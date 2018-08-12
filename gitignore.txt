@@ -1,0 +1,10 @@
+/*
+!*.html
+!*.ipynb
+!*.md
+!*.py
+!*.pdf
+!*.jpg
+!*.jpeg
+!*.png
+!*.tif
