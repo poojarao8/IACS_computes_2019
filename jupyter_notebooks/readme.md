@@ -2,7 +2,7 @@ In this folder, you'll find jupyter notebooks that we are going to use.
 
 --
 
-###Authors of the notebooks
+### Authors of the notebooks
 
 ##### This year:
 * Alëna Aksënova
