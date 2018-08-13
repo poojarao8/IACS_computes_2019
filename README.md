@@ -7,7 +7,7 @@ Hi and welcome to the website for the **IACS Computes! HS summer camp**. During 
 - **Instructors:** Alëna Aksënova, Sanket Deshmukh, Ayla Karakas
 
 **Please find the documents that we discuss in class in [this folder](https://github.com/loisetoil/IACS_computes_2018).**
-On this page, you will find information about the [schedule](#schedule), [instructors](#instructors), and how to [install anaconda](#anaconda-installation).
+On this page, you will find information about the [schedule](#schedule), [materials](#materials), and how to [install anaconda](#anaconda-installation).
 
 > Talk is cheap. Show me the code.
 > - [Linus Torvalds](https://en.wikipedia.org/wiki/Linus_Torvalds)
@@ -34,6 +34,11 @@ Time | August, 20 | August, 21 | August, 22 | August, 23 | August, 24
 **12:00** | lunch | lunch | lunch | lunch | lunch
 **13:00** | libraries | invited talk: [Thomas Graf](http://thomasgraf.net/) | Robotics with Ayla | student projects | student presentations
 **14:00** | coding practice | coding practice | coding practice | student projects | student presentations
+
+
+## Materials
+#### Day 1 (Monday, August 13)
+1. [Basics.ipynb](https://github.com/loisetoil/IACS_computes_2018/tree/master/jupyter_notebooks/day%201/Basics.ipynb)
 
 
 ## Anaconda installation
