@@ -39,7 +39,14 @@ Time | August, 20 | August, 21 | August, 22 | August, 23 | August, 24
 ## Materials
 #### Day 1 (Monday, August 13)
 1. [Basics.ipynb](https://github.com/loisetoil/IACS_computes_2018/tree/master/jupyter_notebooks/day%201/Basics.ipynb)
+2. [Arithmetic.ipynb](https://github.com/loisetoil/IACS_computes_2018/tree/master/jupyter_notebooks/day%201/Arithmetic.ipynb)
+3. [DataTypes.ipynb](https://github.com/loisetoil/IACS_computes_2018/tree/master/jupyter_notebooks/day%201/DataTypes.ipynb)
+4. [Variables.ipynb](https://github.com/loisetoil/IACS_computes_2018/tree/master/jupyter_notebooks/day%201/Variables.ipynb)
+5. [Conditionals.ipynb](https://github.com/loisetoil/IACS_computes_2018/tree/master/jupyter_notebooks/day%201/Conditionals.ipynb)
+6. [WhileLoops.ipynb](https://github.com/loisetoil/IACS_computes_2018/tree/master/jupyter_notebooks/day%201/WhileLoops.ipynb)
 
+#### Day 2 (Tuesday, August 14)
+*... to be updated soon!*
 
 ## Anaconda installation
 
