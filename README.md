@@ -48,6 +48,8 @@ Time | August, 20 | August, 21 | August, 22 | August, 23 | August, 24
 #### Day 2 (Tuesday, August 14)
 1. [Review - Day1.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day2/Review%20-%20Day1.ipynb)
 2. [Lists.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day2/Lists.ipynb)
+3. [Turtles.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day2/turtles.ipynb)
+3. [Practice_day2.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day2/practice_day2.ipynb)
 
 ## Anaconda installation
 
