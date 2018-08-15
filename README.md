@@ -20,10 +20,10 @@ The schedule is subject to change!
 Time | August, 13 | August, 14 | August, 15 | August, 16 | August, 17
 ---------- | ---------- | ---------- | ---------- | ---------- | ----------
 **09:00** | welcome + installation | warm up | warm up | warm up | warm up
-**10:00** | arithmetics + variables | lists | strings | I/O | errors + exceptions
+**10:00** | arithmetics + variables | lists | strings | functions | errors + exceptions
 **11:00** | data types + conditionals | lists | strings | functions | libraries
 **12:00** | lunch | lunch | lunch | lunch | lunch
-**13:00** | while loops | turtles | for loops | functions | more functions
+**13:00** | while loops | turtles | for loops | I/O | more functions
 **14:00** | coding practice | coding practice | coding practice | coding practice | coding practice
 
 Time | August, 20 | August, 21 | August, 22 | August, 23 | August, 24
