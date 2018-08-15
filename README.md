@@ -53,6 +53,7 @@ Time | August, 20 | August, 21 | August, 22 | August, 23 | August, 24
 
 #### Day 3 (Wednesday, August 15)
 1. [Day3-Strings.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day3/Day3-Strings.ipynb)
+2. [ForLoops.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day3/ForLoops.ipynb)
 
 ## Anaconda installation
 
