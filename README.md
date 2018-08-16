@@ -55,6 +55,9 @@ Time | August, 20 | August, 21 | August, 22 | August, 23 | August, 24
 1. [Strings.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day3/Day3-Strings.ipynb)
 2. [ForLoops.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day3/ForLoops.ipynb)
 
+#### Day 4 (Thursday, August 16)
+1. [Functions.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day4/Functions.ipynb)
+
 ## Anaconda installation
 
 1. Go to [Anaconda's website](https://www.anaconda.com/)
