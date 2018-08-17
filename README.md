@@ -63,6 +63,7 @@ Time | August, 20 | August, 21 | August, 22 | August, 23 | August, 24
 #### Day 5 (Friday, August 17)
 1. [AdvancedFunctions.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day5/AdvancedFunctions.ipynb)
 2. [Errors.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day5/Errors.ipynb)
+3. [Numpy.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day5/Numpy.ipynb)
 
 
 ## Anaconda installation
