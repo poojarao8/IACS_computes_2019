@@ -60,7 +60,7 @@ Time | August, 20 | August, 21 | August, 22 | August, 23 | August, 24
 2. [IO.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day4/IO.ipynb)
 3. [IO-v2.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day4/IO-v2.ipynb)
 
-#### Day 5(Friday, August 17)
+#### Day 5 (Friday, August 17)
 1. [AdvancedFunctions.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day5/AdvancedFunctions.ipynb)
 2. [Errors.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day5/Errors.ipynb)
 
