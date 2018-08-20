@@ -66,7 +66,10 @@ Time | August, 20 | August, 21 | August, 22 | August, 23 | August, 24
 3. [Numpy.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day5/Numpy.ipynb)
 
 #### Day 6 (Monday, August 20)
-1. [Dictionaries.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/day6/Dictionaries.ipynb)
+1. [Dictionaries.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day6/Dictionaries.ipynb)
+2. [AdvancedLists.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day6/AdvancedLists.ipynb)
+3. [Practice.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day6/day6_practice.ipynb)
+
 
 ## Anaconda installation
 
