@@ -71,9 +71,7 @@ Time | August, 20 | August, 21 | August, 22 | August, 23 | August, 24
 3. [Practice.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day6/day6_practice.ipynb)
 
 #### Day 7 (Tuesday, August 21)
-1. [Literature analysis with n-grams.ipynb](https://github.com/loisetoil/IACS_computes_2018/tree/master/jupyter_notebooks/day7)
-
-Download the link above through [this website](http://kinolien.github.io/gitzip/).
+1. [Literature analysis with n-grams (folder)](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/tree/master/jupyter_notebooks/day7)
 
 ## Anaconda installation
 
