@@ -73,6 +73,10 @@ Time | August, 20 | August, 21 | August, 22 | August, 23 | August, 24
 #### Day 7 (Tuesday, August 21)
 1. [Literature analysis with n-grams (folder)](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/tree/master/jupyter_notebooks/day7)
 
+#### Day 8 (Wednesday, August 22)
+1. [Warm-up](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day8/warm-up.ipynb)
+2. [AI/NLP projects](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/tree/master/jupyter_notebooks/day8/AI)
+
 ## Anaconda installation
 
 1. Go to [Anaconda's website](https://www.anaconda.com/)
