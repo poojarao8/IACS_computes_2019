@@ -80,7 +80,7 @@ Time | August, 20 | August, 21 | August, 22 | August, 23 | August, 24
 #### Day 9 (Thursday, Auguest 23)
 1. [Towers of Hanoi](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/tree/master/jupyter_notebooks/day9/Towers%20of%20Hanoi)
 2. [Tic Tac Toe](https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day9/Tic-Tac-Toe.ipynb)
-3 [Text-based Adventure](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day9/Text-Based-Adventure.ipynb)
+3. [Text-based Adventure](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day9/Text-Based-Adventure.ipynb)
 
 ## Anaconda installation
 
