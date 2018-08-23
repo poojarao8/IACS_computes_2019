@@ -28,7 +28,7 @@ Time | August, 13 | August, 14 | August, 15 | August, 16 | August, 17
 
 Time | August, 20 | August, 21 | August, 22 | August, 23 | August, 24
 ---------- | ---------- | ---------- | ---------- | ---------- | ----------
-**09:00** | warm up | warm up | warm up | projects discussion | student projects
+**09:00** | warm up | warm up | warm up | student projects | student projects
 **10:00** | dictionaries | practice | AI with Alëna | student projects | student projects
 **11:00** | dictionaries | practice | Statistics with Sanket | student projects | student projects
 **12:00** | lunch | lunch | lunch | lunch | lunch
@@ -71,7 +71,8 @@ Time | August, 20 | August, 21 | August, 22 | August, 23 | August, 24
 3. [Practice.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day6/day6_practice.ipynb)
 
 #### Day 7 (Tuesday, August 21)
-1. [Literature analysis with n-grams (folder)](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/tree/master/jupyter_notebooks/day7)
+1. [What is computational linguistics?](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day7/technology.pdf)
+2. [Literature analysis with n-grams (folder)](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/tree/master/jupyter_notebooks/day7)
 
 #### Day 8 (Wednesday, August 22)
 1. [Warm-up](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day8/warm-up.ipynb)
