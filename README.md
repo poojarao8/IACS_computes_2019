@@ -85,6 +85,9 @@ Time | August, 20 | August, 21 | August, 22 | August, 23 | August, 24
 3. [Text-based Adventure](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day9/Text-Based-Adventure.ipynb)
 4. [Automated Trading](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day9/Automated%20Trading)
 
+#### Day 10 (Friday, Auguest 24)
+1. [Survey!](https://docs.google.com/forms/d/e/1FAIpQLSew0NXhhqRpNmYxIvEZU9Ui2QJ9h9dbglrgEKPxbBYOnA_uFQ/viewform)
+
 ## Anaconda installation
 
 1. Go to [Anaconda's website](https://www.anaconda.com/)
