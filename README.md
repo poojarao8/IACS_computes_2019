@@ -2,9 +2,9 @@
 
 Hi and welcome to the website for the **IACS Computes! HS summer camp**. During this camp, students will learn Python programming skills, get to know research challenges for which coding is necessary, and solve several issues from various disciplines, such as robotics, mathematics, artificial intelligence, natural language processing, etc.
 
-- **Dates:** 13-25 August, 9am-3pm
+- **Dates:** 12-23 August, 9am-3pm
 - **Location:** IACS, Stony Brook University, NY
-- **Instructors:** Alëna Aksënova, Sanket Deshmukh, Ayla Karakas
+- **Instructors:** Alice Harpole, Lupe Barrios Sazo, Nazila Shafiei
 
 **Please find the documents that we discuss in class in [this folder](https://github.com/loisetoil/IACS_computes_2018).**
 On this page, you will find information about the [schedule](#schedule), [materials](#materials), and how to [install anaconda](#anaconda-installation).
@@ -17,7 +17,7 @@ On this page, you will find information about the [schedule](#schedule), [materi
 
 The schedule is subject to change!
 
-Time | August, 13 | August, 14 | August, 15 | August, 16 | August, 17
+Time | August 12 | August 13 | August 14 | August 15 | August 16
 ---------- | ---------- | ---------- | ---------- | ---------- | ----------
 **09:00** | welcome + installation | warm up | warm up | warm up | warm up
 **10:00** | arithmetics + variables | lists | strings | functions | errors + exceptions
@@ -26,7 +26,7 @@ Time | August, 13 | August, 14 | August, 15 | August, 16 | August, 17
 **13:00** | while loops | turtles | for loops | I/O | more functions
 **14:00** | coding practice | coding practice | coding practice | coding practice | coding practice
 
-Time | August, 20 | August, 21 | August, 22 | August, 23 | August, 24
+Time | August 19 | August 20 | August 21 | August 22 | August 23
 ---------- | ---------- | ---------- | ---------- | ---------- | ----------
 **09:00** | warm up | warm up | warm up | student projects | student projects
 **10:00** | dictionaries | practice | AI with Alëna | student projects | student projects
@@ -91,7 +91,7 @@ Time | August, 20 | August, 21 | August, 22 | August, 23 | August, 24
 ## Anaconda installation
 
 1. Go to [Anaconda's website](https://www.anaconda.com/)
-2. Scroll down and click on 'Download now'
-3. Choose Python 3.6 version
+2. Click 'Download' in the top right
+3. Choose Python 3.7 version
 4. Follow the instructions
 5. Done!
