@@ -4,12 +4,15 @@ In this folder, you'll find jupyter notebooks that we are going to use.
 
 ### Authors of the notebooks
 
-##### This year:
+##### 2019:
+* Alice Harpole
+
+##### 2018:
 * Alëna Aksënova
 * Sanket Deshmukh
 * Ayla Karakas
 
-##### Last year:
+##### 2017:
 * Joel Anderson
 * Marisa Lim
 * Panu Sam-Ang
