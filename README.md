@@ -20,20 +20,20 @@ The schedule is subject to change!
 Time | August 12 | August 13 | August 14 | August 15 | August 16
 ---------- | ---------- | ---------- | ---------- | ---------- | ----------
 **09:00** | welcome + installation | warm up | warm up | warm up | warm up
-**10:00** | arithmetics + variables | lists | strings | functions | errors + exceptions
+**10:00** | arithmetic + variables | lists | strings | functions | errors + exceptions
 **11:00** | data types + conditionals | lists | strings | functions | libraries
 **12:00** | lunch | lunch | lunch | lunch | lunch
-**13:00** | while loops | turtles | for loops | I/O | more functions
+**13:00** | while loops | for loops | turtles | I/O | more functions
 **14:00** | coding practice | coding practice | coding practice | coding practice | coding practice
 
 Time | August 19 | August 20 | August 21 | August 22 | August 23
 ---------- | ---------- | ---------- | ---------- | ---------- | ----------
 **09:00** | warm up | warm up | warm up | student projects | student projects
-**10:00** | dictionaries | practice | AI with Alëna | student projects | student projects
-**11:00** | dictionaries | practice | Statistics with Sanket | student projects | student projects
+**10:00** | dictionaries | Literature analysis | ?? | student projects | student projects
+**11:00** | dictionaries | Literature analysis | ?? | student projects | student projects
 **12:00** | lunch | lunch | lunch | lunch | lunch
-**13:00** | advanced lists | invited talk: [Thomas Graf](http://thomasgraf.net/) | Robotics with Ayla | student projects | student presentations
-**14:00** | coding practice | coding practice | coding practice | student projects | student presentations
+**13:00** | advanced lists | ?? | ?? | student projects | student presentations
+**14:00** | coding practice | coding practice | projects intro | student projects | student presentations
 
 
 ## Materials
@@ -48,12 +48,12 @@ Time | August 19 | August 20 | August 21 | August 22 | August 23
 #### Day 2 (Tuesday, August 14)
 1. [Review.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day2/Review%20-%20Day1.ipynb)
 2. [Lists.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day2/Lists.ipynb)
-3. [Turtles.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day2/turtles.ipynb)
-3. [Practice.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day2/practice_day2.ipynb)
+3. [ForLoops.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day3/ForLoops.ipynb)
+4. [Practice.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day2/practice_day2.ipynb)
 
 #### Day 3 (Wednesday, August 15)
 1. [Strings.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day3/Day3-Strings.ipynb)
-2. [ForLoops.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day3/ForLoops.ipynb)
+2. [Turtles.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day2/turtles.ipynb)
 
 #### Day 4 (Thursday, August 16)
 1. [Functions.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day4/Functions.ipynb)
