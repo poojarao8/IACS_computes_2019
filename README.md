@@ -41,6 +41,7 @@ Time | August 19 | August 20 | August 21 | August 22 | August 23
 4. [Variables.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/tree/master/jupyter_notebooks/day1/Variables.ipynb)
 5. [Conditionals.ipynb](https://github.com/loisetoil/IACS_computes_2018/tree/master/jupyter_notebooks/day1/Conditionals.ipynb)
 6. [WhileLoops.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/tree/master/jupyter_notebooks/day1/WhileLoops.ipynb)
+7. [Practice.ipynb]()
 
 #### Day 2 (Tuesday, August 13)
 1. [Review.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day2/Review%20-%20Day1.ipynb)
@@ -49,25 +50,33 @@ Time | August 19 | August 20 | August 21 | August 22 | August 23
 4. [Practice.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day2/practice_day2.ipynb)
 
 #### Day 3 (Wednesday, August 14)
+1. [Review.ipynb]()
 1. [Strings.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day3/Day3-Strings.ipynb)
 2. [Turtles.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day2/turtles.ipynb)
+7. [Practice.ipynb]()
 
 #### Day 4 (Thursday, August 15)
+1. [Review.ipynb]()
 1. [Functions.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day4/Functions.ipynb)
 2. [IO.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day4/IO.ipynb)
 3. [IO-v2.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day4/IO-v2.ipynb)
+7. [Practice.ipynb]()
 
 #### Day 5 (Friday, August 16)
+1. [Review.ipynb]()
 1. [Dictionaries.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day6/Dictionaries.ipynb)
 2. [AdvancedFunctions.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day5/AdvancedFunctions.ipynb)
 3. [Errors.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day5/Errors.ipynb)
+7. [Practice.ipynb]()
 
 #### Day 6 (Monday, August 19)
+1. [Review.ipynb]()
 1. [AdvancedLists.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day6/AdvancedLists.ipynb)
 2. [Classes.ipynb]()
 3. [Practice.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day6/day6_practice.ipynb)
 
 #### Day 7 (Tuesday, August 20)
+1. [Review.ipynb]()
 1. [What is computational linguistics?](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day7/technology.pdf)
 2. [Literature analysis with n-grams (folder)](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/tree/master/jupyter_notebooks/day7)
 
