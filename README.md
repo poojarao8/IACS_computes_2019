@@ -20,8 +20,8 @@ The schedule is subject to change!
 Time | August 12 | August 13 | August 14 | August 15 | August 16
 ---------- | ---------- | ---------- | ---------- | ---------- | ----------
 **09:00** | welcome + installation | warm up | warm up | warm up | warm up
-**10:00** | arithmetic + variables | lists | strings | functions | errors + exceptions
-**11:00** | data types + conditionals | lists | strings | functions | libraries
+**10:00** | arithmetic + variables | lists | strings | functions | dictionaries
+**11:00** | data types + conditionals | lists | strings | functions | errors + exceptions
 **12:00** | lunch | lunch | lunch | lunch | lunch
 **13:00** | while loops | for loops | turtles | I/O | more functions
 **14:00** | coding practice | coding practice | coding practice | coding practice | coding practice
@@ -29,10 +29,10 @@ Time | August 12 | August 13 | August 14 | August 15 | August 16
 Time | August 19 | August 20 | August 21 | August 22 | August 23
 ---------- | ---------- | ---------- | ---------- | ---------- | ----------
 **09:00** | warm up | warm up | warm up | student projects | student projects
-**10:00** | dictionaries | Literature analysis | ?? | student projects | student projects
-**11:00** | dictionaries | Literature analysis | ?? | student projects | student projects
+**10:00** | advanced lists | Literature analysis | ?? | student projects | student projects
+**11:00** | classes | Literature analysis | ?? | student projects | student projects
 **12:00** | lunch | lunch | lunch | lunch | lunch
-**13:00** | advanced lists | ?? | ?? | student projects | student presentations
+**13:00** | classes | ?? | ?? | student projects | student presentations
 **14:00** | coding practice | coding practice | projects intro | student projects | student presentations
 
 
@@ -61,13 +61,13 @@ Time | August 19 | August 20 | August 21 | August 22 | August 23
 3. [IO-v2.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day4/IO-v2.ipynb)
 
 #### Day 5 (Friday, August 17)
-1. [AdvancedFunctions.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day5/AdvancedFunctions.ipynb)
-2. [Errors.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day5/Errors.ipynb)
-3. [Numpy.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day5/Numpy.ipynb)
+1. [Dictionaries.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day6/Dictionaries.ipynb)
+2. [AdvancedFunctions.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day5/AdvancedFunctions.ipynb)
+3. [Errors.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day5/Errors.ipynb)
 
 #### Day 6 (Monday, August 20)
-1. [Dictionaries.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day6/Dictionaries.ipynb)
-2. [AdvancedLists.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day6/AdvancedLists.ipynb)
+1. [AdvancedLists.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day6/AdvancedLists.ipynb)
+2. [Classes.ipynb]()
 3. [Practice.ipynb](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loisetoil/IACS_computes_2018/blob/master/jupyter_notebooks/day6/day6_practice.ipynb)
 
 #### Day 7 (Tuesday, August 21)
