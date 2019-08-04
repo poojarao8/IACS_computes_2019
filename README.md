@@ -1,6 +1,10 @@
 # Welcome to IACS Python summer camp
 
-Hi and welcome to the website for the **IACS Computes! HS summer camp**. During this camp, students will learn Python programming skills, get to know research challenges for which coding is necessary, and see several real-world applications of coding, including literature analysis, cryptography and data processing. 
+<<<<<<< HEAD
+Hi and welcome to the website for the **IACS Computes! HS summer camp**. During this camp, students will learn Python programming skills, get to know research challenges for which coding is necessary, and see several real-world applications of coding, including literature analysis, cryptography and data processing.
+=======
+Hi and welcome to the website for the **IACS Computes! HS summer camp**. During this camp, students will learn Python programming skills, get to know research challenges for which coding is necessary, and see several real-world applications of coding, including literature analysis, cryptography and data processing.
+>>>>>>> 3b0763cb880bebd3cbc45c86b9a3bdde3ea94a79
 
 - **Dates:** 12-23 August, 9am-3pm
 - **Location:** IACS, Stony Brook University, NY
@@ -25,11 +29,11 @@ Time | August 12 | August 13 | August 14 | August 15 | August 16
 Time | August 19 | August 20 | August 21 | August 22 | August 23
 ---------- | ---------- | ---------- | ---------- | ---------- | ----------
 **09:00** | warm up | warm up | warm up | student projects | student projects
-**10:00** | advanced lists | Literature analysis | Fractals | student projects | student projects
-**11:00** | classes | Literature analysis | Fractals | student projects | student projects
+**10:00** | advanced lists | literature analysis | fractals | student projects | student projects
+**11:00** | classes | literature analysis | fractals | student projects | student projects
 **12:00** | lunch | lunch | lunch | lunch | lunch
-**13:00** | classes | Cryptography | Data analysis | student projects | student presentations
-**14:00** | coding practice | Cryptography | projects intro | student projects | student presentations
+**13:00** | classes | cryptography | data processing | student projects | student presentations
+**14:00** | coding practice | cryptography | projects intro | student projects | student presentations
 
 
 ## Materials
@@ -80,8 +84,8 @@ Time | August 19 | August 20 | August 21 | August 22 | August 23
 
 #### Day 8 (Wednesday, August 21)
 1. Warm-up
-2. AI/NLP projects
-3. Simulation
+2. Fractals
+1. Data processing
 
 #### Day 9 (Thursday, August 22)
 1. Towers of Hanoi
