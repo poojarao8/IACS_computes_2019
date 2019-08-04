@@ -1,5 +1,6 @@
 SRC = $(wildcard jupyter_notebooks/*/*.ipynb)
-TAR = $(SRC:.ipynb=.md)
+SRC2 = $(wildcard jupyter_notebooks/*/*/*.ipynb)
+TAR = $(SRC:.ipynb=.md) $(SRC2:.ipynb=.md)
 
 all: $(TAR)
 
