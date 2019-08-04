@@ -1,1 +1,12 @@
-theme: jekyll-theme-hacker
+title: IACS Computes! 2019
+theme: jekyll-theme-minimal
+markdown: kramdown
+mathjax: true
+
+collections:
+    notebooks:
+        output: true
+        permalink: /notebooks/:name
+    days:
+        output: true
+        permalink: /days/:name

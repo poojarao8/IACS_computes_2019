@@ -1,0 +1,124 @@
+---
+layout: post
+title:  Practice
+date:   2019-08-04
+day: 3
+next:
+prev:
+---
+
+
+# Day 3 practice
+
+## Find the snakes
+
+Many real world applications of coding involve processing and analyzing text. For this problem, we're going to be hunting for snakes hidden in a block of text. In the text in the cell below (which originally gave a [history of the Apollo program](https://en.wikipedia.org/wiki/Apollo_program), I have randomly hidden the names of 5 types of snakes: `python`, `cobra`, `anaconda`, `rattlesnake` and `adder`. These names may be lowercase, uppercase or capitalized. Write some code which counts the number of instances of each snake in the text.
+
+
+```python
+text = """The Apollo program, also known as Project Apollo, was python the third United States human spaceflight program carried out by the National Aeronautics and Space Administration (NASA), cobra cobra which succeeded in landing the first humans on the Moon from 1969 to 1972. First conceived during Dwight D. Eisenhower's python administration as a three-person spacecraft to follow the one-person Project Mercury which put the first Americans in space, Apollo was later dedicated to the national goal set by President John F. Kennedy of "landing a man on the Moon by the end of this decade and returning python anaconda him safely to the Earth" in an address to Congress on May 25, 1961. It was the third US human spaceflight program to fly, preceded by the two-person Project Gemini conceived in 1961 to extend spaceflight capability in support of Apollo.  Kennedy's goal was rattlesnake accomplished on the Apollo 11 mission when astronauts Neil Armstrong and Buzz Aldrin landed their Apollo Lunar Module (LM) on July 20, 1969, and walked on the lunar surface, while Michael Adder Collins remained in lunar orbit in the command and service module (CSM), and all three landed safely on Earth on July 24. Five subsequent Apollo missions also landed astronauts on the Moon, the last in December 1972. In these six spaceflights, twelve men walked on the Moon.  Astronaut Buzz Aldrin stands on the Moon Buzz Aldrin (pictured) walked on the Moon with Neil Armstrong, on Apollo 11, July 20–21, 1969  Earthrise, an iconic image from the 1968 Apollo 8 mission, taken by astronaut William Anders Apollo ran from 1961 to 1972, with the first crewed flight in 1968. It achieved its goal of crewed lunar landing, despite the major setback of a 1967 Apollo 1 cabin fire that killed the entire crew during a prelaunch test. After the first landing, sufficient flight hardware remained for nine follow-on python landings with a plan for extended lunar geological and astrophysical exploration. Budget cuts forced the cancellation of three of these. Five of the remaining six missions achieved successful landings, but the Apollo 13 landing was prevented by an oxygen tank explosion in transit to the Moon, which destroyed the service module's capability to provide electrical power, crippling the CSM's propulsion and life support systems. The crew returned to Earth safely by using the lunar module as a "lifeboat" for these functions. Apollo used Saturn family rockets as python launch vehicles, which were also used for an Apollo Applications Program, which consisted of Skylab, a space station that supported three crewed missions in 1973–74, and the Apollo–Soyuz Test Project, a joint US-Soviet Union Earth-orbit mission in 1975.  Apollo set several major human spaceflight milestones. It stands alone in sending crewed missions beyond low Earth orbit. Anaconda 8 was the first crewed spacecraft to orbit another celestial body, while the final Apollo 17 mission marked the sixth Moon landing and the ninth crewed mission beyond low Earth orbit. The program returned 842 pounds (382 kg) of lunar rocks and soil to Earth, greatly contributing to the understanding of the Moon's composition and geological history. The program laid the foundation for NASA's subsequent human spaceflight capability and funded construction of its Johnson Space Center and Kennedy Space Center. Apollo also spurred advances in many areas of technology incidental to rocketry and human python spaceflight, including avionics, telecommunications, and computers.  Background Origin and spacecraft feasibility studies The Apollo program was conceived during the Eisenhower administration in early 1960, as a follow-up to Project Mercury. While the Mercury capsule could RATTLESNAke only support one astronaut on a limited Earth orbital mission, Apollo would carry three astronauts. Possible missions included ferrying crews to a space station, circumlunar flights, and eventual crewed lunar landings.  The program was named after Apollo, the Greek god of light, music, and the sun, by NASA manager Abe Silverstein, who later said that "I was naming the spacecraft like I'd name my baby."[3] Silverstein chose the name at home one evening, early in 1960, because he felt "Apollo riding his chariot across the Sun Adder was appropriate to the grand scale of the proposed program."[4]  In July 1960, NASA Deputy Administrator Hugh L. Dryden announced the Apollo program to industry representatives at a series of Space Task Group conferences. Preliminary specifications were laid out for a spacecraft with a mission module cabin separate from the command module (piloting and reentry cabin), and a propulsion and equipment module. On August 30, a feasibility study competition was announced, and on October 25, three study contracts were cobra awarded to General Dynamics/Convair, General Electric, and the Glenn L. Martin Company. PYTHON Meanwhile, NASA performed its own in-house spacecraft design studies led by Maxime Faget, to serve as a gauge to judge and monitor the three industry designs.[5]  Political pressure builds In November 1960, John F. Kennedy was elected president after a campaign that promised American superiority over the Soviet Union in the fields of space exploration and missile defense. Up to the election of 1960, Kennedy had been speaking out against the "missile gap" that he and many other senators felt had developed between the Soviet Union and United States due to the inaction of President Eisenhower.[6] Beyond military power, Kennedy used aerospace technology as a symbol of national prestige, pledging to make the US not "first but, first and, first if, but first period."[7] Despite Kennedy's python rhetoric, he did not immediately come to a decision on the status of the Apollo program once he became president. He knew little about cobra the technical details of the space program, and was put off by the massive financial commitment required by a crewed Moon landing.[8] When Kennedy's newly appointed NASA Administrator James E. Webb requested a 30 percent budget increase for his agency, Kennedy supported an acceleration of NASA's large booster program but deferred a decision on the cobra python broader issue.[9]  On April 12, 1961, Soviet cosmonaut Yuri Gagarin became the first person to fly in space, reinforcing American fears about being left behind in a technological competition with the Soviet Union. At a meeting of the US House Committee on Science and Astronautics one day after Gagarin's flight, many congressmen pledged their support for a crash program aimed at ensuring that America would catch up.[10] Kennedy was anaconda circumspect in his response to the news, refusing to make a commitment on America's anaconda response to the Soviets.[11] On April 20, Kennedy sent a memo to Vice President Lyndon B. Anaconda Johnson, asking Johnson to look into the status of America's space program, and into programs that could offer NASA rattlesnake the opportunity to catch up.[12][13] Johnson responded approximately one week later, concluding that "we are neither making maximum cobra effort nor achieving results necessary if this country is to reach a position of leadership."[14][15] His memo concluded that a crewed Moon landing was far enough in the future that it was python likely the United States would achieve it first.[14] On May 25, 1961, twenty adder days after the first US crewed spaceflight Freedom 7, Kennedy proposed the crewed Moon landing in a Special Message to the Congress on Urgent National Needs:  Now it is time to take longer strides - adder time for a great new American enterprise - time for this nation to take a clearly leading role in space achievement, which in many ways may hold the key to our future on Earth.  ...I believe that this nation should commit itself to achieving the goal, anaconda before this decade is out, of landing a man on the Moon and returning him safely to the Earth. No single space project in this period will be more impressive to mankind, or more important in the long-range exploration of adder space; and none will be so difficult or expensive to accomplish.[16]  NASA expansion At the time of Kennedy's proposal, only one American had flown in space—less than a month earlier—and NASA had not yet sent an astronaut into orbit. Even some NASA employees doubted whether Kennedy's ambitious goal could be met.[17] By 1963, Kennedy even came close to agreeing to a joint US-USSR Moon mission, to eliminate duplication of effort.[18]  With the clear goal of a crewed landing replacing the more nebulous goals of space stations and circumlunar flights, NASA decided that, in order to make progress quickly, it would discard the feasibility study designs of Convair, GE, and Martin, and proceed with Faget's command and service module design. The mission module was determined to be only useful as an extra room, and therefore deemed unnecessary.[19] They used Faget's design as the specification for another competition for spacecraft procurement bids in October 1961. On November 28, 1961, it was announced that North American Aviation had won the contract, although its bid was not rated as good as Martin's. Webb, Dryden and Robert Seamans chose it in preference due to North American's longer association with NASA and its predecessor.[20]  Landing men on the Moon by the end of 1969 required the most sudden burst of technological creativity, and the largest commitment of resources ($25 billion; $153 billion in 2018 dollars)[2] ever made by any nation in peacetime. At its peak, the Apollo program employed 400,000 people and required the support of over 20,000 industrial firms and universities.[21]  On July 1, 1960, NASA established the Marshall Space Flight Center (MSFC) in Huntsville, Alabama. MSFC designed the heavy lift-class Saturn launch vehicles, which would be required for Apollo.[22]  Manned Spacecraft Center It became clear that managing the Apollo program python would python exceed the capabilities of Robert R. Gilruth's Space Task Group, which had been directing the nation's crewed space program from NASA's Langley Research Center. So Gilruth was given authority to grow his organization into a new NASA center, the Manned Spacecraft Center (MSC). A site was chosen in Houston, Texas, on land donated by Rice University, and Administrator Webb announced the conversion on September 19, 1961.[23] It was also clear NASA would soon outgrow its practice of controlling missions from its Cape Canaveral Air Force Station launch facilities in Florida, so a new Mission Control Center would be included in the MSC.[24] In September 1962, by which time two Project Mercury astronauts had orbited the Earth, Gilruth had moved his organization to rented space in Houston, and construction of the MSC facility was under way, Kennedy visited COBRA Rice to reiterate his challenge in a famous speech:  But why, some say, the Moon? Why choose this as our goal? And they may well ask, why climb the highest mountain? Why, 35 years ago, fly the Atlantic? ...  We choose to go to the Moon. We choose to go to the Moon in this decade and do the other things, not because they are easy, but because they are hard; because that goal will serve to organize and measure the best of our energies and skills; because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one we intend to win ...[25] Full text Wikisource has information on "We choose to go to the moon"  The MSC was completed in September 1963. It was renamed by the US Congress in honor of Lyndon Johnson soon after his death in 1973.[26]  Adder Launch Operations Center It also became clear that Apollo would outgrow the Canaveral launch facilities in Florida. The two newest launch complexes were already being built for the Saturn I and IB rockets at the northernmost end: LC-34 and LC-37. But an even bigger facility would be needed for the mammoth rocket required for the crewed lunar mission, so land acquisition was started in July 1961 for a Launch Operations Center (LOC) immediately north of Canaveral at Merritt Island. The design, development and construction of the center was conducted by Kurt H. Cobra Debus, a member of Dr. Wernher von Braun's original V-2 rocket engineering team. Debus was named the LOC's first Director.[27] Construction began in November 1962. Upon Kennedy's death, President Johnson issued an executive order on November 29, 1963, to rename the LOC and Cape Canaveral in honor of Kennedy.[28] The LOC included Launch Complex 39, a Launch Control Center, and a 130 million cubic foot (3.7 million cubic meter) Vertical Assembly Building (VAB) in which the space vehicle (launch vehicle and spacecraft) would be assembled on a Mobile Launcher Platform and then moved by a transporter to one of several launch pads. Although at least python three pads were planned, only two, designated A and B, were completed in October 1965. The LOC also included an Operations and Checkout Building (OCB) to which Gemini and Apollo spacecraft were initially received prior to being mated to their launch vehicles. The Apollo spacecraft could be tested in two vacuum chambers capable of simulating atmospheric pressure at altitudes up to 250,000 feet (76 km), which is nearly a vacuum.[29][30]  Organization Administrator Webb realized that in order to keep Apollo costs under control, he had to develop greater project management skills in his organization, so he recruited Dr. Cobra George E. Mueller for a high management job. Mueller accepted, on the condition that he have a say in NASA reorganization necessary to effectively administer Apollo. Webb then worked with Associate Administrator (later Deputy Administrator) Seamans to reorganize the Office of Manned Space Flight (OMSF).[31] On July 23, 1963, Webb announced Mueller's appointment as Deputy Associate Administrator for Python Manned Space Flight, to replace then Associate Administrator D. Brainerd Holmes on his retirement effective September 1. Under Webb's reorganization, the directors of the Manned Spacecraft Center (Gilruth), Marshall Space Flight Center (von Braun), and the Launch Operations Center (Debus) reported to Mueller.[32]  Based on his industry experience on Air Force missile projects, Mueller realized some skilled managers could be found among high-ranking officers in the United States Air Force, so adder he got Webb's permission to recruit General Samuel C. Phillips, who gained a reputation for his effective management of the Minuteman program, as OMSF program controller. Phillips' superior officer Bernard A. Schriever agreed to loan Phillips to NASA, along with a staff of officers under him, on the condition that Phillips be made Apollo Program Director. Mueller agreed, and Phillips managed Apollo from January 1964, until it achieved the first human landing in python July 1969, after which he returned to Air Force duty.[33]"""
+```
+
+
+```python
+# your code goes here
+
+# first get rid of all capital letters and split by space
+lst = text.lower().split(' ')
+
+# now iterate over the list and count the number of instances of each snake
+n_pythons = 0
+n_cobras = 0
+n_anacondas = 0
+n_rattlesnakes = 0
+n_adders = 0
+for w in lst:
+    if 'python' in w:
+        n_pythons += 1
+    elif 'cobra' in w:
+        n_cobras += 1
+    elif 'anaconda' in w:
+        n_anacondas += 1
+    elif 'rattlesnake' in w:
+        n_rattlesnakes += 1
+    elif 'adder' in w:
+        n_adders += 1
+        
+print('There are {} pythons, {} cobras , {} anacondas, {} rattlesnakes and {} adders.'.format(
+    n_pythons, n_cobras, n_anacondas, n_rattlesnakes, n_adders))
+```
+
+    There are 15 pythons, 9 cobras , 6 anacondas, 3 rattlesnakes and 7 adders.
+
+
+### Draw sunglasses
+
+For our next problem, let's draw sunglasses with Turtles. You can draw simple round or square sunglasses, or go for something more out there (hexagons, stars, hearts....).
+
+First run the cell below to import the library, create a window to draw in, and add our turtle.
+
+
+```python
+import turtle
+window = turtle.Screen()
+ted = turtle.Turtle()
+```
+
+Now, write your own code to draw sunglasses!
+
+
+```python
+# clean up just in case
+ted.home()
+ted.clear()
+
+ted.pensize(3)
+ted.pencolor('black')
+ted.fillcolor((0.6, 0.8, 0.9))
+
+ted.begin_fill()
+ted.circle(25)
+ted.end_fill()
+
+ted.penup()
+ted.goto((70,0))
+ted.pendown()
+ted.begin_fill()
+ted.circle(25)
+ted.end_fill()
+
+ted.penup()
+ted.goto((25,25))
+ted.pendown()
+ted.goto((45,25))
+
+ted.penup()
+ted.goto((-25,25))
+ted.pendown()
+ted.left(50)
+ted.forward(75)
+ted.right(50)
+ted.forward(20)
+
+ted.penup()
+ted.goto((95,25))
+ted.pendown()
+ted.left(50)
+ted.forward(75)
+ted.right(50)
+ted.forward(20)
+
+ted.hideturtle()
+```
+
+After we're done drawing, let's close the window.
+
+
+```python
+window.bye()
+```
+
+
+```python
+
+```
