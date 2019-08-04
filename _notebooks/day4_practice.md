@@ -3,8 +3,6 @@ layout: post
 title:  Practice
 date:   2019-08-04
 day: 4
-next:
-prev:
 ---
 
 

@@ -1,6 +1,6 @@
 # Welcome to IACS Python summer camp
 
-Hi and welcome to the website for the **IACS Computes! HS summer camp**. During this camp, students will learn Python programming skills, get to know research challenges for which coding is necessary, and solve several issues from various disciplines, such as robotics, mathematics, artificial intelligence, natural language processing, etc.
+Hi and welcome to the website for the **IACS Computes! HS summer camp**. During this camp, students will learn Python programming skills, get to know research challenges for which coding is necessary, and see several real-world applications of coding, including literature analysis, cryptography and data processing.
 
 - **Dates:** 12-23 August, 9am-3pm
 - **Location:** IACS, Stony Brook University, NY
@@ -25,11 +25,11 @@ Time | August 12 | August 13 | August 14 | August 15 | August 16
 Time | August 19 | August 20 | August 21 | August 22 | August 23
 ---------- | ---------- | ---------- | ---------- | ---------- | ----------
 **09:00** | warm up | warm up | warm up | student projects | student projects
-**10:00** | advanced lists | Literature analysis | ?? | student projects | student projects
-**11:00** | classes | Literature analysis | ?? | student projects | student projects
+**10:00** | advanced lists | Literature analysis | Fractals | student projects | student projects
+**11:00** | classes | Literature analysis | Fractals | student projects | student projects
 **12:00** | lunch | lunch | lunch | lunch | lunch
-**13:00** | classes | ?? | ?? | student projects | student presentations
-**14:00** | coding practice | coding practice | projects intro | student projects | student presentations
+**13:00** | classes | Cryptography | Data analysis | student projects | student presentations
+**14:00** | coding practice | Cryptography | projects intro | student projects | student presentations
 
 
 ## Materials
@@ -75,13 +75,13 @@ Time | August 19 | August 20 | August 21 | August 22 | August 23
 
 #### Day 7 (Tuesday, August 20)
 1. [Review.ipynb]({{ site.baseurl }}{% link _notebooks/day7_review.md %})
-1. [What is computational linguistics?]({{ site.baseurl }}{% link _notebooks/day7_review.md %})
-2. [Literature analysis with n-grams (folder)]({{ site.baseurl }}{% link _notebooks/day7_review.md %})
+2. [Literature analysis ]({{ site.baseurl }}{% link _notebooks/day7_review.md %})
+1.  Cryptography
 
 #### Day 8 (Wednesday, August 21)
 1. [Warm-up]({{ site.baseurl }}{% link _notebooks/day8_warm-up.md %})
-2. [AI/NLP projects]()
-3. [Simulation.ipynb]({{ site.baseurl }}{% link _notebooks/day8_Simulation.md %})
+1.  Fractals
+1.  Data Processing
 
 #### Day 9 (Thursday, August 22)
 1. [Towers of Hanoi](=)
