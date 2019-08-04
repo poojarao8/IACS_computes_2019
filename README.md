@@ -25,11 +25,11 @@ Time | August 12 | August 13 | August 14 | August 15 | August 16
 Time | August 19 | August 20 | August 21 | August 22 | August 23
 ---------- | ---------- | ---------- | ---------- | ---------- | ----------
 **09:00** | warm up | warm up | warm up | student projects | student projects
-**10:00** | advanced lists | Literature analysis | Fractals | student projects | student projects
-**11:00** | classes | Literature analysis | Fractals | student projects | student projects
+**10:00** | advanced lists | literature analysis | fractals | student projects | student projects
+**11:00** | classes | literature analysis | fractals | student projects | student projects
 **12:00** | lunch | lunch | lunch | lunch | lunch
-**13:00** | classes | Cryptography | Data analysis | student projects | student presentations
-**14:00** | coding practice | Cryptography | projects intro | student projects | student presentations
+**13:00** | classes | cryptography | data processing | student projects | student presentations
+**14:00** | coding practice | cryptography | projects intro | student projects | student presentations
 
 
 ## Materials
@@ -76,18 +76,18 @@ Time | August 19 | August 20 | August 21 | August 22 | August 23
 #### Day 7 (Tuesday, August 20)
 1. [Review.ipynb]({{ site.baseurl }}{% link _notebooks/day7_review.md %})
 2. [Literature analysis ]({{ site.baseurl }}{% link _notebooks/day7_review.md %})
-1.  Cryptography
+1. [Cryptography]({{ site.baseurl }}{% link _notebooks/cryptography_cryptography.md %})
 
 #### Day 8 (Wednesday, August 21)
 1. [Warm-up]({{ site.baseurl }}{% link _notebooks/day8_warm-up.md %})
-1.  Fractals
-1.  Data Processing
+1. [Fractals]()
+1. [Data Processing]({{ site.baseurl }}{% link _notebooks/data_processing_simplified_LOSC_Event_tutorial.md %})
 
 #### Day 9 (Thursday, August 22)
-1. [Towers of Hanoi](=)
+1. [Towers of Hanoi]({{ site.baseurl }}{% link _notebooks/TowersofHanoi_Towers-of-Hanoi.md %})
 2. [Tic Tac Toe]({{ site.baseurl }}{% link _notebooks/day9_Tic-Tac-Toe.md %})
 3. [Text-based Adventure]({{ site.baseurl }}{% link _notebooks/day9_Text-Based-Adventure.md %})
-4. [Automated Trading]()
+4. [Automated Trading]({{ site.baseurl }}{% link _notebooks/AutomatedTrading_StockMarket.md %})
 
 #### Day 10 (Friday, August 23)
 1. [Survey!]()
