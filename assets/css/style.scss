@@ -32,10 +32,30 @@
 /* stop the main content from being so narrow */
 section {
   width: auto;
-  max-width:800px;
+  max-width: 800px;
   min-width: 500px;
   float:right;
   padding-bottom:50px;
   margin: auto;
   margin-bottom: 20px;
+}
+
+.wrapper {
+  width: auto;
+  max-width: 1160px;
+  min-width: 860px;
+}
+
+header {
+  position: auto;
+  width: auto;
+  max-width: 270px;
+  min-width:100px;
+}
+
+footer {
+  position: absolute;
+  width: auto;
+  max-width: 270px;
+  min-width:100px;
 }
