@@ -20,30 +20,6 @@ text = """The Apollo program, also known as Project Apollo, was python the third
 
 ```python
 # your code goes here
-
-# first get rid of all capital letters and split by space
-lst = text.lower().split(' ')
-
-# now iterate over the list and count the number of instances of each snake
-n_pythons = 0
-n_cobras = 0
-n_anacondas = 0
-n_rattlesnakes = 0
-n_adders = 0
-for w in lst:
-    if 'python' in w:
-        n_pythons += 1
-    elif 'cobra' in w:
-        n_cobras += 1
-    elif 'anaconda' in w:
-        n_anacondas += 1
-    elif 'rattlesnake' in w:
-        n_rattlesnakes += 1
-    elif 'adder' in w:
-        n_adders += 1
-        
-print('There are {} pythons, {} cobras , {} anacondas, {} rattlesnakes and {} adders.'.format(
-    n_pythons, n_cobras, n_anacondas, n_rattlesnakes, n_adders))
 ```
 
     There are 15 pythons, 9 cobras , 6 anacondas, 3 rattlesnakes and 7 adders.

@@ -22,6 +22,18 @@ while i < 11:
     i = i + 1
 ```
 
+    1
+    4
+    9
+    16
+    25
+    36
+    49
+    64
+    81
+    100
+
+
 To demonstrate a for loop, let's write one that does the same thing as this while loop. First, let's make a list of the numbers that we want to find the squares of.
 
 
@@ -37,6 +49,18 @@ for a in numlist:
     print(a**2)
 ```
 
+    1
+    4
+    9
+    16
+    25
+    36
+    49
+    64
+    81
+    100
+
+
 And we get the same result! Let's take a look at the syntax. When we write `for a in numlist:` we're creating a new variable called `a`, and inside `a`, we store the first element of `numlist` (which is 1). We then execute the indented code in the for loop. At the next iteration of the loop, the value of `a` will be changed to be the next element of `numlist` (in this case, 2). This will continue until `a` takes the value of the last element in `numlist`. Note that the variable name `a` is arbitrary. We could name this variable whatever we want, as long as we're consistent inside the loop. A common convention (and good coding practice to make your code understandable!) is to use a variable name that describes what is inside the list. For this loop, we could have used the variable name `number` since each thing inside `numlist` is a number.
 
 In the code above, we made the list of numbers we wanted to square before we made the loop. This wasn't actually necessary: instead, we could have defined the list in the definition of the for loop itself like this:
@@ -47,6 +71,18 @@ for number in [1,2,3,4,5,6,7,8,9,10]:
     print(number**2)
 ```
 
+    1
+    4
+    9
+    16
+    25
+    36
+    49
+    64
+    81
+    100
+
+
 An alternative to the above is the handy `range` function. Repeating the same action for the numbers 1 through $n$ is so common that Python has a built-in way of creating a list containing just those numbers. So instead of having to type out the numbers 1 to 10 ourselves, we can just use `range(1,11)`: 
 
 
@@ -54,6 +90,18 @@ An alternative to the above is the handy `range` function. Repeating the same ac
 for number in range(1,11):
     print(number**2)
 ```
+
+    1
+    4
+    9
+    16
+    25
+    36
+    49
+    64
+    81
+    100
+
 
 Note that just like the slices we saw when we looked at lists, `range(1,11)` will return us the numbers from 1 up to *but not including* 11. 
 
@@ -67,6 +115,17 @@ mystring = "bulldozer"
 for c in mystring:
     print(c)
 ```
+
+    b
+    u
+    l
+    l
+    d
+    o
+    z
+    e
+    r
+
 
 So far, the main difference we've seen between while loops and for loops is that for loops eliminate the need for us to create and update our own counter. However, they're much more powerful than that. Using a for loop, we can easily iterate over multiple things at once. Let's define two lists:
 
@@ -85,9 +144,9 @@ for color, price in zip(colors, prices):
 ```
 
     red fabric costs $ 76 per yard.
-    blue fabric costs $ 2 per yard.
-    yellow fabric costs $ 8 per yard.
-    green fabric costs $ 2 per yard.
+    blue fabric costs $ 27 per yard.
+    yellow fabric costs $ 18 per yard.
+    green fabric costs $ 34 per yard.
 
 
 What if we want to iterate over the elements of a list but also need to access the index of the list element? For this we can use `enumerate`:
@@ -116,6 +175,22 @@ for i in range(3,17):   # i is the variable that we'll use, and the range functi
                         # takes care of this for us
 ```
 
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    10
+    11
+    12
+    13
+    14
+    15
+    16
+
+
 Write a for loop that 'flips' a list of boolean variables (changes True to False and changes False to True) by creating a new list containing the 'flipped' booleans.
 
 
@@ -132,6 +207,9 @@ for a in bool_list:        # loop over our list of booleans
                            # we appended it to our new list
 print(newlist)             # print our result so we can see if it's correct
 ```
+
+    [False, False, True, False, True, True, False]
+
 
 Write a for loop that loops through a string and converts every other character in the string to an underscore, starting with the second letter.
 
@@ -167,6 +245,9 @@ for i in range(len(mystring)):
 print(newstring)
 ```
 
+    I_l_k_ _o_a_o_s_
+
+
 
 ```python
 # Here's the same solution to the above problem, without comments:
@@ -179,6 +260,9 @@ for i in range(len(mystring)):
         newstring = newstring + mystring[i]
 print(newstring)
 ```
+
+    I_l_k_ _o_a_o_s_
+
 
 ## Practice Problems
 
@@ -238,6 +322,13 @@ mylist = [4,7,-5,9,1,-2,6,4]
 mylist.index(min(mylist))       # min finds the lowest number, and mylist.index() finds 
                                 # the first index of that number
 ```
+
+
+
+
+    2
+
+
 
 
 ```python

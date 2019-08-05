@@ -86,7 +86,7 @@ for cat in cats:
     print("Name: {}, age: {}, color: {}".format(cat.name, cat.age, cat.color))
 ```
 
-    Name: Arya, age: 5, color: ginger
+    Name: Arya, age: 6, color: ginger
     Name: Lilly, age: 3, color: gray
     Name: Ben, age: 11, color: white
     Name: Ser Pounce, age: 4, color: gray

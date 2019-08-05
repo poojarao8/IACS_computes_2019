@@ -56,7 +56,7 @@ print(am_i_odd(81726))
 name = input("Hi! What is your name? ")
 ```
 
-    Hi! What is your name?  Alice
+    Hi! What is your name?  Luna
 
 
 

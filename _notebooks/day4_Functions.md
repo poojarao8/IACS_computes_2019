@@ -366,24 +366,12 @@ Write a function that takes an integer `n` and prints the first `n` natural numb
 
 ```
 
-    1
-    2
-    3
-
-
 Write a function that takes a string and counts how many vowels (a,e,i,o,u) are there in the string. Return the result.
 
 
 ```python
 
 ```
-
-
-
-
-    4
-
-
 
 Now, remember the first thing we did today. Write a function that takes two arguments: `string` and `t`, and returns the version of the string without consonants if the value of `t` is `c`, and removes vowels if the value of the `t` is `v`. Otherwise it returns `False`.
 
@@ -392,30 +380,12 @@ Now, remember the first thing we did today. Write a function that takes two argu
 
 ```
 
-
-
-
-    'oou'
-
-
-
 Write a function that takes 4 arguments: `name`, `year`, `month`, and `day`. It then greets the user and happliy tells them how old they are, before returning ther age.
 
 
 ```python
 
 ```
-
-    Hi, Blue Ivy!
-    Wow, you're 7 years old!
-
-
-
-
-
-    7
-
-
 
 Write a function that takes a list of strings and concatenates every string to the strings in front of it in the list. For example, the list ["cat", "dog", "fox","pig"] would return ["cat","catdog","catdogfox","catdogfoxpig"]
 
@@ -424,13 +394,6 @@ Write a function that takes a list of strings and concatenates every string to t
 
 ```
 
-
-
-
-    ['cat', 'catdog', 'catdogfox', 'catdogfoxpig']
-
-
-
 Write a function that takes an integer and returns `True` if that number is prime, and `False` if it isn't. Recall that a positive integer greater than 1 is prime if it can only be divided by 1 and itself.
 
 
@@ -438,26 +401,12 @@ Write a function that takes an integer and returns `True` if that number is prim
 
 ```
 
-
-
-
-    True
-
-
-
 Write a function that takes an integer and returns a list of all the factors of the input number.
 
 
 ```python
 
 ```
-
-
-
-
-    [1, 2, 11, 22]
-
-
 
 ## Advanced Problems
 
@@ -485,13 +434,6 @@ Find all prime factors of an integer `n`.
 ```python
 
 ```
-
-
-
-
-    [1, 7]
-
-
 
 
 ```python

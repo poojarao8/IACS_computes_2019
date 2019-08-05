@@ -35,6 +35,9 @@ We can also print all of the test scores at once by printing this variable:
 print(scores)
 ```
 
+    [89, 77, 100, 95, 88]
+
+
 You can put any kind of variable in a list, such as strings or booleans:
 
 
@@ -43,11 +46,17 @@ names = ["Billy", "Matthew", "Shannon", "Kristen", "Taylor"]
 print(names)
 ```
 
+    ['Billy', 'Matthew', 'Shannon', 'Kristen', 'Taylor']
+
+
 
 ```python
 key = [True, False, False, True, False]
 print(key)
 ```
+
+    [True, False, False, True, False]
+
 
 An important aspect of lists is that they are *ordered*. This means that the list `[1,2,3]` is different from the list `[2,1,3]`. This can work to our advantage, because each element of a list is uniquely identified by its position in the list.
 
@@ -62,12 +71,31 @@ print(scores[3])
 print(scores[4])
 ```
 
+    89
+    77
+    100
+    95
+    88
+
+
 *Note*: Python begins numbering the elements of the list from 0. The number used to access an element of a list (i.e. the number inside the square brackets) is called an *index*. So the first element of the list is indexed as the 0th element. What happens if we try to access scores with the index 5?
 
 
 ```python
 print(scores[5])
 ```
+
+
+    ---------------------------------------------------------------------------
+
+    IndexError                                Traceback (most recent call last)
+
+    <ipython-input-7-ad4a294d22ac> in <module>
+    ----> 1 print(scores[5])
+    
+
+    IndexError: list index out of range
+
 
 We get an error. This is because we're trying to access an element of a list that doesn't exist.
 
@@ -78,6 +106,13 @@ While we can't access `scores[5]`, we *can* access `scores[-1]`. When Python enc
 scores[-1]
 ```
 
+
+
+
+    88
+
+
+
 Note that this only works up until you reach the beginning of the list, so the most negative index that won't return an error is -(length of list). In our example, `scores[-5]` would return 89, the first entry of the list, but `scores[-6]` would give an error.
 
 When we access an element of a list, it behaves just like the type that is stored in the list. For example, we can add two elements of a list (when that addition makes sense).
@@ -87,10 +122,16 @@ When we access an element of a list, it behaves just like the type that is store
 print(scores[0] + scores[1])
 ```
 
+    166
+
+
 
 ```python
 print(names[0] + names[1])
 ```
+
+    BillyMatthew
+
 
 We can also make changes to a single element of a list (i.e. we can reassign what is stored at a certain position in the list). For example, let's say we made an error and need to change the third student's score to 79. We can do that like this:
 
@@ -100,6 +141,9 @@ scores[2] = 79 # An index of 2 will give us the 3rd element of the list
 print(scores)
 ```
 
+    [89, 77, 79, 95, 88]
+
+
 In Python, the elements of a list don't have to be the same type. It's therefore possible for us to do something like this:
 
 
@@ -108,12 +152,18 @@ randomlist = ["h", 67, True, 9, "masonry", [7, "moon", [3]], False, True]
 print(randomlist)
 ```
 
+    ['h', 67, True, 9, 'masonry', [7, 'moon', [3]], False, True]
+
+
 From this example, we can see that we can even put lists inside of lists (and lists inside those). These are known as *nested lists*. We can access the elements of these nested lists by adding another set of brackets to the right containing the index of the element within the inner list. For example, if we want to print "moon" from the above nested list, we'd first access the nested list (which is the 6th element in the list so has index 5), then we'd access the second element (index 1) of *that* inner list:
 
 
 ```python
 print(randomlist[5][1])
 ```
+
+    moon
+
 
 ## Some functions we can call on lists
 
@@ -126,6 +176,13 @@ The `len` function (short for length) tells us how many items are in a list.
 len(scores)
 ```
 
+
+
+
+    5
+
+
+
 This is useful if you want to use a loop to perform the same action for all the items in a list.
 
 Say we decided to add 5 points to the score of every student. We can do so like this:
@@ -134,6 +191,9 @@ Say we decided to add 5 points to the score of every student. We can do so like 
 ```python
 print(scores) # For reference, let's see what scores is right now
 ```
+
+    [89, 77, 79, 95, 88]
+
 
 
 ```python
@@ -148,6 +208,9 @@ while i < len(scores):
 print(scores)
 ```
 
+    [94, 82, 84, 100, 93]
+
+
 We can use the append function to add another student's score to the list.
 
 
@@ -156,6 +219,10 @@ print(scores)      # again, print beforehand for reference
 scores.append(85)  # This is a special function that uses a period to act on something. Note the syntax.
 print(scores)
 ```
+
+    [94, 82, 84, 100, 93]
+    [94, 82, 84, 100, 93, 85]
+
 
 The append function is very useful for building up a list from scratch (e.g. inside a loop). One very useful technique is starting an empty list and appending to it later. Accumulating elements of a list in a loop like this is very common.
 
@@ -177,6 +244,9 @@ while i < 8:
 print(mylist)
 ```
 
+    [0, 2, 4, 6, 8, 10, 12, 14]
+
+
 The `del` function removes the element of the list at the index specified. For example, this code deletes the last element of scores.
 
 
@@ -185,6 +255,10 @@ print(scores)
 del scores[-1]
 print(scores)
 ```
+
+    [94, 82, 84, 100, 93, 85]
+    [94, 82, 84, 100, 93]
+
 
 A note of caution: be careful using the `del` function in loops, as it's easy to lose track of how long your list is. This can understandably cause many errors.
 
@@ -202,6 +276,9 @@ while(i < len(b)):
 print(a)
 ```
 
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+
 There is much simpler way to append a list into another list by using the in built Python function `extend`.
 
 
@@ -213,6 +290,9 @@ a.extend(b)
 print(a)
 ```
 
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+
 We can test to see if a list contains some element using the keyword `in`. This will return a boolean (`True` or `False`).
 
 
@@ -220,6 +300,10 @@ We can test to see if a list contains some element using the keyword `in`. This 
 print(1 in a)
 print(13 in a)
 ```
+
+    True
+    False
+
 
 We can use the function `sorted` to sort a list.
 
@@ -230,6 +314,10 @@ sorted_a = sorted(a)
 print("a :", a)
 print("sorted a:", sorted_a)
 ```
+
+    a : [98, 43, 56, 38, 99, 17, 22]
+    sorted a: [17, 22, 38, 43, 56, 98, 99]
+
 
 ## Slicing
 
@@ -247,6 +335,9 @@ To define a slice from elements between indexes `1` and `5`, we would write `[1:
 print(a[1:5])
 ```
 
+    [43, 56, 38, 99]
+
+
 But that only printed 4 numbers??!! In Python, a slice will return you the elements starting with the first index in the slice, up to *but not including* the last element. So `a[1:5]` returned the elements with indices 1, 2, 3, 4 but *not* 5. 
 
 If we leave out the index before the colon, then Python will start the slice with the 0th element:
@@ -256,12 +347,18 @@ If we leave out the index before the colon, then Python will start the slice wit
 print(a[:2])
 ```
 
+    [98, 43]
+
+
 Similarly, if we leave out the index after the colon, then the slice will go from the first index up to the end of the list:
 
 
 ```python
 print(a[3:])
 ```
+
+    [38, 99, 17, 22]
+
 
 As you may have guessed, if we leave out both indices, then we will get the full list. In this case, `a[:]` is just the same as writing `a`.
 
@@ -270,12 +367,18 @@ As you may have guessed, if we leave out both indices, then we will get the full
 print(a[:])
 ```
 
+    [98, 43, 56, 38, 99, 17, 22]
+
+
 We can use the negative indices we saw before to access elements at the end of the list. For example, we can get the last two elements of the list by writing
 
 
 ```python
 print(a[-2:])
 ```
+
+    [17, 22]
+
 
 What if we want to miss out elements? We can define a *step* size, that will allow us to access every $n$th element. For example, if we want to access the 1st, 3rd and 5th elements in our list, we would define a slice with step size 2:
 
@@ -284,12 +387,18 @@ What if we want to miss out elements? We can define a *step* size, that will all
 print(a[1:6:2])
 ```
 
+    [43, 38, 17]
+
+
 We can also use negative step sizes in order to print the list backwards:
 
 
 ```python
 print(a[::-1])
 ```
+
+    [22, 17, 99, 38, 56, 43, 98]
+
 
 The indexing can get a little tricky here. For example, what would we write if we wanted to print the list backwards without the last element? You may think that it would be `a[:-1:-1]`, but that just gives us an empty list:
 
@@ -298,12 +407,18 @@ The indexing can get a little tricky here. For example, what would we write if w
 print(a[:-1:-1])
 ```
 
+    []
+
+
 In fact, to do this we'd write 
 
 
 ```python
 print(a[-2::-1])
 ```
+
+    [17, 99, 38, 56, 43, 98]
+
 
 What's going on here??? We can understand this by imagining that Python starts of by reversing our list, but keeping the indices of the elements the same. The second-to-last element which we wish to begin our new reversed list therefore still has the index -2. We therefore use this index as the starting point for our slice. As we haven't provided an index to the right of the first colon, Python will then print the rest of the elements after this one in the reversed list. 
 
@@ -324,12 +439,28 @@ print(my_tuple[0])
 print(my_tuple[2:])
 ```
 
+    5
+    (1, 8, 2)
+
+
 However, if we try to change one of the elements of the tuple, Python gives us an error:
 
 
 ```python
 my_tuple[1] = 3
 ```
+
+
+    ---------------------------------------------------------------------------
+
+    TypeError                                 Traceback (most recent call last)
+
+    <ipython-input-38-0a2170fd1534> in <module>
+    ----> 1 my_tuple[1] = 3
+    
+
+    TypeError: 'tuple' object does not support item assignment
+
 
 Due to their limitations, tuples may appear to be just a less useful type of list. However, you will often see them used to pass in arguments to functions and more complex data structures where their unchangeable nature (their immutability) can be very useful. 
 
@@ -359,6 +490,9 @@ the_average = the_average / 3
 print(the_average)
 ```
 
+    84.33333333333333
+
+
 Here's the above code without comments:
 
 
@@ -371,6 +505,9 @@ the_average = the_average / 3
 
 print(the_average)
 ```
+
+    84.33333333333333
+
 
 ## Practice Problems
 

@@ -19,6 +19,9 @@ A very simple way to demonstrate how to interact with the user is to take input 
 name = input("What is your name?: ")
 ```
 
+    What is your name?:  Arthur
+
+
 You'll notice a few things from this line. 
 
 First: Python prints out what is inside the string that we passed to the `input()` function. If we had passed nothing, what would we get?
@@ -27,6 +30,16 @@ First: Python prints out what is inside the string that we passed to the `input(
 ```python
 input()
 ```
+
+     
+
+
+
+
+
+    ''
+
+
 
 It's not very informative when a program puts up an empty box and then idles, waiting for an uninformed user to do something. Its good practice to always provide some kind of prompt as a string input argument to `input()`. 
 
@@ -37,6 +50,16 @@ The second thing you may notice is Python that outputs our input. What type is o
 # use the type function to determine the type of our output
 type(input("Give me a number: "))
 ```
+
+    Give me a number:  42
+
+
+
+
+
+    str
+
+
 
 Although I entered a number here, Python interpreted it as a string. That's because everything entered into `input()` gets stored as a string. It is up to the programmer to change the input into the correct data type (this is known by computer scientists as *casting*).  
 
@@ -49,12 +72,18 @@ We can save the input into a variable in the usual way:
 my_name = input("Enter your name: ")
 ```
 
+    Enter your name:  Arthur
+
+
 You'll notice no output was given here, as it was instead stored inside the variable `my_name`. Lets see what is stored in `my_name`.
 
 
 ```python
 print(my_name)
 ```
+
+    Arthur
+
 
 Let's try and get a number from the user now:
 
@@ -75,6 +104,16 @@ print(type(my_int))
 
 ```
 
+    What is the answer to life, the universe and everything?  42
+
+
+    <class 'str'>
+    The answer is  42
+    <class 'int'>
+    The answer is  42
+    <class 'str'>
+
+
 So notice here that we took something that was a string and converted it to an integer. We could do it in one line by doing the following:
 
 
@@ -83,6 +122,13 @@ my_int = int(input("What is the answer to life, the universe and everything? "))
 print(type(my_int))
 print("The answer is " , my_int)
 ```
+
+    What is the answer to life, the universe and everything?  42
+
+
+    <class 'int'>
+    The answer is  42
+
 
 ### A bot you can chat to!
 
@@ -118,6 +164,27 @@ Write some code that uses this chat bot by feeding user input into the chat bot 
 ```python
 chatbot(input("What is your name? "),input ("What is your favorite animal? "),input("where are you from? "))
 ```
+
+    What is your name?  Ford
+    What is your favorite animal?  cat
+    where are you from?  Betelgeuse V
+
+
+    Hello, Ford!
+    
+    Oh, I see you like cats...
+    That choice is pretty usual.
+    
+    Wow, you're from Betelgeuse V.
+    That's good.
+
+
+
+
+
+    'Ford from Betelgeuse V likes cats!'
+
+
 
 Let's make our chatbot more chatty:
 
@@ -173,6 +240,35 @@ def chatbot():
 chatbot()
 ```
 
+    Hi, I'm RUDY! What's your name?  Ford
+
+
+    Nice to meet you, Ford!
+    
+
+
+    I like turtles. What's your favorite animal?  cat
+
+
+    Oh, you like cats...?
+    Boooooring!
+    
+
+
+    Where are you from? :D  Betelgeuse V
+
+
+    Wow, you're from Betelgeuse V??
+    That's good.
+
+
+
+
+
+    'Ford from Betelgeuse V likes cats!'
+
+
+
 ### A quick example of control flow
 
 
@@ -191,6 +287,12 @@ def are_we_there_yet():
 ```python
 are_we_there_yet()
 ```
+
+    Are we there yet?  no
+    Are we there yet?  
+    Are we there yet?  no
+    Are we there yet?  yes
+
 
 ## Read and Write to Files 
 
@@ -220,6 +322,13 @@ The variable `output_file` is of a new kind of data type. Let's see what Python 
 type(output_file)
 ```
 
+
+
+
+    _io.TextIOWrapper
+
+
+
 Think of `output_file` as some kind of interface to the actual file we're interested in,`secret.txt`. `output_file` is *not* the file itself, but through it we can communicate with the file. 
 
 Anything we want to do with `secret.txt`, we must do through `output_file`. Note that `output_file` is just a variable name. We could have named it anything we wanted.
@@ -230,6 +339,13 @@ Now let's write something to our file with the write function.
 ```python
 output_file.write("I know your secrets")
 ```
+
+
+
+
+    19
+
+
 
 This, oddly, printed the number `19` to the screen. This is simply the length of the string that we gave to `write()`. However, `write()` did more than just tell us the length of the string. 
 
@@ -258,6 +374,9 @@ the_line = input_file.readline()
 print(the_line)
 ```
 
+    I know your secrets
+
+
 Yay! The string we added is in our file. Can we read any more? We didn't add anything else, but let's try.
 
 
@@ -265,6 +384,9 @@ Yay! The string we added is in our file. Can we read any more? We didn't add any
 the_second_line = input_file.readline() # read the next line of our file, which is the second line, since we already read the first
 print(the_second_line)
 ```
+
+    
+
 
 No errors, but nothing seems to have happened. That's because `the_second_line` didn't contain anything (which we expected since we knew our file only had one line.)  
   
@@ -307,6 +429,9 @@ with open('secret.txt','r') as the_big_file: # open the file
         print(line)
 ```
 
+    I know them all! Muahaha! 
+
+
 You'll notice that all the lines we printed were put on one single line. Why? 
 
 
@@ -326,6 +451,13 @@ with open('secret.txt','r') as the_big_file:
         print(line)
 ```
 
+    I know them all! Muahaha! 
+    
+    I know them all!
+    
+    Muahaha!
+
+
 Woo hoo! That did what we thought it would do. 
 
 What if we wanted to read the entire file at once?  We can use the `readlines()` function to do that.
@@ -339,12 +471,19 @@ with open('secret.txt', 'r') as the_whole_file:
     print(everything)
 ```
 
+    ['I know them all! Muahaha! \n', 'I know them all!\n', 'Muahaha!']
+
+
 The `readlines()` function stores all of the lines in a file as strings inside a list. So here we got the whole file, stored in a list of length `3` (the number of non-empty lines in the file). You'll notice we have the special characters `"\n"` explicitly written out here. But look what happens if we try printing them -- they'll magically turn back into new lines!
 
 
 ```python
 print(everything[1])
 ```
+
+    I know them all!
+    
+
 
 ## Practice Problems
 

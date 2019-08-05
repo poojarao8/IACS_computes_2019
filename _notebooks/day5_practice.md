@@ -45,8 +45,7 @@ We've already seen the `.split()` method will, by default, split by spaces. Try 
 
 
 ```python
-ga = gettysburg_address.split()
-#ga
+
 ```
 
 Now, the next problem is that some of these still have punctuation. In particular, we see ".", ",", and "--".
@@ -54,14 +53,14 @@ When considering a word, we can get rid of these by using the `replace()` method
 
 
 ```python
-ga = gettysburg_address.replace(".", "").replace(",", "").replace("--", "").split()
+
 ```
 
 Another problem is case—we want to count 'but' and 'But' as the same. Use the `lower()` method that can be used to covert this string:
 
 
 ```python
-ga = gettysburg_address.lower().replace(".", "").replace(",", "").replace("--", "").split()
+
 ```
 
 Create a dictionary that uses the unique words as keys and has as a value the number of times that word appears.
@@ -86,18 +85,14 @@ Using the `set()` function, turn the list of words into a set, removing any dupl
 
 
 ```python
-ga_set = set(ga)
+
 ```
 
 Now loop over the unique words and use the `count` method of a list to find how many there are:
 
 
 ```python
-count = {}
-for uw in ga_set:
-    count[uw] = ga.count(uw)
-    
-# count
+
 ```
 
 ## Dictionary sorting 

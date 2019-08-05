@@ -191,9 +191,6 @@ Create a list of strings that say `n is even`, where `n` is every even number in
 
 ```
 
-    ['0 is even', '2 is even', '4 is even', '6 is even', '8 is even', '10 is even']
-
-
 If we list all the natural numbers below 10 that are multiples of 3 or 5, we get \[3, 5 ,6 , 9\]. The sum of these multiples is `23`. Using a list comprehension, find the sum of all the multiples of 3 or 5 below 1000. (The problem is from [projecteuler.net](projecteuler.net)). *Hint*: we can find the sum of a list using the function `sum`. 
 
 
@@ -210,9 +207,6 @@ Using a list comprehension, create a new list made up of words from word from a 
 ```python
 
 ```
-
-    ['Ayla', 'Sanket', 'alena']
-
 
 
 ```python

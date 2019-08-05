@@ -138,8 +138,3 @@ for i, creature in enumerate(my_list):
     dragon is element number 4
     elf is element number 5
 
-
-
-```python
-
-```

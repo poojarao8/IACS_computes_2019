@@ -16,13 +16,7 @@ Leap years occur mostly every 4 years, but every 100 years we skip a leap year u
 
 
 ```python
-def leap(year):
-    if year % 4 == 0:
-        if not year % 100 == 0 or year % 400 == 0:
-            return True
-    return False
 
-leap(2100)
 ```
 
 
@@ -36,19 +30,7 @@ Next, write a function `leap_years` that tells you which years out of the next `
 
 
 ```python
-def leap_years(n):
-    
-    l = []
-    cy = 2018
-    
-    for i in range(1, n):
-        check = leap(cy + i)
-        if check:
-            l.append(cy + i)
-            
-    return l
 
-leap_years(20)
 ```
 
 
@@ -60,10 +42,7 @@ leap_years(20)
 
 
 ```python
-def fancy_leap_years(n):
-    return [i for i in range(2018, 2018 + n) if leap(i)]
 
-fancy_leap_years(50)
 ```
 
 
@@ -79,28 +58,12 @@ Write a function which implements [Pascal's triangle](http://mathforum.org/dr.ma
 
 
 ```python
-def pascal(n):
-    
-    if n == 1:
-        print([1])
-        return [1]
-    if n == 2:
-        print([1])
-        print([1,1])
-        return [1,1]
-    
-    prev_level = pascal(n - 1)
-    new = [1]
-    for i in range(len(prev_level) - 1):
-        new.append(prev_level[i] + prev_level[i + 1])
-    new.append(1)
-    print(new)
-    return new
+
 ```
 
 
 ```python
-pascal(7)
+
 ```
 
     [1]
