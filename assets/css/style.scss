@@ -28,3 +28,13 @@
   display: none;
   overflow: hidden;
 }
+
+/* stop the main content from being so narrow */
+section {
+  max-width:800px;
+  min-width: 500px;
+  float:right;
+  padding-bottom:50px;
+  margin: auto;
+  margin-bottom: 20px;
+}
