@@ -10,3 +10,6 @@ collections:
     days:
         output: true
         permalink: /days/:name
+    images:
+        output: true
+        permalink: /images/:name

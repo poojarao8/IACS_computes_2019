@@ -225,7 +225,7 @@ plt.show()
 ```
 
 
-![png](cryptography_files/cryptography_14_0.png)
+<img src="{{ site.baseurl }}/images/cryptography_14_0.png" />
 
 
 As expected, the frequencies of letters like a, e and t are highest, whereas there are very few j's, q's, x's or z's. Now let's encrypt a longer message and see what happens when we compare the frequency distribution of letters against standard English.
@@ -284,7 +284,7 @@ plt.show()
 ```
 
 
-![png](cryptography_files/cryptography_18_0.png)
+<img src="{{ site.baseurl }}/images/cryptography_18_0.png" />
 
 
 Here we can clearly see that the most frequent letters in the encrypted message do not line up with what we'd expect for something in standard English. Let's make a first pass at decrypting the message by assuming that the most common letter in the encrypted message is the same as the most common letter in English, and so on for all the other letters. 
@@ -349,7 +349,7 @@ One of the simplest (and earliest, dating back to the 16th century) examples of 
 
 To encrypt a message with the Vigenère cipher, we first start of with a *Vigenère square*:
 
-![](Vigenère_square_shading.svg)
+<img src="{{ site.baseurl }}/images/Vigenère_square_shading.svg" />
 
 Next, we need to choose a *key* with which to encrypt our message. This is sort of like a password, and just like a password, the longer and more random the key is, the more secure our message will be (so the safer Bob and I's messages will be from Charlie). However, to illustrate the dangers of short, easily guessable passwords, for this example I shall choose the word `PYTHON`. 
 
@@ -472,7 +472,7 @@ plt.show()
 ```
 
 
-![png](cryptography_files/cryptography_34_0.png)
+<img src="{{ site.baseurl }}/images/cryptography_34_0.png" />
 
 
 As we can see, the distribution of the letters in the ciphertext is a lot more even than in standard english. This is because of the polyalphabetic cipher: as letters in the plaintext can now be encrypted as several different letters, this has a way of 'averaging out' the individual letters in the distribution. 
@@ -501,7 +501,7 @@ plt.show()
 ```
 
 
-![png](cryptography_files/cryptography_36_0.png)
+<img src="{{ site.baseurl }}/images/cryptography_36_0.png" />
 
 
 Better, but still not quite plain English. Charlie repeats this for different key lengths. Here's what it looks like with the (correct) guess of a key of length 6:
@@ -528,7 +528,7 @@ plt.show()
 ```
 
 
-![png](cryptography_files/cryptography_38_0.png)
+<img src="{{ site.baseurl }}/images/cryptography_38_0.png" />
 
 
 Much better! We can see here that the most common letters in the ciphertext (D and T) have frequencies very close to the most common letters in plain English (T and E respectively). From this, Charlie can infer that this set of letters was encrypted with the letter P (A is always encrypted as the key letter, so we can count back from the letter corresponding to E in the ciphertext (T) to find this. All Charlie to do now is repeat this for the other 5 letters in the key, and Charlie can both decrypt the message *and* discover the key. This second point is particularly dangerous, as it means that not only can Charlie read our messages, they can also send encrypted messages impersonating us. 

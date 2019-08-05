@@ -36,7 +36,7 @@ Next we define a function called `__init__`. This is a special function called t
 
 To try and see how all this works a bit more, let's actually make a particular `Cat`. A particular instance of a class is known as an *object*. I'm going to make an object that represents my cat Arya.
 
-![arya](arya.jpeg)
+<img src="{{ site.baseurl }}/images/arya.jpeg" />
 
 
 ```python
