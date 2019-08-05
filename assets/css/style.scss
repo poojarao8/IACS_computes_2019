@@ -59,6 +59,14 @@ footer {
   min-width:100px;
 }
 
+.highlight {
+    background-color: #ffffff;
+}
+
+.language-python.highlighter-rouge .highlight {
+    background-color: #f8f8f8;
+}
+
 @media print, screen and (max-width: 960px) {
 
   header, section, footer {
