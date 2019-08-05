@@ -1,10 +1,8 @@
 ---
 layout: post
 title:  Day3-strings
-date:   2019-08-04
+date:   2019-08-05
 day: 3
-next:
-prev:
 ---
 
 
@@ -333,53 +331,35 @@ Create a list containing some strings. Then add all of the strings together and 
 
 
 ```python
-my_list = ["anti", "dis", "establish", "ment", "arian","ism"]
 
-new_string = ""
-
-for s in my_list:
-    new_string += s
-    
-print(new_string)
 ```
 
 Write some code that determines how many words are in a string. (Assume that the string is a sentence where words are all seperated by a space).
 
 
 ```python
-my_string = "Mr. and Mrs. Dursley of number four, Privet Drive, were proud to say that they were perfectly normal, thank you very much."
-print(len(my_string.split()))
+
 ```
 
 Write some code that doubles every letter. For example, 'Help' would become 'HHeellpp'. Store the elongated string as a new string, and print it.
 
 
 ```python
-word = "Help"
-new_string = ""
-for l in word:
-    new_string += l*2
-print(new_string)
+
 ```
 
 Write some code that takes a string as input and prints the string, written in reverse. For example, if given the string 'coconut" the cell would print 'tunococ'.
 
 
 ```python
-word = "coconut"
-print(word[::-1])
+
 ```
 
 Write some code that inserts the character 'h' at a given location inside another string. For example, create an integer and initialize it to 5. Then insert 'h' after the 5th position of the string 'She sells seashells'.
 
 
 ```python
-character = 'h'
-location = 5                            # change this to have some fun
-test_string = "She sells seashells"     # or change this for some more fun
 
-new_string = test_string[:5] + character + test_string[5:]
-print(new_string)
 ```
 
 ## Advanced Problems
@@ -388,27 +368,14 @@ print(new_string)
 
 
 ```python
-result = False
-my_string = "blah3"
-for l in my_string:
-    if l.isdigit():
-        result = True
-print(result)
+
 ```
 
 *Vowels*: Write some code that determines the index (or indices) in a string of all the vowels. 
 
 
 ```python
-vowels = ["a", "o", "i", "u", "e"]
-count = 0
-my_string = "Hello world!"
 
-for l in my_string:
-    if l in vowels:
-        count += 1
-    
-print(count)
 ```
 
 *Palindrome*:  
@@ -419,15 +386,7 @@ Write some code that determines if a string is a palindrome. Make it case insens
 
 
 ```python
-palindrome = True
-string = "tacocat"
-scan = len(string) // 2
 
-for i in range(scan + 1):
-    if string[i] != string[-(i + 1)]:
-        palindrome = False
-    
-print(palindrome)
 ```
 
 

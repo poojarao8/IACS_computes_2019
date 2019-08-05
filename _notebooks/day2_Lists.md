@@ -1,10 +1,8 @@
 ---
 layout: post
 title:  Lists
-date:   2019-08-04
+date:   2019-08-05
 day: 2
-next:
-prev:
 ---
 
 

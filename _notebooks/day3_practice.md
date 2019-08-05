@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Practice
-date:   2019-08-04
+date:   2019-08-05
 day: 3
 ---
 
@@ -66,47 +66,7 @@ Now, write your own code to draw sunglasses!
 
 
 ```python
-# clean up just in case
-ted.home()
-ted.clear()
 
-ted.pensize(3)
-ted.pencolor('black')
-ted.fillcolor((0.6, 0.8, 0.9))
-
-ted.begin_fill()
-ted.circle(25)
-ted.end_fill()
-
-ted.penup()
-ted.goto((70,0))
-ted.pendown()
-ted.begin_fill()
-ted.circle(25)
-ted.end_fill()
-
-ted.penup()
-ted.goto((25,25))
-ted.pendown()
-ted.goto((45,25))
-
-ted.penup()
-ted.goto((-25,25))
-ted.pendown()
-ted.left(50)
-ted.forward(75)
-ted.right(50)
-ted.forward(20)
-
-ted.penup()
-ted.goto((95,25))
-ted.pendown()
-ted.left(50)
-ted.forward(75)
-ted.right(50)
-ted.forward(20)
-
-ted.hideturtle()
 ```
 
 After we're done drawing, let's close the window.

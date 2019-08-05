@@ -1,10 +1,8 @@
 ---
 layout: post
 title:  I o
-date:   2019-08-04
+date:   2019-08-05
 day: 4
-next:
-prev:
 ---
 
 
@@ -358,22 +356,12 @@ Check that your function works by either opening the file manually, or by openin
 
 
 ```python
-def write_to_file(my_string, file_name):
-    
-    with open(file_name,'a') as my_file:
-        my_file.write(my_string)
+
 ```
 
 
 ```python
-# use this cell to open your file and print the content
 
-write_to_file("Hello World!\n\nGoodbye.", "hello_world.txt")
-
-with open('hello_world.txt', 'r') as reader:
-
-    for line in reader:
-        print(line)
 ```
 
 Write a function with no arguments that prompts the user to enter a random integer between zero and one-hundred. 
@@ -386,35 +374,22 @@ Make sure to cast the number entered as an integer!!
 
 
 ```python
-def get_number():
-    # Prompt user for a number
-    the_number = input("Please enter an integer between 1 and 100: ")
-    
-    # Return the number
-    return int(the_number)
+
 ```
 
 
 ```python
-def bonus_get_number():
-    the_number = 0
-    
-    while the_number < 1 or the_number > 100:
-        # Prompt user for a number
-        the_number = int(input("Please enter an integer between 1 and 100: "))
-    
-    # Return the number
-    return the_number
+
 ```
 
 
 ```python
-print(get_number())
+
 ```
 
 
 ```python
-print(bonus_get_number())
+
 ```
 
 Write a function that takes a number as its only argument. 
@@ -427,40 +402,12 @@ Have your function return True if its equal and False otherwise.
 
 
 ```python
-def guess(n):
-    
-    # Prompt user for a number
-    # making sure to cast it as an int
-    the_guess = int(input("Please enter an integer between 1 and 100: "))
-    
-    # Check if too low
-    if the_guess < n:
-        
-        # Too low!
-        print("Your guess was too low.")
-        
-    # Check if too high
-    elif the_guess > n:
-        
-        # Too high!
-        print("Your guess was too high.")
-        
-    # Else handles the case the_number == n
-    else:
-        
-        # They guessed right
-        print("You guessed right!\nThe number was", n)
-        return True
-    
-    # If we get here then they didn't guess the number
-    # so return False
-    return False
+
 ```
 
 
 ```python
-# Testing guess
-guess(30)
+
 ```
 
 ## Advanced Problem 
@@ -469,39 +416,10 @@ guess(30)
 
 
 ```python
-# We need this library to generate a random number
-import random
 
-def guessing_game( ):
-    
-   # This creates a random integer between 1 and 100
-    # and stores it in the variable named "the_number"
-    the_number = random.randint(1,100)
-    
-    # Boolean variable to determine if we continue
-    game = True
-    
-    # Going to be smart and use the previous code we wrote!
-    while game:
-        
-        # Check if guess is correct
-        if guess(the_number):
-            
-            # They got it right
-            print("Congratulations! You've won the guessing game.")
-            
-            # We need to exit the game
-            return
-    
-        # If we get here, they guessed wrong
-        else:
-            
-            # Tell them to try again
-            print("Try again!")
-            print("") # This empty line helps with read-ability
 ```
 
 
 ```python
-guessing_game()
+
 ```

@@ -1,10 +1,8 @@
 ---
 layout: post
 title:  Advanced lists
-date:   2019-08-04
+date:   2019-08-05
 day: 6
-next:
-prev:
 ---
 
 
@@ -190,9 +188,7 @@ Create a list of strings that say `n is even`, where `n` is every even number in
 
 
 ```python
-n = 10
-r = [str(x) + " is even" for x in range(n + 1) if x % 2 == 0]
-print(r)
+
 ```
 
     ['0 is even', '2 is even', '4 is even', '6 is even', '8 is even', '10 is even']
@@ -202,9 +198,7 @@ If we list all the natural numbers below 10 that are multiples of 3 or 5, we get
 
 
 ```python
-l = [i for i in range(1,1001) if i % 3 == 0 or i % 5 == 0]
 
-print(sum(l))
 ```
 
 Using a list comprehension, create a new list made up of words from word from a given list that either start with a capital letter, or start with `a` and have exactly `5` characters. For example:
@@ -214,10 +208,7 @@ Using a list comprehension, create a new list made up of words from word from a 
 
 
 ```python
-names = ["jess", "Ayla", "Sanket", "alena", "jimmy"]
 
-res = [x for x in names if x.istitle() or (x[0] == 'a' and len(x) == 5)]
-print(res)
 ```
 
     ['Ayla', 'Sanket', 'alena']

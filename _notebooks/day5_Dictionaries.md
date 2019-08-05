@@ -1,10 +1,8 @@
 ---
 layout: post
 title:  Dictionaries
-date:   2019-08-04
+date:   2019-08-05
 day: 5
-next:
-prev:
 ---
 
 
@@ -467,13 +465,7 @@ Try to implement this using memoization:
 
 
 ```python
-d = {0:1}
 
-def nw(n):
-    if n in d:
-        return d[n]
-    else:
-        val = nw(n-1) + 1
 ```
 
 ### Exercise 4

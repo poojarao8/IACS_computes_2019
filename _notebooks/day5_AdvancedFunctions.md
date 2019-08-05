@@ -1,10 +1,8 @@
 ---
 layout: post
 title:  Advanced functions
-date:   2019-08-04
+date:   2019-08-05
 day: 5
-next:
-prev:
 ---
 
 
@@ -346,49 +344,28 @@ Write a function called `factorial` with an argument `n` as input, which returns
 
 
 ```python
-def factorial(n):
-    num = 1
-    for i in range(1,n+1):
-        num *= i
-    return num
 
-factorial(5)
 ```
 
 Now implement a recursive version of the factorial function
 
 
 ```python
-def factorial_recursive(n):
-    if n == 1:
-        return 1
-    return n * factorial_recursive(n - 1)
 
-factorial_recursive(5)
 ```
 
 Implement a recursive function to calculate $f(x) = 3x$.
 
 
 ```python
-def f(x):
-    if x == 0:
-        return 0
-    return 3 + f(x - 1)
 
-f(5)
 ```
 
 Implement a recursive function to calculate the sum of the first `n` positive integers.
 
 
 ```python
-def f(x):
-    if x == 0:
-        return 0
-    return x + f(x - 1)
 
-f(5)
 ```
 
 The Fibonacci sequence is given by: 
@@ -403,19 +380,7 @@ Implement a recursive function to generate the $n$th number in the Fibonacci seq
 
 
 ```python
-def fib(x):
-    if x == 0:
-        return 0
-    if x == 1:
-        return 1
-    
-    return fib(x - 1) + fib(x - 2)
 
-def print_fib(x):
-    for i in range(x):
-        print(fib(i), end=" ")
-        
-print_fib(10)
 ```
 
 ## Advanced Problems
@@ -424,39 +389,7 @@ Write a recursive function which implements Pascal's triangle: (http://mathforum
 
 
 ```python
-def pascal(n):
-    if n == 1:
-        print("1")
-        return [1]
-    if n == 2:
-        previous = pascal(1)
-        print("1 1")
-        return [1, 1]
-    
-    previous = pascal(n - 1)
-    new = [1] + [previous[i] + previous[i + 1] for i in range(len(previous) - 1)] + [1]
-    print(" ".join([str(i) for i in new[:]]))
-    return new
 
-
-def pascal_old(n):
-    if n == 1:
-        print([1])
-        return [1]
-    if n == 2:
-        previous = pascal_old(1)
-        print([1, 1])
-        return [1, 1]
-    
-    previous = pascal_old(n-1)
-    new = [1]
-    for i in range(len(previous)-1):
-        new.append(previous[i] + previous[i + 1])
-    new.append(1)
-    print(new)
-    return new
-
-pascal(10)
 ```
 
 

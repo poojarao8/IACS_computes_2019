@@ -1,10 +1,8 @@
 ---
 layout: post
 title:  Variables
-date:   2019-08-04
+date:   2019-08-05
 day: 1
-next:
-prev:
 ---
 
 
@@ -194,36 +192,28 @@ Add 10 to that variable, then print it.
 
 
 ```python
-a = 58
-a = a + 10 # or a += 10
-print(a)
+
 ```
 
 Write some code that creates an integer variable with value between 10 and 99. Print the quotient and remainder of that integer resulting from division by 7.
 
 
 ```python
-a = 50
-print("Quotient:", a//7)
-print("Remainder:", a%7)
+
 ```
 
 Write some code that creates a variable and assign to it a string containing your name (e.g. "Liz"). Print this string twice. (Guess how to print a string a couple of times!)
 
 
 ```python
-a = "Alena"
-print(a * 2)
+
 ```
 
 Write some code that creates two variables, and assign each variable to a string containing an animal (e.g. "cat" or "dog"). Add these two strings together and print the result.
 
 
 ```python
-a = "cat"
-b = "dog"
-c = a + b
-print(c)
+
 ```
 
 ## Advanced Problems 
@@ -245,10 +235,7 @@ $$
 
 
 ```python
-A = True
-B = False
 
-print(not A == B)
 ```
 
 Write some code that saves a number to the variable `num_minutes`. Convert that number to be read in days:hours:minutes and print this to the screen. Use as many additional variables as necessary. The following table gives you some inputs with the correct outputs so you can test your code's accuracy.
@@ -268,18 +255,10 @@ Hint: the function `print` can be called with more that one *argument* by separa
 
 
 ```python
-print(4, ":", 5, ":", 4)
+
 ```
 
 
 ```python
-minutes = 43219
 
-minutes_in_day = 60 * 24
-days = minutes // minutes_in_day
-minutes = minutes - days * minutes_in_day
-hours = minutes // 60
-minutes = minutes - hours * 60
-
-print(days, ":", hours, ":", minutes)
 ```

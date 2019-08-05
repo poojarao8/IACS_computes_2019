@@ -1,10 +1,8 @@
 ---
 layout: post
 title:  Functions
-date:   2019-08-04
+date:   2019-08-05
 day: 4
-next:
-prev:
 ---
 
 
@@ -365,11 +363,7 @@ Write a function that takes an integer `n` and prints the first `n` natural numb
 
 
 ```python
-def print_numbers(n):
-    for i in range(1,n+1):
-        print(i)
-        
-print_numbers(3)
+
 ```
 
     1
@@ -381,15 +375,7 @@ Write a function that takes a string and counts how many vowels (a,e,i,o,u) are 
 
 
 ```python
-def vowel_count(string):
-    count = 0
-    vowels = ["i", "e", "u", "a", "o"]
-    for l in string:
-        if l in vowels:
-            count += 1
-    return count
 
-vowel_count("abababo")
 ```
 
 
@@ -403,24 +389,7 @@ Now, remember the first thing we did today. Write a function that takes two argu
 
 
 ```python
-def remove_something(string, t):
-    new_string = ""
-    vowels = ["i", "e", "u", "a", "o"]
-    if t == "c":
-        for l in string:
-            if l in vowels:
-                new_string += l
-        return new_string
-    
-    elif t == "v":
-        for l in string:
-            if l not in vowels:
-                new_string += l
-        return new_string
-    else:
-        return False
-    
-remove_something("coconut", "c")
+
 ```
 
 
@@ -434,23 +403,7 @@ Write a function that takes 4 arguments: `name`, `year`, `month`, and `day`. It 
 
 
 ```python
-def new_age(birth_year, birth_month, birth_day):
-    today = 16
-    this_month = 8
-    this_year = 2019
-    if (birth_month > this_month) or ((birth_month == this_month) and (birth_day >= today)):
-        return this_year - birth_year - 1
-    else:
-        return this_year - birth_year
-    
-    
-def weird_chat(name, year, month, day):
-    print("Hi,", name + "!")
-    age = new_age(year, month, day)
-    print("Wow, you're", age, "years old!")
-    return age
 
-weird_chat("Blue Ivy", 2012, 1, 7)
 ```
 
     Hi, Blue Ivy!
@@ -468,14 +421,7 @@ Write a function that takes a list of strings and concatenates every string to t
 
 
 ```python
-animals = ["cat", "dog", "fox", "pig"] 
 
-def concat(ls):
-    for i in range(1, len(ls)):
-        ls[i] = ls[i-1] + ls[i]
-    return ls
-
-concat(animals)
 ```
 
 
@@ -489,13 +435,7 @@ Write a function that takes an integer and returns `True` if that number is prim
 
 
 ```python
-def prime(n):
-    for i in range(2, n//2 + 1): # we only need to check up to half the number
-        if n%i == 0:
-            return False        # to save time, we can just return False as soon as we find a factor of n so we don't waste time checking the other numbers
-    return True
 
-prime(113)
 ```
 
 
@@ -509,14 +449,7 @@ Write a function that takes an integer and returns a list of all the factors of 
 
 
 ```python
-def divides(n):
-    factors = []
-    for divisor in range(1, n+1):
-        if n % divisor == 0:
-            factors.append(divisor)
-    return factors
-        
-divides(22)
+
 ```
 
 
@@ -541,30 +474,7 @@ Test the following strings:
 
 
 ```python
-def password(pw):
-    lower = False
-    upper = False
-    number = False
-    char = False
-    
-    ch = [".", ",", "!", "?", "$", "&", "^", ":", ";"]
-    
-    for i in pw:
-        if i.islower():
-            lower = True
-        elif i.isupper():
-            upper = True
-        elif i.isdigit():
-            number = True
-        elif i in ch:
-            char = True
-            
-    if lower and upper and number and char and len(pw) >= 9:
-        return True
-    else:
-        return False
-    
-password("password_is_stron2:gD")
+
 ```
 
 By the way, **this advice is wrong**: read [this article](https://www.usatoday.com/story/news/nation-now/2017/08/09/password-expert-says-he-wrong-numbers-capital-letters-and-symbols-useless/552013001/) from *USA today*. People still tend to choose very predictable sequences of numbers, words, and special symbols. A much more secure option is to choose a longer password made up of several random words, e.g. purple tortoise silence cobras -> `purpletortoisesilencecobras`.
@@ -573,28 +483,7 @@ Find all prime factors of an integer `n`.
 
 
 ```python
-def prime(n):
-    for i in range(2, n//2 + 1):
-        if n%i == 0:
-            return False
-    return True
 
-def factors(n):
-    facs = []
-    for divisor in range(1,n+1):
-        if n % divisor == 0:
-            facs.append(divisor)
-    return facs
-
-def prime_factors(n):
-    pf = []
-    f = factors(n)
-    for i in f:
-        if prime(i):
-            pf.append(i)
-    return pf
-
-prime_factors(49)
 ```
 
 

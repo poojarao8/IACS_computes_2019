@@ -1,10 +1,8 @@
 ---
 layout: post
 title:  While loops
-date:   2019-08-04
+date:   2019-08-05
 day: 1
-next:
-prev:
 ---
 
 
@@ -197,43 +195,28 @@ Write a loop to print the first 10 natural numbers in descending order. (Print 1
 
 
 ```python
-n = 10
-while n > 0:
-    print(n)
-    n = n - 1
+
 ```
 
 Write a loop to print the odd numbers between 17 and 67.
 
 
 ```python
-n = 17
-while n <= 67:
-    if n % 2 == 1:
-        print(n)
-    n += 1
+
 ```
 
 Write a loop to print the first 11 multiples of the number 3 (start with 0). So your loop should print 0, 3, 6, ...
 
 
 ```python
-n = 0
-while n <= 11:
-    print(n * 3)
-    n += 1
+
 ```
 
 Write a loop to calculate the product of the first 5 numbers. (Hint: The answer is 120. This is also known as the factorial function. This code should be very similar to the loop that sums the first 10 numbers.)
 
 
 ```python
-result = 1
-n = 1
-while n <= 5:
-    result = result * n
-    n += 1
-print(result)
+
 ```
 
 ## Advanced Practice Problems
@@ -243,15 +226,7 @@ Write some code to print out each pair of divisors of an integer variable `n` th
 
 
 ```python
-import math
 
-n = 100
-div = 1
-
-while div <= math.sqrt(n):
-    if n % div == 0:
-        print(n // div, "*", div, "=", n)
-    div += 1
 ```
 
 **Growing Numbers**  
@@ -259,15 +234,7 @@ Write a cell that when executed prints the numbers from 1 to n (a variable that 
 
 
 ```python
-n = 5
-i = 1
 
-while i <= n:
-    j = 1
-    while j <= i:
-        print(i)
-        j = j + 1
-    i = i + 1
 ```
 
 **Series**  
@@ -280,17 +247,7 @@ This sum simply adds up all of the natural numbers from 1 to $n$. A worked examp
 
 
 ```python
-number_of_terms = 10
-my_sum = 0
 
-i = 1
-
-while i <= number_of_terms:
-    my_sum = my_sum + i
-    
-    i = i + 1
-
-print(my_sum)
 ```
 
 Once you have that sum working, modify your code to try these sums:
@@ -299,33 +256,14 @@ $$1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \dots + \frac{1}{2^n}$$
 
 
 ```python
-number_of_terms = 25
-my_sum = 0
 
-i = 0
-
-while i <= number_of_terms:
-    my_sum = my_sum + 1.0/(2**i)
-    i = i + 1
-
-print(my_sum)
 ```
 
 $$1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \frac{1}{5} - \dots + \frac{(-1)^{n+1}}{n} $$
 
 
 ```python
-number_of_terms = 2500000
 
-my_sum = 1
-i = 2
-
-while i <= number_of_terms:
-    my_sum = my_sum + (-1.0)**(i + 1) / i
-    
-    i = i + 1
-
-print(my_sum)
 ```
 
 
