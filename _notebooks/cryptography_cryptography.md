@@ -8,7 +8,7 @@ day: ptography
 
 # Cryptography
 
-Cryptography is everywhere in modern life. Everytime you send or receive some kind of electronic communication, it will encrypted in some way. The strength of the encryption will depend on how sensitive the information is. 
+Cryptography is everywhere in modern life. Every time you send or receive some kind of electronic communication, it will be encrypted in some way. The strength of the encryption will depend on how sensitive the information is. 
 
 ## Making codes with code
 
