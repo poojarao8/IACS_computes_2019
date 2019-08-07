@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Numpy
-date:   2019-08-06
+date:   2019-08-07
 day: 5
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Day3-strings
-date:   2019-08-05
+date:   2019-08-07
 day: 3
 ---
 

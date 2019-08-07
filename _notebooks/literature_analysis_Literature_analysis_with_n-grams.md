@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Literature analysis with n-grams
-date:   2019-08-05
+date:   2019-08-07
 day: erature_analysis
 ---
 
