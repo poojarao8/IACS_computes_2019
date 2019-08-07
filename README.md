@@ -25,11 +25,11 @@ Time | August 12 | August 13 | August 14 | August 15 | August 16
 Time | August 19 | August 20 | August 21 | August 22 | August 23
 ---------- | ---------- | ---------- | ---------- | ---------- | ----------
 **09:00** | warm up | warm up | warm up | student projects | student projects
-**10:00** | advanced lists | Literature analysis | Fractals | student projects | student projects
-**11:00** | classes | Literature analysis | Fractals | student projects | student projects
+**10:00** | advanced lists | literature analysis | fractals | student projects | student projects
+**11:00** | classes | literature analysis | fractals | student projects | student projects
 **12:00** | lunch | lunch | lunch | lunch | lunch
-**13:00** | classes | Cryptography | Data analysis | student projects | student presentations
-**14:00** | coding practice | Cryptography | projects intro | student projects | student presentations
+**13:00** | classes | cryptography | Data processing | student projects | student presentations
+**14:00** | coding practice | cryptography | projects intro | student projects | student presentations
 
 
 ## Materials
@@ -80,17 +80,15 @@ Time | August 19 | August 20 | August 21 | August 22 | August 23
 
 #### Day 8 (Wednesday, August 21)
 1. Warm-up
-2. AI/NLP projects
-3. Simulation
+2. Fractals
+3. Data processing
 
-#### Day 9 (Thursday, August 22)
-1. Towers of Hanoi
-2. Tic Tac Toe
-3. Text-based Adventure
-4. Automated Trading
-
-#### Day 10 (Friday, August 23)
-1. Survey!
+#### Days 9 & 10 (Thursday, August 22 & Friday, August 23)
+Student projects
+- Towers of Hanoi
+- Tic Tac Toe
+- Text-based Adventure
+- Dead or alive
 
 ## Anaconda installation
 
