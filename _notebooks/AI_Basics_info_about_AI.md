@@ -13,7 +13,7 @@ day:
 * How will you understand that AI achieved its goals?
 * **Superintelligence: Paths, Dangers, Strategies** by *Nick Bostrom*
 
-<img src="1.jpg" alt="drawing" width="200"/>
+<img src="{{ site.baseurl }}/images/1.jpg" alt="drawing" width="200"/>
 
 ## Areas that are traditionally associated with AI
 * Reasoning
@@ -28,7 +28,7 @@ Not a challenge for a human. But how to encode reasoning into a computer?
 * Logic
 * Machine learning
 * Result of extracting knowledge from the world is **ontologies** that show relations among events, companies, people, etc.
-<img src="2.png" alt="drawing" width="500"/>
+<img src="{{ site.baseurl }}/images/2.png" alt="drawing" width="500"/>
 
 ### Natural Language Processing
 
@@ -58,7 +58,7 @@ os.system("espeak 'lol'")
 **Project(?):** transducer-based machine translation.
 
 ### Computer vision
-<img src="3.jpg" alt="drawing" width="500"/>
+<img src="{{ site.baseurl }}/images/3.jpg" alt="drawing" width="500"/>
 
 **One of the mian tasks:**
 * How not to bump in the walls?
@@ -70,7 +70,7 @@ If you are interested in working on computer vision with Python, check out [this
 ### Robotics
 Sophia was the first robot that was awarded citizenship. She is a [citizen of Saudi Arabia](https://www.youtube.com/watch?v=sKrV2CVDXjo)!
 
-<img src="4.png" alt="drawing" width="400"/>
+<img src="{{ site.baseurl }}/images/4.png" alt="drawing" width="400"/>
 
 
 

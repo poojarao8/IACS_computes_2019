@@ -7,9 +7,9 @@ all: $(TAR) images
 	git add _notebooks/*.md
 
 jupyter_notebooks/%.md: jupyter_notebooks/%.ipynb
-	jupyter nbconvert --to markdown $<
-	#sed -i -E 's/(!\[.*?\]\()(.*?)\)/\1{{ site.baseurl }}{% link images\/\2 %}\)/g' $@
-	sed -i -E 's/(!\[.*?\]\()(.*\/|)(.*?)\)/<img src="{{ site.baseurl }}\/images\/\3" \/>/g' $@ 
+	jupyter nbconvert --to markdown $< 
+	sed -i -E 's~img src="(.*?)"~img src="{{ site.baseurl }}/images/\1"~g' $@
+	sed -i -E 's/(!\[.*?\]\()(.*\/|)(.*?)\)/<img src="{{ site.baseurl }}\/images\/\3" \/>/g' $@
 	python make_post.py $@
 
 .PHONY: clean

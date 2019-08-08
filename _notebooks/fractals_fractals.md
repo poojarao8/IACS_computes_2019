@@ -20,13 +20,13 @@ The mathematical definition of a fractal is rather complex, and we will not worr
 
 Lets start with a normal geometric shape, say a circle or a square. If we zoom in to a part of these shapes, we get a straight or curved line:
 
-<img src="not_fractal.png" width="500">
+<img src="{{ site.baseurl }}/images/not_fractal.png" width="500">
 
 The zoomed pictures obviously do not resemble the full shapes, thus these simple examples are not self-similar, and not fractals.
 
 So what would a simple fractal look like? Say we define an algorithm to make a tree. This agorithm involves drawing a "root" (straight line) with two "branches" coming off at angles from the end. Each one of these branches has its own two branches, and so on. If we draw a picture of this and zoom in we see something like this:
 
-<img src="ch08_04.png">
+<img src="{{ site.baseurl }}/images/ch08_04.png">
 
 Looking closely at any branch gives something that looks like the tree itself. Therefore, this geometric construction is *self-similar*!
 
@@ -34,7 +34,7 @@ In the simple case of the tree, you could imagine from the definition of how to 
 
 A simple example of this is the fluctuations in a stock's price. Consider the following data for Google's stock price: 
 
-<img src="stocks_google_2.png" width="500">
+<img src="{{ site.baseurl }}/images/stocks_google_2.png" width="500">
 
 The top curve is for six hours and the bottom is for six months. Other than maybe the number of data points, the fluctuations are both about the same. You could not tell which one was for a shorter or longer time without a scale bar. The same fluctuations would occur for a decade or a minute if we had dense enough data.
 
@@ -86,7 +86,7 @@ turtle.done() # leave the figure on the screen until we close the window
 
 We obtain something that looks like this:
 
-<img src="circles.png" width="400">
+<img src="{{ site.baseurl }}/images/circles.png" width="400">
 
 which already looking a bit fractal! Note that the program only recurs until the circle radius is smaller than 2. ***NOTE: There always needs to be a stopping condition for a recursive function, or it will continue forever!!***
 We can mess around with the initial radius and the stopping conditions to get more or less circles. 
@@ -129,7 +129,7 @@ turtle.done()
 
 Again, we can mess around with the original radius and the stopping criteria to get more or less circles. Even with a fast turtle, it takes quite a while! Worth the wait, thought as the pattern is awesome. Here it is for circles starting with a radius of 80 and going to 2:
 
-<img src="circles_2.png" width="400">
+<img src="{{ site.baseurl }}/images/circles_2.png" width="400">
 
 
 That is *a lot* of circles! However, the code is still modest thanks to the power of recusion. This is one of the interesting aspects of fractals, and why they are so powerful for describing things in nature: relatively simple rules repeated over and over can generate complex patterns.
@@ -143,7 +143,7 @@ Now that we have the basic tool of recursion, lets study and plot some common fr
 
 One of the most recognizable fractal patters is the Koch curve. The rules for this type of fractal can be written as such:
 
-<img src="Koch_Curve_des.png" width="600">
+<img src="{{ site.baseurl }}/images/Koch_Curve_des.png" width="600">
 
 We again implement this using turtle and a recursive function. Our specific algorith is a bit different that the steps written above, since we are drawing from right to left, but we can clearly see how changing the "depth" adds more triangles to each straight segment of the curve:
 
@@ -243,13 +243,13 @@ turtle.done()
 
 And off it goes, meandering around. If we blur our eyes a bit, it kind of looks like a coastline viewed from space.
 
-<img src="Koch_coast_2.png">
+<img src="{{ site.baseurl }}/images/Koch_coast_2.png">
 
 Coastlines and the Koch curve also share a very strange property, known as the *coastline paradox*. Say we want to measure the overall length of the Koch curve. Since we have only been dealing with finite "depth" versions, we can take out a ruler and measure it. But, in principle, to actually be self-similar the true fractal has infinite depth, so the more you zoom in, the more triangles you see on each line segment. Thus the more you zoom *the longer the curve you measure*. Since a coastline is also truly fractal, the same issue appears in cartography! The more acuratly you try to measure the length of a coastline, by zooming in more and more, the result just becomes longer and longer as you follow the smaller and smaller featuers of the coast. 
 
 In fact, it is theorized that the infinite length of a fractal coastline makes it the most stable to erosion caused by ocean waves:
 
-<img src="coast_paper.png" width="700">
+<img src="{{ site.baseurl }}/images/coast_paper.png" width="700">
 
 ### Fractal tree
 
@@ -484,7 +484,7 @@ for _ in range(5000):
 turtle.done()
 ```
 
-<img src="ser_tri.png" width="700">
+<img src="{{ site.baseurl }}/images/ser_tri.png" width="700">
 
 What?! We see the Sierpinski Triangle slowly emerge out of the random points! This is what's known as an *iterated function system*, which is another way of creating fractals by iterating a function over and over. In this case the function is simply findiny the midpoint between any point and a random vertex of the triangle. I guess you could think of it as a *kind* of recusion, but note that in the program there is no function calling itself.
 
@@ -594,15 +594,15 @@ But it gets even better. There is a related set called the ***Julia set***, whic
 
 #### $c=-0.8 + 0.156i$
 
-<img src="julia_m0.8_0.156.png" width="500">
+<img src="{{ site.baseurl }}/images/julia_m0.8_0.156.png" width="500">
 
 #### $c=-0.7269 + 0.1889i$
 
-<img src="julia_m0.7269_0.1889.png" width="500">
+<img src="{{ site.baseurl }}/images/julia_m0.7269_0.1889.png" width="500">
 
 #### $c=-0.70176 - 0.3842i$
 
-<img src="julia_m0.70176 _m0.3842.png" width="500">
+<img src="{{ site.baseurl }}/images/julia_m0.70176 _m0.3842.png" width="500">
 
 Looks like some galactic nebulae, right? There are infinite variations of Julia sets, and you will play around with this in the exercises.
 
@@ -622,7 +622,7 @@ Lets play around with the fractals that we just learned about. The first rule of
 
 Modify the Koch curve code to make a "Koch snowflake" like this one:
 
-<img src="Koch_snowflake.png" width="500">
+<img src="{{ site.baseurl }}/images/Koch_snowflake.png" width="500">
 
 Can you come up with any other cool patterns that are a variation of the Koch curve? Maybe multiple Koch snowflakes inside of each other?
 

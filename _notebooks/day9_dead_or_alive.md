@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Dead or alive
-date:   2019-08-07
+date:   2019-08-08
 day: 9
 ---
 
