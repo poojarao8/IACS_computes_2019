@@ -6,6 +6,7 @@ In this folder, you'll find jupyter notebooks that we are going to use.
 
 ##### 2019:
 * Alice Harpole
+* Cyrus Dreyer
 
 ##### 2018:
 * Alëna Aksënova
