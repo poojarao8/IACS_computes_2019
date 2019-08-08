@@ -602,7 +602,7 @@ But it gets even better. There is a related set called the ***Julia set***, whic
 
 #### $c=-0.70176 - 0.3842i$
 
-<img src="{{ site.baseurl }}/images/julia_m0.70176 _m0.3842.png" width="500">
+<img src="{{ site.baseurl }}/images/julia_m0.70176_m0.3842.png" width="500">
 
 Looks like some galactic nebulae, right? There are infinite variations of Julia sets, and you will play around with this in the exercises.
 
