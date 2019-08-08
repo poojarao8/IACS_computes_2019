@@ -75,12 +75,12 @@ Time | August 19 | August 20 | August 21 | August 22 | August 23
 
 #### Day 7 (Tuesday, August 20)
 1. [Review.ipynb]({{ site.baseurl }}{% link _notebooks/day7_review.md %})
-2. [Literature analysis ]({{ site.baseurl }}{% link _notebooks/day7_review.md %})
+2. [Literature analysis]({{ site.baseurl }}{% link _notebooks/literature_analysis_Literature_analysis_with_n-grams.md %})
 1. [Cryptography]({{ site.baseurl }}{% link _notebooks/cryptography_cryptography.md %})
 
 #### Day 8 (Wednesday, August 21)
 1. [Warm-up]({{ site.baseurl }}{% link _notebooks/day8_warm-up.md %})
-1. [Fractals]()
+1. [Fractals]({{ site.baseurl }}{% link _notebooks/fractals_fractals.md %})
 1. [Data Processing]({{ site.baseurl }}{% link _notebooks/data_processing_simplified_LOSC_Event_tutorial.md %})
 
 #### Days 9 & 10 (Thursday, August 22 & Friday, August 23)

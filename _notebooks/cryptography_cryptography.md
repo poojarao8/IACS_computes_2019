@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Cryptography
-date:   2019-08-07
+date:   2019-08-08
 day: ptography
 ---
 
@@ -83,7 +83,7 @@ decrypt_caesar(encrypted_message)
 
 ## Breaking codes with code
 
-Excellent! Unfortunately a simple encryption like this is pretty easy to break. For example, say our nosy friend Charlie is trying to listen in our conversation. Charlie could easily just brute force this using a loop over all the possible values of `n` until they hit upon a message that made sense:
+Excellent! Unfortunately a simple encryption like this is pretty easy to break. For example, say our nosy friend Charlie is trying to listen in to our conversation. Charlie could easily just brute force this using a loop over all the possible values of `n` until they hit upon a message that made sense:
 
 
 ```python
@@ -345,7 +345,7 @@ Hmmm not great, but good for a first attempt! We can see that even with this pre
 
 So we've seen that simply substituting one letter for another (known as a *monoalphabetic cipher*) is pretty easy to crack. Fortunately, there's a fairly straightforward way that we can make this significantly more secure: we can change which letter we use to substitute the other for each time (known as a *polyalphabetic cipher*). So maybe the first time we encrypt the letter *a* it becomes a *y*, the next time it becomes a *u*, the time after that a *k* and so on... This will make the encrypted message much harder to crack through frequency analysis (though as we shall see, often not impossible...)
 
-One of the simplest (and earliest, dating back to the 16th century) examples of a polyalphabetic is the *Vigenère cipher*. At the time, this cipher was so secure that it took three centuries before anyone was able to break it, earning it the name *le chiffre indéchiffrable* (French for 'the indecipherable cipher'). Polyalphabetic ciphers are so secure that they were used right up until the invention of the computers: although much more complex than the cipher we're going to look at here, even the Enigma machines essentially implemented a polyalphabetic cipher. 
+One of the simplest (and earliest, dating back to the 16th century) examples of a polyalphabetic is the *Vigenère cipher*. At the time, this cipher was so secure that it took three centuries before anyone was able to break it, earning it the name *le chiffre indéchiffrable* (French for 'the indecipherable cipher'). Polyalphabetic ciphers are so secure that they were used right up until the invention of the computers: although much more complex than the cipher we're going to look at here, even the Enigma machines used in the Second World War essentially implemented a polyalphabetic cipher. 
 
 To encrypt a message with the Vigenère cipher, we first start of with a *Vigenère square*:
 
@@ -531,17 +531,17 @@ plt.show()
 <img src="{{ site.baseurl }}/images/cryptography_38_0.png" />
 
 
-Much better! We can see here that the most common letters in the ciphertext (D and T) have frequencies very close to the most common letters in plain English (T and E respectively). From this, Charlie can infer that this set of letters was encrypted with the letter P (A is always encrypted as the key letter, so we can count back from the letter corresponding to E in the ciphertext (T) to find this. All Charlie to do now is repeat this for the other 5 letters in the key, and Charlie can both decrypt the message *and* discover the key. This second point is particularly dangerous, as it means that not only can Charlie read our messages, they can also send encrypted messages impersonating us. 
+Much better! We can see here that the most common letters in the ciphertext (D and T) have frequencies very close to the most common letters in plain English (T and E respectively). From this, Charlie can infer that this set of letters was encrypted with the letter P (A is always encrypted as the key letter, so we can count back from the letter corresponding to E in the ciphertext (T) to find this). All Charlie needs to do now is repeat this for the other 5 letters in the key, and Charlie can both decrypt the message *and* discover the key. This second point is particularly dangerous, as it means that not only can Charlie read our messages, they can also send encrypted messages impersonating us. 
 
 So clearly *le chiffre indéchiffrable* is not quite as unbreakable as first thought. There are ways we can make it more secure though. Firstly, we can use a much longer key. If we have a key that is around the same length as the message itself, then frequency analysis will no longer work. Unfortunately, whilst this sounds great, it's not so practical. What if I want to send Bob a really long message? We should also change our keys often, in case one of them gets compromised. How do I send him the keys beforehand without Charlie getting hold of them? 
 
 Maybe I could choose keys from a preexisting text (a *keytext*) that I know Bob and I will both always have copies of (Harry Potter and the Goblet of Fire)? This gets over the problem of having keys that are two short (it's unlikely we're going to send messages longer than this book), and gets over the problem of having to securely communicate huge lists of keys. 
 
-Well..... sadly this is also fairly breakable. For starters, it's not a huge secret that Bob and I are huge Harry Potter fans, and so if Charlie suspects that we may be using a keytext, it wouldn't take a huge jump for them to suspect we may have chosen one of the Harry Potter books. Say Bob and I have decided we're going to use a different key based off text on a certan page number each day. All Charlie would have to do would be to try keys based on each of the 734 pages (in the US edition of Goblet of Fire) each day until they hit upon one that would work, which probably would take their computer a few seconds a most. 
+Well..... sadly this is also fairly breakable. For starters, it's not a huge secret that Bob and I are huge Harry Potter fans, and so if Charlie suspects that we may be using a keytext, it wouldn't take a huge jump for them to suspect we may have chosen one of the Harry Potter books. Say Bob and I have decided we're going to use a different key based off text on a certan page number each day. All Charlie would have to do would be to try keys based on each of the 734 pages (in the US edition of Goblet of Fire) each day until they hit upon one that would work, which probably would take their computer a few seconds at most. 
 
 Ultimately, codes of this type are broken because of the predictability of human behavior. If the key is not secure enough, then codebreakers can simply guess likely keys until they hit upon the correct one. This principle even works for much more sophisticated polyalbatic ciphers. 
 
-In World War II, one of the techniques that was used to break the 'unbreakable' Enigma code was based on guessing the content of the message. Each day, all communications using the Enigma code were sent with machines in a certain configuration. To break the code, the Allies needed to work out which particular machine configuration was being used that day. It was known that German naval submarines used to send out weather reports every day giving their location and the local conditions. When the Allies intercepted a signal, they therefore could try and decrypt the message (and therefore discover the day's machine configuration) by guessing the origin of the signal's location and the local weather conditions (which they had a rough idea of from their weather monitoring service). The predicatable patterns of these communications therefore meant that the incredibly sophisticated Enigma code could be broken.
+In World War II, one of the techniques that was used to break the 'unbreakable' Enigma code was based on guessing the content of the message. Each day, all communications using the Enigma code were sent with machines in a certain configuration. To break the code, the Allies needed to work out which particular machine configuration was being used that day. It was known that German naval submarines used to send out weather reports every day giving their location and the local conditions. When the Allies intercepted a signal, they therefore could try and decrypt the message (and therefore discover the day's machine configuration) by guessing the origin of the signal's location and the local weather conditions (which they had a rough idea of from their weather monitoring service). The predicatable patterns of these communications ultimately meant that even the incredibly sophisticated Enigma code could be broken.
 
 
 ```python
