@@ -2,6 +2,10 @@ title: IACS Computes! 2019
 theme: jekyll-theme-minimal
 markdown: kramdown
 mathjax: true
+show_downloads: true
+github:
+    zip_url: https://github.com/harpolea/IACS_computes_2019/zipball/master/
+    tar_url: https://github.com/harpolea/IACS_computes_2019/tarball/master/
 
 collections:
     notebooks:

@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  Simplified l os c event tutorial
-date:   2019-08-08
-day: a_processing
+date:   2019-08-11
+day: 8
 ---
 
 

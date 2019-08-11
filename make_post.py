@@ -9,11 +9,13 @@ def make_post(filename):
     title = filename.split('/')[-1][:-3].replace('_', ' ').replace('_', ' ')
     title = re.sub(r"(\w)([A-Z])", r"\1 \2", title).capitalize()
 
+    day = re.search(r'day([0-9])', filename).group(1)
+
     blog_text = f"""---
 layout: post
 title:  {title}
 date:   {now.strftime("%Y-%m-%d")}
-day: {filename.split('/')[-2][3:]}
+day: {day}
 ---
 
 """

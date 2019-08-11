@@ -1,4 +1,4 @@
-# Welcome to IACS Python summer camp
+# Welcome to IACS Computes! HS summer camp
 
 Hi and welcome to the website for the **IACS Computes! HS summer camp**. During this camp, students will learn Python programming skills, get to know research challenges for which coding is necessary, and see several real-world applications of coding, including literature analysis, cryptography and data processing.
 
@@ -33,6 +33,11 @@ Time | August 19 | August 20 | August 21 | August 22 | August 23
 
 
 ## Materials
+
+The notebooks can be downloaded by clicking on the *Download ZIP File*
+(or alternatively the *Download TAR Ball*) button in the sidebar. Static versions of the
+notebooks can be found at the links below.
+
 #### Day 1 (Monday, August 12)
 1. [Basics.ipynb]({{ site.baseurl }}{% link _notebooks/day1_Basics.md %})
 2. [Arithmetic.ipynb]({{ site.baseurl }}{% link _notebooks/day1_Arithmetic.md %})
@@ -77,6 +82,7 @@ Time | August 19 | August 20 | August 21 | August 22 | August 23
 1. [Review.ipynb]({{ site.baseurl }}{% link _notebooks/day7_review.md %})
 2. [Literature analysis]({{ site.baseurl }}{% link _notebooks/literature_analysis_Literature_analysis_with_n-grams.md %})
 1. [Cryptography]({{ site.baseurl }}{% link _notebooks/cryptography_cryptography.md %})
+1. [Cryptography exercises]({{ site.baseurl }}{% link _notebooks/cryptography_exercises.md %})
 
 #### Day 8 (Wednesday, August 21)
 1. [Warm-up]({{ site.baseurl }}{% link _notebooks/day8_warm-up.md %})

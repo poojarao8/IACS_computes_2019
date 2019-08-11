@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  Towers-of-hanoi
-date:   2019-08-08
-day: ersofHanoi
+date:   2019-08-11
+day: 9
 ---
 
 

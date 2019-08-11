@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  Basics info about a i
-date:   2019-08-08
-day: 
+date:   2019-08-11
+day: 8
 ---
 
 
