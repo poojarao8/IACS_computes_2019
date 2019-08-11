@@ -1,10 +1,8 @@
 ---
 layout: post
 title:  Review
-date:   2019-08-04
+date:   2019-08-08
 day: 2
-next:
-prev:
 ---
 
 
@@ -38,6 +36,13 @@ print(type(True))
 print(type(1 + 2j))
 ```
 
+    <class 'int'>
+    <class 'float'>
+    <class 'str'>
+    <class 'bool'>
+    <class 'complex'>
+
+
 ## 2. Arithmetics
 
 
@@ -70,6 +75,16 @@ print(a ** b)
 print(a ** (0.5))
 ```
 
+    31
+    11
+    210
+    2.1
+    1
+    2
+    8
+    1.4142135623730951
+
+
 ## 3. Logical Operators
 
 
@@ -78,9 +93,23 @@ True and False
 ```
 
 
+
+
+    False
+
+
+
+
 ```python
 True or False
 ```
+
+
+
+
+    True
+
+
 
 
 ```python
@@ -88,9 +117,23 @@ not True
 ```
 
 
+
+
+    False
+
+
+
+
 ```python
 1 == 2
 ```
+
+
+
+
+    False
+
+
 
 
 ```python
@@ -98,9 +141,23 @@ not True
 ```
 
 
+
+
+    False
+
+
+
+
 ```python
 2 < 1
 ```
+
+
+
+
+    False
+
+
 
 #### And Operator
 
@@ -134,6 +191,12 @@ else:
     print("n is odd")
 ```
 
+     7
+
+
+    n is odd
+
+
 **Example 2:** Identify if a given number if positive, negative or 0
 
 
@@ -147,6 +210,12 @@ elif n < 0:
 else:
     print("n is 0")
 ```
+
+     7
+
+
+    n is positive
+
 
 ## 5. While Loop
 
@@ -167,4 +236,21 @@ i = 1
 while i <= 10:
     print(2 * i)
     i += 1
+```
+
+    2
+    4
+    6
+    8
+    10
+    12
+    14
+    16
+    18
+    20
+
+
+
+```python
+
 ```

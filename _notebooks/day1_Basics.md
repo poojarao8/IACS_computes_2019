@@ -1,10 +1,8 @@
 ---
 layout: post
 title:  Basics
-date:   2019-08-04
+date:   2019-08-08
 day: 1
-next:
-prev:
 ---
 
 

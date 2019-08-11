@@ -1,10 +1,8 @@
 ---
 layout: post
 title:  Classes
-date:   2019-08-04
+date:   2019-08-08
 day: 6
-next:
-prev:
 ---
 
 
@@ -38,7 +36,7 @@ Next we define a function called `__init__`. This is a special function called t
 
 To try and see how all this works a bit more, let's actually make a particular `Cat`. A particular instance of a class is known as an *object*. I'm going to make an object that represents my cat Arya.
 
-![arya](arya.jpeg)
+<img src="{{ site.baseurl }}/images/arya.jpeg" />
 
 
 ```python
@@ -88,7 +86,7 @@ for cat in cats:
     print("Name: {}, age: {}, color: {}".format(cat.name, cat.age, cat.color))
 ```
 
-    Name: Arya, age: 5, color: ginger
+    Name: Arya, age: 6, color: ginger
     Name: Lilly, age: 3, color: gray
     Name: Ben, age: 11, color: white
     Name: Ser Pounce, age: 4, color: gray

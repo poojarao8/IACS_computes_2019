@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Practice
-date:   2019-08-04
+date:   2019-08-08
 day: 5
 ---
 
@@ -45,8 +45,7 @@ We've already seen the `.split()` method will, by default, split by spaces. Try 
 
 
 ```python
-ga = gettysburg_address.split()
-#ga
+
 ```
 
 Now, the next problem is that some of these still have punctuation. In particular, we see ".", ",", and "--".
@@ -54,14 +53,14 @@ When considering a word, we can get rid of these by using the `replace()` method
 
 
 ```python
-ga = gettysburg_address.replace(".", "").replace(",", "").replace("--", "").split()
+
 ```
 
 Another problem is case—we want to count 'but' and 'But' as the same. Use the `lower()` method that can be used to covert this string:
 
 
 ```python
-ga = gettysburg_address.lower().replace(".", "").replace(",", "").replace("--", "").split()
+
 ```
 
 Create a dictionary that uses the unique words as keys and has as a value the number of times that word appears.
@@ -86,18 +85,14 @@ Using the `set()` function, turn the list of words into a set, removing any dupl
 
 
 ```python
-ga_set = set(ga)
+
 ```
 
 Now loop over the unique words and use the `count` method of a list to find how many there are:
 
 
 ```python
-count = {}
-for uw in ga_set:
-    count[uw] = ga.count(uw)
-    
-# count
+
 ```
 
 ## Dictionary sorting 
@@ -160,6 +155,67 @@ Hint: you can reverse the sorting order so it goes from high to low by passing i
 
 ```python
 # Your code here
+```
+
+## Houston, we have a problem
+
+Below I have a function that takes a city name (a string) and a dictionary of different cities and their populations, and returns a string describing the city.
+
+
+```python
+def city_pop(city, cities_dict):
+    return "{} has a population of {}".format(city, cities_dict[city])
+```
+
+This works fine if the city is in the dictionary, however if it is not we get a `KeyError`:
+
+
+```python
+cities = {'London': 8787892, 'New York': 8.623e6, 'Paris': 2.141e6, 'Los Angeles': 4e6}
+```
+
+
+```python
+city_pop('London', cities)
+```
+
+
+
+
+    'London has a population of 8787892'
+
+
+
+
+```python
+city_pop('Houston', cities)
+```
+
+
+    ---------------------------------------------------------------------------
+
+    KeyError                                  Traceback (most recent call last)
+
+    <ipython-input-8-9fe6da459e6a> in <module>
+    ----> 1 city_pop('Houston', cities)
+    
+
+    <ipython-input-2-dd117ddc914e> in city_pop(city, cities_dict)
+          1 def city_pop(city, cities_dict):
+    ----> 2     return "{} has a population of {}".format(city, cities_dict[city])
+    
+
+    KeyError: 'Houston'
+
+
+Your task is to make a new version of the function `city_pop` that behaves more intelligently that simply raising a `KeyError` if it cannot find the city. Here are a few suggestions for things you could try adding, but feel free to come up with your own improvements:
+- check that the city is a string (what happens if you tried giving the function a number instead of a real city name?)
+- if the function cannot find the city in the dictionary, print a (helpful!) message to the user that the city cannot be found
+- even better: if the city cannot be found, ask the user if they'd like to add a new city to the dictionary. If so, make sure to ask for the population.
+
+
+```python
+# Your code goes here
 ```
 
 

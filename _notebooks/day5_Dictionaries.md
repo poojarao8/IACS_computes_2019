@@ -1,10 +1,8 @@
 ---
 layout: post
 title:  Dictionaries
-date:   2019-08-04
+date:   2019-08-08
 day: 5
-next:
-prev:
 ---
 
 
@@ -82,7 +80,7 @@ print(bootleg_dict)
 
     TypeError                                 Traceback (most recent call last)
 
-    <ipython-input-7-9fe13a886d13> in <module>
+    <ipython-input-5-9fe13a886d13> in <module>
           2                 1 : 'ints can be keys',
           3                 'run' : 'strings can be keys',
     ----> 4                 ['a', 'list']: 'but can lists be keys?'}
@@ -141,6 +139,18 @@ Trying to access a key that does not exist in a dictionary will result in a `Key
 eggs['color']
 ```
 
+
+    ---------------------------------------------------------------------------
+
+    KeyError                                  Traceback (most recent call last)
+
+    <ipython-input-9-cbdb4186d4f0> in <module>
+    ----> 1 eggs['color']
+    
+
+    KeyError: 'color'
+
+
 Actually, the ability to have arbitrary values for the keys allows you to organize your data in powerful ways. 
 
 Say you wanted your program to store data about your friends’ birthdays. You can use a dictionary with the names as keys and the birthdays as values:
@@ -164,6 +174,26 @@ while True:
         birthdays[name] = bday
         print('Birthday database updated.')
 ```
+
+    Enter a name: (blank to quit)
+
+
+     Harry
+
+
+    I do not have birthday information for Harry
+    What is their birthday?
+
+
+     Jul 31
+
+
+    Birthday database updated.
+    Enter a name: (blank to quit)
+
+
+     
+
 
 ## Practice tiiiime!
 Given this dictionary, try to do the following:
@@ -208,9 +238,51 @@ def fib(n):
     else:
         return fib(n-1) + fib(n-2)
     
-for n in range(1,101):
+for n in range(1,41):
     print(n, ":", fib(n))
 ```
+
+    1 : 1
+    2 : 1
+    3 : 2
+    4 : 3
+    5 : 5
+    6 : 8
+    7 : 13
+    8 : 21
+    9 : 34
+    10 : 55
+    11 : 89
+    12 : 144
+    13 : 233
+    14 : 377
+    15 : 610
+    16 : 987
+    17 : 1597
+    18 : 2584
+    19 : 4181
+    20 : 6765
+    21 : 10946
+    22 : 17711
+    23 : 28657
+    24 : 46368
+    25 : 75025
+    26 : 121393
+    27 : 196418
+    28 : 317811
+    29 : 514229
+    30 : 832040
+    31 : 1346269
+    32 : 2178309
+    33 : 3524578
+    34 : 5702887
+    35 : 9227465
+    36 : 14930352
+    37 : 24157817
+    38 : 39088169
+    39 : 63245986
+    40 : 102334155
+
 
 
 ```python
@@ -231,9 +303,51 @@ def fib(n):
     fib_list[n] = value
     return value
 
-for n in range(1,101):
-    fib(n)
+for n in range(1,41):
+    print(n, ":", fib(n))
 ```
+
+    1 : 1
+    2 : 1
+    3 : 2
+    4 : 3
+    5 : 5
+    6 : 8
+    7 : 13
+    8 : 21
+    9 : 34
+    10 : 55
+    11 : 89
+    12 : 144
+    13 : 233
+    14 : 377
+    15 : 610
+    16 : 987
+    17 : 1597
+    18 : 2584
+    19 : 4181
+    20 : 6765
+    21 : 10946
+    22 : 17711
+    23 : 28657
+    24 : 46368
+    25 : 75025
+    26 : 121393
+    27 : 196418
+    28 : 317811
+    29 : 514229
+    30 : 832040
+    31 : 1346269
+    32 : 2178309
+    33 : 3524578
+    34 : 5702887
+    35 : 9227465
+    36 : 14930352
+    37 : 24157817
+    38 : 39088169
+    39 : 63245986
+    40 : 102334155
+
 
 ## What _else_ can we do with dictionaries?
 
@@ -251,11 +365,22 @@ len(age_dict)
 ```
 
 
+
+
+    4
+
+
+
+
 ```python
 print(age_dict)
 age_dict['Timmy'] = 14
-print(ageDict)
+print(age_dict)
 ```
+
+    {'John': 22, 'Bob': 47, 'Susan': 63, 'Timmy': 14}
+    {'John': 22, 'Bob': 47, 'Susan': 63, 'Timmy': 14}
+
 
 There are three dictionary methods that will return list-like values of the dictionary's keys, values, or both keys and values: `keys()`, `values()`, and `items()`. 
 
@@ -273,6 +398,10 @@ for v in cheese.values():
     print(v)
 ```
 
+    yellow
+    42
+
+
 A `for` loop can also iterate over the **keys**...:
 
 
@@ -281,6 +410,10 @@ for k in cheese.keys():
         print(k)
 ```
 
+    color
+    age
+
+
 OR **both** keys **and** values:
 
 
@@ -288,6 +421,10 @@ OR **both** keys **and** values:
 for k in cheese.items():
         print(k)
 ```
+
+    ('color', 'yellow')
+    ('age', 42)
+
 
 If you want one of these methods to return a list, then it's necessary to use the `list()` function to cast it was a list. For example:
 
@@ -298,6 +435,10 @@ print(cheese.keys())
 print(list(cheese.keys()))
 ```
 
+    dict_keys(['color', 'age'])
+    ['color', 'age']
+
+
 You can also use the multiple assignment trick in a `for` loop to assign the key and value to separate variables, like so:
 
 
@@ -305,6 +446,10 @@ You can also use the multiple assignment trick in a `for` loop to assign the key
 for k, v in cheese.items():
         print('Key: ' + k + ' Value: ' + str(v))
 ```
+
+    Key: color Value: yellow
+    Key: age Value: 42
+
 
 Remember how the `in` and `not in` operators can check whether a value exists in a list? So far, we have used these when looking at strings, however you can also use them to see whether a certain key or value exists in a dictionary:
 
@@ -317,6 +462,13 @@ print('color' in cat.keys())
 print('color' not in cat.keys())
 print('color' in cat)
 ```
+
+    True
+    True
+    False
+    True
+    False
+
 
 Notice that `'color' in cat` is essentially equivalent to `'color' in cat.keys()`. This is always the case: if you ever want to check whether a value is (or isn’t) a key in the dictionary, you can simply use the `in` (or `not in`) keyword with the dictionary value itself.
 
@@ -349,7 +501,7 @@ print('I am bringing ' + str(picnic_items['eggs']) + ' eggs.')
 
     KeyError                                  Traceback (most recent call last)
 
-    <ipython-input-3-48aeb831060d> in <module>
+    <ipython-input-31-48aeb831060d> in <module>
     ----> 1 print('I am bringing ' + str(picnic_items['eggs']) + ' eggs.')
     
 
@@ -366,17 +518,9 @@ import pprint
 pprint.pprint(inventory)
 ```
 
-
-    ---------------------------------------------------------------------------
-
-    NameError                                 Traceback (most recent call last)
-
-    <ipython-input-4-d11e485ecd85> in <module>
-          1 import pprint
-    ----> 2 pprint.pprint(inventory)
-    
-
-    NameError: name 'inventory' is not defined
+    {'backpack': ['xylophone', 'dagger', 'bedroll', 'bread loaf'],
+     'gold': 500,
+     'pouch': ['flint', 'twine', 'gemstone']}
 
 
 
@@ -467,13 +611,7 @@ Try to implement this using memoization:
 
 
 ```python
-d = {0:1}
 
-def nw(n):
-    if n in d:
-        return d[n]
-    else:
-        val = nw(n-1) + 1
 ```
 
 ### Exercise 4

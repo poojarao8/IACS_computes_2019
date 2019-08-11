@@ -1,10 +1,8 @@
 ---
 layout: post
 title:  Text-based-adventure
-date:   2019-08-04
+date:   2019-08-08
 day: 9
-next:
-prev:
 ---
 
 

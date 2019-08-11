@@ -1,10 +1,8 @@
 ---
 layout: post
 title:  Review
-date:   2019-08-04
+date:   2019-08-08
 day: 3
-next:
-prev:
 ---
 
 
@@ -140,8 +138,3 @@ for i, creature in enumerate(my_list):
     dragon is element number 4
     elf is element number 5
 
-
-
-```python
-
-```

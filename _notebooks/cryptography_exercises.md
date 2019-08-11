@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Exercises
-date:   2019-08-04
+date:   2019-08-08
 day: ptography
 ---
 

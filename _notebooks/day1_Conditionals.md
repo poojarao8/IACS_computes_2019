@@ -1,10 +1,8 @@
 ---
 layout: post
 title:  Conditionals
-date:   2019-08-04
+date:   2019-08-08
 day: 1
-next:
-prev:
 ---
 
 
@@ -22,6 +20,9 @@ a = 1
 print(a)
 ```
 
+    1
+
+
 Let's add 1 to `a` and print out its new value:
 
 
@@ -29,6 +30,9 @@ Let's add 1 to `a` and print out its new value:
 a = a + 1
 print(a)
 ```
+
+    2
+
 
 Now that that cell is executed, let's look at the following piece of code:
 
@@ -38,6 +42,9 @@ if a < 5:
     a = a + 1
 print(a)
 ```
+
+    3
+
 
 The first time you run the above code, you should see the number 3 printed (assuming you've run the previous cells). This code does pretty much what you would expect. First, the computer checks to see if `a` is less than 5. If it is, then it adds 1 to `a`, and stores the result in `a`. Next, it prints `a`. Since `a` was 2, it met the condition of being less than 5, so the computer added 1 to `a`. Then the computer printed `a` (because of the way this is written, the computer will print `a` regardless of its value). `a` is now 3. 
 
@@ -56,6 +63,9 @@ if True:
 print(a)
 ```
 
+    9
+
+
 Since the if statement expects a boolean, we could just put a boolean in there (instead of a statement that evaluates to a boolean). Unfortunately, this isn't particularly useful: `if True` will mean that section of code will always run (so we might as well not have the if statement there at all), and `if False` will never run (so we might as well not have that section of code there at all). 
 
 Often, we want our if statement to apply to multiple instructions, and not just one. To do this, we indent all the lines that we want to include in the if statement block, like so:
@@ -69,6 +79,10 @@ if a < 10:
 print("a is", a)
 print("b is", b)
 ```
+
+    a is 10
+    b is 2
+
 
 Note: from now on it will be very important to pay attention to indentation. Indentation is how Python detects what you want to be inside the if block. In the example above, the 3rd and 4th lines are inside the if block, so they will only run if the if statement succeeds. The print statements are outside the if block, so they will always run even if the if statement evaluates to `False`. 
 
@@ -88,6 +102,9 @@ else:
 print(a)
 ```
 
+    6
+
+
 The else statement is partnered with the preceding if statement. In the case that the if evaluates to `False`, the block following the else statement will run instead. Note that else statements are optional (e.g. in the above section we didn't have an else statement, which meant that the code did nothing if the if statement evaluated to `False`), but can be very useful.
 
 A common mistake for beginners is to write a condition next to the `else` keyword, like this:
@@ -101,6 +118,14 @@ else a >= 5:
 
 print(a)
 ```
+
+
+      File "<ipython-input-7-7a7c4efa53f3>", line 3
+        else a >= 5:
+             ^
+    SyntaxError: invalid syntax
+
+
 
 However, this gives an error. This is because the else keyword doesn't require a boolean expression to run. It *automatically* runs in all the cases that the if statement fails. 
 
@@ -117,6 +142,9 @@ else:
 
 print(a)
 ```
+
+    -4
+
 
 The `elif` statement will only run if none of the preceding statements ran (including the if statement with which it is paired and any other preceding elif statements). You can have as many elif statements as you want following an if statement. The computer will check each statement from top to bottom until one of three things happens:
 
@@ -147,6 +175,9 @@ if my_number < 10:
     print("my_number is less than 10")
 ```
 
+    my_number is less than 10
+
+
 In the above code, we used the pound sign (#) to write comments. Python will ignore any text we write on the rest of the line following this sign. This is useful because we can write notes to other programmers (and our future selves) without the computer thinking we're trying to code something (which would result in a ton of errors).
 
 Here's the above code without comments:
@@ -158,6 +189,9 @@ my_number = 5
 if my_number < 10:   
     print("my_number is less than 10")
 ```
+
+    my_number is less than 10
+
 
 2) Write some code that checks if a number is less than 10 or less than 20. If it's less than 10, print `my_number is less than 10`. If it's less than 20 but greater than 10, print `my_number is greater than 10 but less than 20`.
 
@@ -184,6 +218,9 @@ elif my_number < 20:
     print("my_number is greater than 10 but less than 20")
 ```
 
+    my_number is greater than 10 but less than 20
+
+
 Here's the above code without comments:
 
 
@@ -195,6 +232,9 @@ if my_number < 10:
 elif my_number < 20:
     print("my_number is greater than 10 but less than 20")
 ```
+
+    my_number is greater than 10 but less than 20
+
 
 3) Write some code that checks if a number is less than 10 or less than 20. If it's less than 10, print `my_number is less than 10`. If it's less than 20 but greater than 10, print `my_number is greater than 10 but less than 20`. If the number is neither of these, print `my_number is greater than 20`.
 
@@ -230,6 +270,9 @@ else:
     print("my_number is greater than 20")
 ```
 
+    my_number is greater than 10 but less than 20
+
+
 Here's the above code without comments:
 
 
@@ -244,30 +287,23 @@ else:
     print("my number is greater than 20")
 ```
 
+    my number is greater than 20
+
+
 ## Practice Problems 
 
 Write some code that creates an variable containing an integer between 10 and 99. If it's less than 50, add 25 to it and print the result. Otherwise, just print the number.
 
 
 ```python
-a = 38
-if a < 50:
-    print(25 + a)
-else:
-    print(a)
+
 ```
 
 Write some code that creates a variable containing an integer that's either 1, 2, or 3. Write an `if -> elif -> else` statement that will print the word corresponding to that integer. For example, if that integer is 1, this cell should print the word `one`.
 
 
 ```python
-a = 1
-if a == 1:
-    print("One")
-elif a == 2:
-    print("Two")
-elif a == 3:
-    print("Three")
+
 ```
 
 Write some code that creates a variable and stores an integer there. Use an if statement to print `Even` if the number is even or `Odd` if the number is odd. (If you want to make your program more robust, you can have it print an error message if it receives a non-integer). 
@@ -276,11 +312,7 @@ Write some code that creates a variable and stores an integer there. Use an if s
 
 
 ```python
-a = 5
-if a % 2 == 1:
-    print("Odd")
-else:
-    print("Even")
+
 ```
 
 ## Advanced Problem
@@ -289,11 +321,5 @@ Recall the `type` function. Create a variable that contains a string, an integer
 
 
 ```python
-a = 94
-if type(a) == str:
-    print("This is a string!")
-else:
-    print("This is a number!")
-    if type(a) == int and a > 10:
-        print("A large number!")
+
 ```

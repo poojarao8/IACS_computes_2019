@@ -1,10 +1,8 @@
 ---
 layout: post
 title:  Variables
-date:   2019-08-04
+date:   2019-08-08
 day: 1
-next:
-prev:
 ---
 
 
@@ -17,6 +15,9 @@ In Python, we can assign names to values. For example, here we assign the name `
 my_number = 5
 print(my_number)
 ```
+
+    5
+
 
 Assigning names to quantities in a code is called *defining variables*. You can think of a *variable* as a human-readable label (i.e. a nickname) for a bit of data in the computer's memory. When we use the variable name in our code, the program knows that we are really referring the data. 
 
@@ -31,6 +32,13 @@ width = 12
 length * width
 ```
 
+
+
+
+    84
+
+
+
 There are several advantages of using variables in our code.
 
 The first is readability. As you continue to code, you'll soon be reading programs written by other people (or your past self). It's way more useful to know what each number is if the person gave that number a (sensible) name. The example written above is a fair example. Anyone reading that code will know that 7 is the length of something and 12 is the width. To be even more informative, we could even write it like this:
@@ -43,6 +51,9 @@ area = length * width
 print(area)
 ```
 
+    84
+
+
 Now anyone reading our code knows that we wanted to calculate an area. Also note here that we've defined the variable `area` using two other variables. Because we've already told the computer what `length` and `area` mean, it knows that when we use them to calculate the area, we really mean `area = 7 * 12`. 
 
 When choosing our variable names, it's important to choose names that are descriptive, so that someone reading our code can work out what it is doing. For example, let's look at the above example again with some different variable names:
@@ -54,6 +65,9 @@ aa = 12
 aaa = a * aa
 print(aaa)
 ```
+
+    84
+
 
 Someone reading our code wouldn't have any idea that `a`, `aa` or `aaa` correspond to the length, width and area of a rectangle. This isn't such a big deal for a short program such as this, but for larger programs with 10s or even 100s of different variables, choosing sensible variable names becomes increasingly important to keep a track of what the code is doing!
 
@@ -84,6 +98,9 @@ x2 = (-b - sqrt(b**2 - 4 * a * c)) / (2 * a)
 print(x1, x2)
 ```
 
+    0.5 -1.0
+
+
 In the above example, if we wanted to solve a different equation, perhaps the following:
 
 $$x^2+6x-27=0$$
@@ -102,11 +119,17 @@ price = 1.50
 print(price)
 ```
 
+    1.5
+
+
 
 ```python
 price = 1.75
 print(price)
 ```
+
+    1.75
+
 
 The assignment operator is telling the computer: "Create a variable with this name, and store this value in that variable". 
 
@@ -118,9 +141,23 @@ price == 1.75
 ```
 
 
+
+
+    True
+
+
+
+
 ```python
 price == 1.50
 ```
+
+
+
+
+    False
+
+
 
 Play around with the above examples using the price variable until you understand the difference between using a single equals sign and using two equals signs.
 
@@ -130,6 +167,14 @@ Note that the equals sign treats its left and right sides differently. Let's ill
 ```python
 1.50 = price
 ```
+
+
+      File "<ipython-input-10-407f9b60ad94>", line 1
+        1.50 = price
+                    ^
+    SyntaxError: can't assign to literal
+
+
 
 What happened above? Python thinks we are trying to assign the value of `price` to a variable called `1.50`. As mentioned above, variables names in Python are not allowed to start with a number and the only punctuation they're allowed to contain are underscores, so when we run this we get a `SyntaxError`. 
 
@@ -141,17 +186,26 @@ a = 6
 print(a)
 ```
 
+    6
+
+
 
 ```python
 a = a + 1
 print(a)
 ```
 
+    7
+
+
 
 ```python
 a = a*2
 print(a)
 ```
+
+    14
+
 
 In math, if someone writes
 
@@ -173,6 +227,11 @@ likes_corgies = True
 print(likes_corgies)
 ```
 
+    Elizabeth
+    1926
+    True
+
+
 A quick word of warning before we move on: although it's *possible* to give your variables all sorts of names, be careful not to use the same name as an existing Python function. For example:
 
 
@@ -187,6 +246,18 @@ It worked... Now let us try to use the print function.
 print("Hi!")
 ```
 
+
+    ---------------------------------------------------------------------------
+
+    TypeError                                 Traceback (most recent call last)
+
+    <ipython-input-16-753269468413> in <module>
+    ----> 1 print("Hi!")
+    
+
+    TypeError: 'int' object is not callable
+
+
 ## Practice Problems
 
 Write some code that creates an integer variable with value between 10 and 99. 
@@ -194,36 +265,28 @@ Add 10 to that variable, then print it.
 
 
 ```python
-a = 58
-a = a + 10 # or a += 10
-print(a)
+
 ```
 
 Write some code that creates an integer variable with value between 10 and 99. Print the quotient and remainder of that integer resulting from division by 7.
 
 
 ```python
-a = 50
-print("Quotient:", a//7)
-print("Remainder:", a%7)
+
 ```
 
 Write some code that creates a variable and assign to it a string containing your name (e.g. "Liz"). Print this string twice. (Guess how to print a string a couple of times!)
 
 
 ```python
-a = "Alena"
-print(a * 2)
+
 ```
 
 Write some code that creates two variables, and assign each variable to a string containing an animal (e.g. "cat" or "dog"). Add these two strings together and print the result.
 
 
 ```python
-a = "cat"
-b = "dog"
-c = a + b
-print(c)
+
 ```
 
 ## Advanced Problems 
@@ -245,10 +308,7 @@ $$
 
 
 ```python
-A = True
-B = False
 
-print(not A == B)
 ```
 
 Write some code that saves a number to the variable `num_minutes`. Convert that number to be read in days:hours:minutes and print this to the screen. Use as many additional variables as necessary. The following table gives you some inputs with the correct outputs so you can test your code's accuracy.
@@ -268,18 +328,10 @@ Hint: the function `print` can be called with more that one *argument* by separa
 
 
 ```python
-print(4, ":", 5, ":", 4)
+
 ```
 
 
 ```python
-minutes = 43219
 
-minutes_in_day = 60 * 24
-days = minutes // minutes_in_day
-minutes = minutes - days * minutes_in_day
-hours = minutes // 60
-minutes = minutes - hours * 60
-
-print(days, ":", hours, ":", minutes)
 ```

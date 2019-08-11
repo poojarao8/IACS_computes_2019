@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Literature analysis with n-grams
-date:   2019-08-04
+date:   2019-08-08
 day: erature_analysis
 ---
 
@@ -375,8 +375,8 @@ And then there is **Zipf's law**: ranking words by their frequency, the n-th wor
 So the most common word is twice as frequent as the second most common one, three times more frequent than the third most common one, and so on.
 As a result, a handful of words make up over 50% of all words in a text.
 
-![The Zipf dinosaur](./zipfgraph_dinosaur.jpeg)
-![Zipf distribution for English](./zipfgraph_english.png)
+<img src="{{ site.baseurl }}/images/zipfgraph_dinosaur.jpeg" />
+<img src="{{ site.baseurl }}/images/zipfgraph_english.png" />
 
 Looking at the ten most common words in each play can't reveal much because Zipf's law already tells us that those words won't be interesting.
 If we want to find anything of interest, we have to ignore punctuation and all these common but uninteresting words, which are also called *stop words*.

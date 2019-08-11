@@ -1,10 +1,8 @@
 ---
 layout: post
 title:  Errors
-date:   2019-08-04
+date:   2019-08-08
 day: 5
-next:
-prev:
 ---
 
 
@@ -50,14 +48,61 @@ dot([1,2,3],[4,5,6])
 ```
 
 
+
+
+    32
+
+
+
+
 ```python
 dot([1,2,3,3,3,3,3],[4,5,6])
 ```
 
 
+    ---------------------------------------------------------------------------
+
+    AssertionError                            Traceback (most recent call last)
+
+    <ipython-input-4-f077d6d949c0> in <module>
+    ----> 1 dot([1,2,3,3,3,3,3],[4,5,6])
+    
+
+    <ipython-input-2-16660ae540a0> in dot(a, b)
+          1 def dot(a, b):
+    ----> 2     assert len(a) == len(b) # Make sure the two lists have equal length
+          3     answer = 0              # initialize a variable to hold our answer
+          4     for x, y in zip(a, b):  # loop over the lists
+          5         answer += x * y     # multiply each matching element of a and b, and add to answer
+
+
+    AssertionError: 
+
+
+
 ```python
 dot([1,2],[4,5,6])
 ```
+
+
+    ---------------------------------------------------------------------------
+
+    AssertionError                            Traceback (most recent call last)
+
+    <ipython-input-5-02c8af38ad61> in <module>
+    ----> 1 dot([1,2],[4,5,6])
+    
+
+    <ipython-input-2-16660ae540a0> in dot(a, b)
+          1 def dot(a, b):
+    ----> 2     assert len(a) == len(b) # Make sure the two lists have equal length
+          3     answer = 0              # initialize a variable to hold our answer
+          4     for x, y in zip(a, b):  # loop over the lists
+          5         answer += x * y     # multiply each matching element of a and b, and add to answer
+
+
+    AssertionError: 
+
 
 We can make our assert statement more useful by putting in a message that will be displayed if the assertion fails:
 
@@ -77,9 +122,36 @@ dot([1,2,3,3,3,3,3],[4,5,6])
 ```
 
 
+    ---------------------------------------------------------------------------
+
+    AssertionError                            Traceback (most recent call last)
+
+    <ipython-input-7-f077d6d949c0> in <module>
+    ----> 1 dot([1,2,3,3,3,3,3],[4,5,6])
+    
+
+    <ipython-input-6-b7a3605a328f> in dot(a, b)
+          1 def dot(a,b):
+    ----> 2     assert len(a)==len(b) , "The lists given are not the same length."
+          3     answer = 0
+          4     for x, y in zip(a, b):
+          5         answer += x * y
+
+
+    AssertionError: The lists given are not the same length.
+
+
+
 ```python
 dot([1,2,3],[4,5,6])
 ```
+
+
+
+
+    32
+
+
 
 ## Try blocks
 
@@ -107,6 +179,9 @@ def solver(a,b,c):
 ```python
 solver(2, 1, 1)
 ```
+
+    (-0.25+0.6614378277661477j) (-0.25-0.6614378277661477j)
+
 
 The above function will work for both real and complex answers! And if the answer is real, it won't use complex numbers (causing that unsightly `+0j` in the solution).
 

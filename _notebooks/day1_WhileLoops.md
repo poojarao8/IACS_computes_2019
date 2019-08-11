@@ -1,10 +1,8 @@
 ---
 layout: post
 title:  While loops
-date:   2019-08-04
+date:   2019-08-08
 day: 1
-next:
-prev:
 ---
 
 
@@ -18,9 +16,23 @@ In programming and computing (maybe even life in general), there are times where
 ```
 
 
+
+
+    1
+
+
+
+
 ```python
 2**2
 ```
+
+
+
+
+    4
+
+
 
 
 ```python
@@ -28,9 +40,23 @@ In programming and computing (maybe even life in general), there are times where
 ```
 
 
+
+
+    9
+
+
+
+
 ```python
 4**2
 ```
+
+
+
+
+    16
+
+
 
 
 ```python
@@ -38,9 +64,23 @@ In programming and computing (maybe even life in general), there are times where
 ```
 
 
+
+
+    25
+
+
+
+
 ```python
 6**2
 ```
+
+
+
+
+    36
+
+
 
 
 ```python
@@ -48,9 +88,23 @@ In programming and computing (maybe even life in general), there are times where
 ```
 
 
+
+
+    49
+
+
+
+
 ```python
 8**2
 ```
+
+
+
+
+    64
+
+
 
 
 ```python
@@ -58,9 +112,23 @@ In programming and computing (maybe even life in general), there are times where
 ```
 
 
+
+
+    81
+
+
+
+
 ```python
 10**2
 ```
+
+
+
+
+    100
+
+
 
 Very cumbersome, right? Surely there's a better way to do this! Maybe we could use a variable?
 
@@ -88,6 +156,18 @@ a += 1
 print(a**2)   # by this time, a should be 10, so we can print this last number and quit
 ```
 
+    1
+    4
+    9
+    16
+    25
+    36
+    49
+    64
+    81
+    100
+
+
 That was actually worse. But looking at what we just did, we did the same thing 10 seperate times. We started with variable `a`, assigned to it the value 1, printed `a` squared, added 1 to it and then repeated. Once we had written the first 3 lines of code, we could have copied and pasted the second and third lines 8 more times rather than typing them out by hand. 
 
 But thankfully there's a better way to do this: using a *loop*. 
@@ -103,6 +183,18 @@ while a < 11:   # Keep repeating while a is less than 11
     print(a**2) # print a squared
     a = a + 1   # add 1 to a and store the result. This is called *incrementing* a
 ```
+
+    1
+    4
+    9
+    16
+    25
+    36
+    49
+    64
+    81
+    100
+
 
 Loops in python have a very specific structure. The first line defines the condition for continuation followed by a colon, then they are followed by an indented body that defines what should be done each time the loop is executed. Each line in the body must be indented under the condition line (this indentation is how Python knows what is inside the loop and what isn't). 
 
@@ -138,6 +230,17 @@ while i < 10:
     i = i + 1
 ```
 
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+
+
 Do note that the last line printed was a 9, and not a 10. That is because the conditional in the header of the while loop must be true for the body to be executed. This code requires that `i < 10` for the body to be executed, so we will never print the number 10 since 10 is not less than 10. Thus when `i` equals 10, the loop's condition is false and the print statement inside the body of the loop will not be executed.
 
 ## Worked Examples
@@ -152,6 +255,23 @@ while a < 18:  # We could also have written a <= 17 here if we wanted. The resul
     a = a + 1  # After printing, increment a so that the loop will eventually terminate (infinite loops are bad)
 ```
 
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    10
+    11
+    12
+    13
+    14
+    15
+    16
+    17
+
+
 Write a loop to print the even numbers between 20 and 50
 
 
@@ -164,6 +284,24 @@ while a < 51:  # we want to stop at 50, so put 'less than 51' here
     a = a + 2  # Here, I can increment by 2 instead of 1 so that a stays even
 ```
 
+    20
+    22
+    24
+    26
+    28
+    30
+    32
+    34
+    36
+    38
+    40
+    42
+    44
+    46
+    48
+    50
+
+
 
 ```python
 # SOLUTION 2:
@@ -175,6 +313,24 @@ while a < 51:           #so far the same as above
         print(a)        # If a is even, then print it
     a = a + 1           # increment a by 1 whether we print or not
 ```
+
+    20
+    22
+    24
+    26
+    28
+    30
+    32
+    34
+    36
+    38
+    40
+    42
+    44
+    46
+    48
+    50
+
 
 Write a loop to sum all perfect squares less than 1000.
 
@@ -191,49 +347,37 @@ while a**2 < 1000:          # We want to stop once a**2 is greater than 1000
 print(my_sum)               # at the very end (outside the loop) print the result (my_sum)
 ```
 
+    10416
+
+
 ## Practice Problems 
 
 Write a loop to print the first 10 natural numbers in descending order. (Print 10, then 9, then 8...down to 1)
 
 
 ```python
-n = 10
-while n > 0:
-    print(n)
-    n = n - 1
+
 ```
 
 Write a loop to print the odd numbers between 17 and 67.
 
 
 ```python
-n = 17
-while n <= 67:
-    if n % 2 == 1:
-        print(n)
-    n += 1
+
 ```
 
 Write a loop to print the first 11 multiples of the number 3 (start with 0). So your loop should print 0, 3, 6, ...
 
 
 ```python
-n = 0
-while n <= 11:
-    print(n * 3)
-    n += 1
+
 ```
 
 Write a loop to calculate the product of the first 5 numbers. (Hint: The answer is 120. This is also known as the factorial function. This code should be very similar to the loop that sums the first 10 numbers.)
 
 
 ```python
-result = 1
-n = 1
-while n <= 5:
-    result = result * n
-    n += 1
-print(result)
+
 ```
 
 ## Advanced Practice Problems
@@ -243,15 +387,7 @@ Write some code to print out each pair of divisors of an integer variable `n` th
 
 
 ```python
-import math
 
-n = 100
-div = 1
-
-while div <= math.sqrt(n):
-    if n % div == 0:
-        print(n // div, "*", div, "=", n)
-    div += 1
 ```
 
 **Growing Numbers**  
@@ -259,15 +395,7 @@ Write a cell that when executed prints the numbers from 1 to n (a variable that 
 
 
 ```python
-n = 5
-i = 1
 
-while i <= n:
-    j = 1
-    while j <= i:
-        print(i)
-        j = j + 1
-    i = i + 1
 ```
 
 **Series**  
@@ -280,17 +408,7 @@ This sum simply adds up all of the natural numbers from 1 to $n$. A worked examp
 
 
 ```python
-number_of_terms = 10
-my_sum = 0
 
-i = 1
-
-while i <= number_of_terms:
-    my_sum = my_sum + i
-    
-    i = i + 1
-
-print(my_sum)
 ```
 
 Once you have that sum working, modify your code to try these sums:
@@ -299,33 +417,14 @@ $$1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \dots + \frac{1}{2^n}$$
 
 
 ```python
-number_of_terms = 25
-my_sum = 0
 
-i = 0
-
-while i <= number_of_terms:
-    my_sum = my_sum + 1.0/(2**i)
-    i = i + 1
-
-print(my_sum)
 ```
 
 $$1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \frac{1}{5} - \dots + \frac{(-1)^{n+1}}{n} $$
 
 
 ```python
-number_of_terms = 2500000
 
-my_sum = 1
-i = 2
-
-while i <= number_of_terms:
-    my_sum = my_sum + (-1.0)**(i + 1) / i
-    
-    i = i + 1
-
-print(my_sum)
 ```
 
 

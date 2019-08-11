@@ -1,10 +1,8 @@
 ---
 layout: post
 title:  Review
-date:   2019-08-04
+date:   2019-08-08
 day: 4
-next:
-prev:
 ---
 
 

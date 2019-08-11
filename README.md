@@ -75,22 +75,20 @@ Time | August 19 | August 20 | August 21 | August 22 | August 23
 
 #### Day 7 (Tuesday, August 20)
 1. [Review.ipynb]({{ site.baseurl }}{% link _notebooks/day7_review.md %})
-2. [Literature analysis ]({{ site.baseurl }}{% link _notebooks/day7_review.md %})
+2. [Literature analysis]({{ site.baseurl }}{% link _notebooks/literature_analysis_Literature_analysis_with_n-grams.md %})
 1. [Cryptography]({{ site.baseurl }}{% link _notebooks/cryptography_cryptography.md %})
 
 #### Day 8 (Wednesday, August 21)
 1. [Warm-up]({{ site.baseurl }}{% link _notebooks/day8_warm-up.md %})
-1. [Fractals]()
+1. [Fractals]({{ site.baseurl }}{% link _notebooks/fractals_fractals.md %})
 1. [Data Processing]({{ site.baseurl }}{% link _notebooks/data_processing_simplified_LOSC_Event_tutorial.md %})
 
-#### Day 9 (Thursday, August 22)
-1. [Towers of Hanoi]({{ site.baseurl }}{% link _notebooks/TowersofHanoi_Towers-of-Hanoi.md %})
-2. [Tic Tac Toe]({{ site.baseurl }}{% link _notebooks/day9_Tic-Tac-Toe.md %})
-3. [Text-based Adventure]({{ site.baseurl }}{% link _notebooks/day9_Text-Based-Adventure.md %})
-4. [Automated Trading]({{ site.baseurl }}{% link _notebooks/AutomatedTrading_StockMarket.md %})
-
-#### Day 10 (Friday, August 23)
-1. [Survey!]()
+#### Days 9 & 10 (Thursday, August 22 & Friday, August 23)
+Student projects
+- [Towers of Hanoi]({{ site.baseurl }}{% link _notebooks/TowersofHanoi_Towers-of-Hanoi.md %})
+- [Tic Tac Toe]({{ site.baseurl }}{% link _notebooks/day9_Tic-Tac-Toe.md %})
+- [Text-based Adventure]({{ site.baseurl }}{% link _notebooks/day9_Text-Based-Adventure.md %})
+- [Dead or alive]({{ site.baseurl }}{% link _notebooks/day9_dead_or_alive.md %})
 
 ## Anaconda installation
 

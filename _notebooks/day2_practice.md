@@ -1,14 +1,12 @@
 ---
 layout: post
 title:  Practice
-date:   2019-08-04
+date:   2019-08-08
 day: 2
-next:
-prev:
 ---
 
 
-# Coding practice
+# Day 2 practice
 
 Let's practice the tools and functions we have looked at the past couple of days. We'll have 2 main probems to solve today: staircase and sentiment analysis.
 
@@ -27,88 +25,38 @@ For a given $n$, print the corresponding staircase made out of hash symbols. For
 
 
 ```python
-n = 6
-for i in range(n + 1):
-    print("#" * i)
+
 ```
 
-### Sentiment analysis
+## Data cleaning
 
-[Sentiment analysis](https://en.wikipedia.org/wiki/Sentiment_analysis), or *emotion AI*, is an area of Natural Language Processing (NLP) that allows us to extract and quantify opinions and emotions from the text.
+When scientists perform experiments, the data that they collect needs to be processed before it can be analyzed. Sometimes the detector may not be working, it might be cloudy so the telescope can't see anything, or the scientist may go to get a coffee and miss a reading. Sometimes things interfere with the readings, leading the strange, *anomalous* readings that are far outside the range of expected values. Before any analysis is performed, the data must therefore be *cleaned* to remove any missing or anomalous values.
 
-We will continue looking at this task more later, but for now let us create a super simple sentiment analysis system. Namely, we will let the computer read a sentence and decide whether it is nice or rude. 
+In this exercise, we're going to pretend that we've collected some readings of the brightness of a star that we observed using Mount Stony Brook every evening for four weeks. Unfortunately, on a few of those nights it was cloudy, so no reading was taken. In this case, the brightness is recorded as `0`. On a few other nights, the flood lights at the nearby football stadium were turned on, leading to light contamination which produced anomalously large readings. On one night, an anomalously small reading was recorded (maybe the person taking the reading put the decimal point in the wrong place??). 
 
-Let us start by learning one more function defined for strings -- `str.split()`.
+Before we can analyze our data to work out how bright the star is, we will therefore need to clean it. 
+
+To do this, create a new list which does not contain any values which are 0, or much smaller/larger than would reasonably be expected. Decide for yourself what to consider to be anomalously small/large values. You should create the new list by using a for loop to iterate over the elements of the list, adding any values which satisfy the criteria to your new list. 
 
 
 ```python
-s = "This is a string"
-my_list = s.split()
-print(my_list)
+data = [105.77696802, 110.406054  , 106.36737707,  95.02908826,
+        84.13182033,  0, 0, 101.47121241,
+       106.07343453,  90.65935074,  93.66283734, 102.19944747,
+        82.82894661, 102.20360106, 102.29047846, 596.23884439,
+       104.03586589,  99.09490557,  76.09848805, 114.83901321,
+        86.5806938 , 497.74438934,  9.891387187, 506.57861168,
+       101.61619984,  92.62959516,  0,  90.04324646]
 ```
-
-As you can see, this method splits a string into separate words.
-
-Now we can start the sentiment analysis task!
-
-
-***What is good and what is bad?***
-
-Below, define two lists: `good_words` and `bad_words` that contain good and bad words, correspondingly. After, define a string `tweet` that will contain some phrase. (For now, avoid using punctuation)
 
 
 ```python
-good_words = ["good", "well", "nice", "love", "fun"]
-bad_words = ["bad", "nasty", "eww", "negative", "itchy"]
-tweet = "This book is good and nice :)"
+# create your clean data here
 ```
 
-Now, split the `tweet` into separate words. Try these tweets:
-
-1. "Sentiment analysis is fun and easy!" 
-2. "I don't like reading all of the negative tweets. :("
-3. "I love ice cream. :D"
-4. "My back is itchy."`
-
-
-```python
-tweet = tweet.split()
-print(tweet)
-```
-
-Create the variables `good` and `bad` which you will increment by `1` every time you encounter a good or a bad word in the `tweet`. Using a loop, look at every word in your `tweet`, and see whether you can find it in the list of good or bad words. Every time you see a good or a bad word, update the corresponding counter.
-
-
-```python
-# create two counters
-good = 0
-bad = 0
-
-# using while, loop over every word in your tweet
-for word in tweet:
-    # if the word in the good or bad list, update the corresponding counter
-    if word in good_words:
-        good += 1
-    elif word in bad_words:
-        bad += 1
-```
-
-Now we want to decide by comparing our two counters whether the tweet is good or bad. Let's write conditions which:
-1. will print `not enough data` if both counters are zero;
-2. will print that the text is mostly positive if `good` is bigger than `bad`;
-3. think about two additional outcomes!
-
-
-```python
-if good == 0 and bad == 0:
-    print("Not enough data!")
-elif good > bad:
-    print("The tweet is good!")
-elif bad > good:
-    print("The tweet is bad!")
-else:
-    print("The tweet is neutral.")
-```
+Now you have your nice clean data, let's analyze it to deduce how bright this star is. 
+- Calculate the mean of your clean data (this gives an estimate of the true value of the brightness)
+- *Advanced*: calculate the standard deviation of the clean data (see the advanced problem in the lists - if you did that problem you can reuse your code here!). The standard deviation gives us an estimate of the error in our measurement.
 
 
 ```python

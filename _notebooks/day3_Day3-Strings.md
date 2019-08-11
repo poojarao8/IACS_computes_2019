@@ -1,10 +1,8 @@
 ---
 layout: post
 title:  Day3-strings
-date:   2019-08-04
+date:   2019-08-08
 day: 3
-next:
-prev:
 ---
 
 
@@ -37,6 +35,9 @@ We can print the contents of a string in a simple and straightforward manner:
 print(a)
 ```
 
+    Woof
+
+
 Python strings can be written using ' or ", as long as they match.
 
 
@@ -45,12 +46,23 @@ print('Hello')
 print("Goodbye")
 ```
 
+    Hello
+    Goodbye
+
+
 We can add two strings together (this process is commonly called *concatenation*).
 
 
 ```python
 "Woof" + "Meow"
 ```
+
+
+
+
+    'WoofMeow'
+
+
 
 We can also do this with strings stored in variables.
 
@@ -61,12 +73,26 @@ b = "Meow"
 a + b
 ```
 
+
+
+
+    'WoofMeow'
+
+
+
 Can I use multiplication instead of addition? How about division?
 
 
 ```python
 a * 5
 ```
+
+
+
+
+    'WoofWoofWoofWoofWoof'
+
+
 
 *Challenge*: Take the strings "Hello" and " World", and print the sum twice back-to-back.
 
@@ -76,6 +102,9 @@ print(("Hello" + " World") * 2)
 
 ```
 
+    Hello WorldHello World
+
+
 
 ```python
 # First sum the two strings
@@ -84,6 +113,9 @@ my_string = "Hello" + " World"
 # Print the new string twice by multiplying it times 2
 print(my_string * 2)
 ```
+
+    Hello WorldHello World
+
 
 ### Strings are basically lists
 
@@ -96,9 +128,28 @@ c[1]
 ```
 
 
+
+
+    'q'
+
+
+
+
 ```python
 c[10]
 ```
+
+
+    ---------------------------------------------------------------------------
+
+    IndexError                                Traceback (most recent call last)
+
+    <ipython-input-11-ea0c20b3b68b> in <module>
+    ----> 1 c[10]
+    
+
+    IndexError: string index out of range
+
 
 Just like in normal lists in Python, we also use negative indices.
 
@@ -107,6 +158,13 @@ Just like in normal lists in Python, we also use negative indices.
 c[-1]
 ```
 
+
+
+
+    'l'
+
+
+
 *Challenge*: How would we find the sixth character of the string 'race car'?
 
 
@@ -114,12 +172,27 @@ c[-1]
 "race car"[6]
 ```
 
+
+
+
+    'a'
+
+
+
 What if I want to include some quotation marks in my string? If I write them as part of the string, Python gets confused:
 
 
 ```python
 newstring0 = "And then I told her, "Well you better go catch it!""
 ```
+
+
+      File "<ipython-input-14-10b748bdfde9>", line 1
+        newstring0 = "And then I told her, "Well you better go catch it!""
+                                               ^
+    SyntaxError: invalid syntax
+
+
 
 How can I fix this problem?? Hint: I have to tell Python somehow that I don't want this character to be special.
 
@@ -129,11 +202,18 @@ newstring1 = "And then I told her, \"Well you better go catch it!\""
 print(newstring1)
 ```
 
+    And then I told her, "Well you better go catch it!"
+
+
 
 ```python
 newstring2 = "Here is\na new line"
 print(newstring2)
 ```
+
+    Here is
+    a new line
+
 
 
 ```python
@@ -141,11 +221,17 @@ newstring3 = "Here is a\ttab"
 print(newstring3)
 ```
 
+    Here is a	tab
+
+
 
 ```python
 newstring4 = "And I put a backslash \\ into this string." 
 print(newstring4)
 ```
+
+    And I put a backslash \ into this string.
+
 
 ## Important Functions 
 
@@ -158,10 +244,24 @@ len(a)
 ```
 
 
+
+
+    4
+
+
+
+
 ```python
 c = "Squirrel"
 len(c)
 ```
+
+
+
+
+    8
+
+
 
 We can remove the white space surrounding a string using a function called `strip()`.
 
@@ -173,6 +273,11 @@ print(line.lstrip() + ".")
 print(line.rstrip() + ".")
 ```
 
+    Lots of     spaces.
+    Lots of     spaces        .
+         Lots of     spaces.
+
+
 We can also get rid of all the white space in a string and save each word into as a seperate element of a list using a function called `split( )`.
 
 
@@ -182,12 +287,18 @@ new_list = line.split()
 print(new_list) # note that this is a list of strings, not a string itself!
 ```
 
+    ['So', 'many', 'spaces', 'everywhere!']
+
+
 We can turn the new list of strings back into one big string.
 
 
 ```python
 print(" ".join(new_list))
 ```
+
+    So many spaces everywhere!
+
 
 *Challenge*: Break the following sentence into individual words: "This is a boring sentence." Then print each word, one per line.
 
@@ -198,12 +309,22 @@ for word in s:
     print(word)
 ```
 
+    This
+    is
+    a
+    boring
+    sentence.
+
+
 We can replace characters too!
 
 
 ```python
 print("cat".replace("c","h"))
 ```
+
+    hat
+
 
 How do I get only the words out of this screen name?
 
@@ -217,6 +338,13 @@ a = "harry_james_potter"
 a.split("_")
 ```
 
+
+
+
+    ['harry', 'james', 'potter']
+
+
+
 Oh but this is a name! We should really capitalize the first letter of each word.
 
 
@@ -228,6 +356,9 @@ for i, name in enumerate(name_list):
 print(name_list)
 ```
 
+    ['Harry', 'James', 'Potter']
+
+
 Similarly, we can change letters to upper and lower case with `.upper()` and `.lower()`.
 
 
@@ -236,6 +367,10 @@ print('MY SHOUTY SENTENCE'.lower())
 
 print('my shift key has broken'.upper())
 ```
+
+    my shouty sentence
+    MY SHIFT KEY HAS BROKEN
+
 
 ### Testing Strings
 
@@ -247,14 +382,35 @@ We can test if a character or even a string is inside another string using the "
 ```
 
 
+
+
+    True
+
+
+
+
 ```python
 "cat" in "The cat is over there."
 ```
 
 
+
+
+    True
+
+
+
+
 ```python
 "cat" in "The quick brown fox jumped over the lazy dog's back."
 ```
+
+
+
+
+    False
+
+
 
 Note that the in keyword is case senstive.
 
@@ -268,20 +424,36 @@ word = "Hello World"
 print(word.count('l')) 
 ```
 
+    3
+
+
 
 ```python
 print(word.find("H")) 
 ```
+
+    0
+
 
 
 ```python
 print(word.index("World")) 
 ```
 
+    6
+
+
 
 ```python
 "2334".isdigit()
 ```
+
+
+
+
+    True
+
+
 
 
 ```python
@@ -296,6 +468,17 @@ print(word.endswith('d'))     # test if string endswith a d
 print(word.startswith('H'))   # test if string startswith H
 ```
 
+    False
+    False
+    False
+    True
+    False
+    False
+    False
+    True
+    True
+
+
 ### Python III: Return of the Slice
 
 So how would we go about changing a letter in a string? Unfortunately we can't just use an equals sign as you would do for a list.
@@ -306,6 +489,20 @@ my_string = "Hello World!"
 
 my_string[0] = "h" # Let's try to change the H to an h
 ```
+
+
+    ---------------------------------------------------------------------------
+
+    TypeError                                 Traceback (most recent call last)
+
+    <ipython-input-39-3a8e474667eb> in <module>
+          1 my_string = "Hello World!"
+          2 
+    ----> 3 my_string[0] = "h" # Let's try to change the H to an h
+    
+
+    TypeError: 'str' object does not support item assignment
+
 
 What happened here? Just like with tuples, strings are *immutable*, which means that we cannot change characters in a string once it has been created. So how would we do it? Instead of changing the letter in the existing string, we need to create a new string made up of the old string along with any modifications we make. We can achieve this through slicing.
 
@@ -319,6 +516,9 @@ new_string = "h" + my_string[1:]
 print(new_string)
 ```
 
+    hello World!
+
+
 What if we want to change a letter in the middle of our string, say change the 'w' to a 'W'? For this we'd slice up to the letter we want to change, add in our changed letter, then add the slice from the letter after that up to the end. 
 
 
@@ -327,59 +527,44 @@ new_string = my_string[:6] + 'w' + my_string[7:]
 print(new_string)
 ```
 
+    Hello world!
+
+
 ## Practice Problems 
 
 Create a list containing some strings. Then add all of the strings together and print the result.
 
 
 ```python
-my_list = ["anti", "dis", "establish", "ment", "arian","ism"]
 
-new_string = ""
-
-for s in my_list:
-    new_string += s
-    
-print(new_string)
 ```
 
 Write some code that determines how many words are in a string. (Assume that the string is a sentence where words are all seperated by a space).
 
 
 ```python
-my_string = "Mr. and Mrs. Dursley of number four, Privet Drive, were proud to say that they were perfectly normal, thank you very much."
-print(len(my_string.split()))
+
 ```
 
 Write some code that doubles every letter. For example, 'Help' would become 'HHeellpp'. Store the elongated string as a new string, and print it.
 
 
 ```python
-word = "Help"
-new_string = ""
-for l in word:
-    new_string += l*2
-print(new_string)
+
 ```
 
 Write some code that takes a string as input and prints the string, written in reverse. For example, if given the string 'coconut" the cell would print 'tunococ'.
 
 
 ```python
-word = "coconut"
-print(word[::-1])
+
 ```
 
 Write some code that inserts the character 'h' at a given location inside another string. For example, create an integer and initialize it to 5. Then insert 'h' after the 5th position of the string 'She sells seashells'.
 
 
 ```python
-character = 'h'
-location = 5                            # change this to have some fun
-test_string = "She sells seashells"     # or change this for some more fun
 
-new_string = test_string[:5] + character + test_string[5:]
-print(new_string)
 ```
 
 ## Advanced Problems
@@ -388,27 +573,14 @@ print(new_string)
 
 
 ```python
-result = False
-my_string = "blah3"
-for l in my_string:
-    if l.isdigit():
-        result = True
-print(result)
+
 ```
 
 *Vowels*: Write some code that determines the index (or indices) in a string of all the vowels. 
 
 
 ```python
-vowels = ["a", "o", "i", "u", "e"]
-count = 0
-my_string = "Hello world!"
 
-for l in my_string:
-    if l in vowels:
-        count += 1
-    
-print(count)
 ```
 
 *Palindrome*:  
@@ -419,15 +591,7 @@ Write some code that determines if a string is a palindrome. Make it case insens
 
 
 ```python
-palindrome = True
-string = "tacocat"
-scan = len(string) // 2
 
-for i in range(scan + 1):
-    if string[i] != string[-(i + 1)]:
-        palindrome = False
-    
-print(palindrome)
 ```
 
 

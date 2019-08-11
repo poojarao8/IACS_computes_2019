@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Towers-of-hanoi
-date:   2019-08-04
+date:   2019-08-08
 day: ersofHanoi
 ---
 
@@ -28,19 +28,19 @@ First, let's see how to solve the problem recursively. We'll start with a really
 
 How about two disks? How do you solve the problem when $n=2$? You can do it in three steps. Here's what it looks like at the start:
 
-![image](tof3.png)
+<img src="{{ site.baseurl }}/images/tof3.png" />
 
 First, move disk 1 from peg A to peg C:
 
-![image](tof4.png)
+<img src="{{ site.baseurl }}/images/tof4.png" />
 
 Notice that we're using peg C as a spare peg, a place to put disk 1 so that we can get at disk 2. Now that disk 2—the bottommost disk—is exposed, move it to peg B:
 
-![image](tof5.png)
+<img src="{{ site.baseurl }}/images/tof5.png" />
 
 Finally, move disk 1 from peg C to peg B:
 
-![image](tof6.png)
+<img src="{{ site.baseurl }}/images/tof6.png" />
 
 This solution takes three steps, and once again there's nothing special about moving the two disks from peg A to peg B. You can move them from peg B to peg C by using peg A as the spare peg: move disk 1 from peg B to peg A, then move disk 2 from peg B to peg C, and finish by moving disk 1 from peg A to peg C. 
 

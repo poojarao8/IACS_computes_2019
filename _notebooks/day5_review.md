@@ -1,10 +1,8 @@
 ---
 layout: post
 title:  Review
-date:   2019-08-04
+date:   2019-08-08
 day: 5
-next:
-prev:
 ---
 
 
@@ -58,7 +56,7 @@ print(am_i_odd(81726))
 name = input("Hi! What is your name? ")
 ```
 
-    Hi! What is your name?  Alice
+    Hi! What is your name?  Luna
 
 
 

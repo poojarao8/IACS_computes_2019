@@ -1,10 +1,8 @@
 ---
 layout: post
 title:  Simulation
-date:   2019-08-04
+date:   2019-08-08
 day: 8
-next:
-prev:
 ---
 
 
@@ -19,6 +17,13 @@ import random
 l = ['H','T']
 random.choice(l)
 ```
+
+
+
+
+    'H'
+
+
 
 ## Coin Toss - Fair coin
 
@@ -46,8 +51,8 @@ print("Tails appears: ",count_t*100/n, "%")
 
 ```
 
-    Heads appears:  50.02 %
-    Tails appears:  49.98 %
+    Heads appears:  49.71 %
+    Tails appears:  50.29 %
 
 
 ## Monty Hall Problem
@@ -78,6 +83,6 @@ print("switching wins: ",count_switch*100/n,"%")
 print("staying wins: ",count_stay*100/n,"%")
 ```
 
-    switching wins:  65.65 %
-    staying wins:  34.35 %
+    switching wins:  66.49 %
+    staying wins:  33.51 %
 

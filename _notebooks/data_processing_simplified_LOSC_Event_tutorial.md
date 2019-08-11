@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Simplified l os c event tutorial
-date:   2019-08-04
+date:   2019-08-08
 day: a_processing
 ---
 
@@ -30,7 +30,7 @@ Note: although I've tried to simplify this notebook a bit, it's still highly tec
 
 Over a hundred years ago, Einstein published the *Theory of General Relativity*. This theory describes how what we experience as gravity is actually the bending of *spacetime* by objects with mass (i.e. rather that being a force as previously thought). This has many consequences, one of which is that objects with mass can emit *gravitational waves*. These are oscillations in spacetime produced by the movement of massive bodies, sort of like how a boat moving across a still lake will send out ripples across the surface. Unfortunately, these ripples are very very small and therefore very very hard to detect. It took scientists a hundred years to build an experiment sensitive enough to detect these gravitational waves (the LIGO detectors), and even then it's still only able to detect waves emitted in one of the most violent events in the universe: two black holes crashing into each other. 
 
-![LIGO](Simplified_diagram_of_an_Advanced_LIGO_detector.png)
+<img src="{{ site.baseurl }}/images/Simplified_diagram_of_an_Advanced_LIGO_detector.png" />
 
 The LIGO experiment consists of two *interferometers*, one in Livingston, LA, the other in Hanford, WA. Each interferometer has two arms, and along each arm is sent a laser beam. These two beams meet at the photodetector, where they produce an interference pattern. When a gravitational wave passes through the detector, this will cause spacetime to bend, slightly lengthening/shortening one of the arms with respect to the other and therefore changing the distance the laser beam has to travel. This will change the interference pattern at the photodetector. 
 
@@ -217,7 +217,7 @@ if make_plots:
 
 
 
-![png](simplified_LOSC_Event_tutorial_files/simplified_LOSC_Event_tutorial_14_1.png)
+<img src="{{ site.baseurl }}/images/simplified_LOSC_Event_tutorial_14_1.png" />
 
 
 The data are dominated by **low frequency noise**; there is no way to see a signal here, without some signal processing.
@@ -266,7 +266,7 @@ if make_plots:
 ```
 
 
-![png](simplified_LOSC_Event_tutorial_files/simplified_LOSC_Event_tutorial_17_0.png)
+<img src="{{ site.baseurl }}/images/simplified_LOSC_Event_tutorial_17_0.png" />
 
 
 NOTE that we only plot the data between f_min = 20 Hz and f_max = 2000 Hz.
@@ -467,11 +467,11 @@ if make_plots:
 ```
 
 
-![png](simplified_LOSC_Event_tutorial_files/simplified_LOSC_Event_tutorial_25_0.png)
+<img src="{{ site.baseurl }}/images/simplified_LOSC_Event_tutorial_25_0.png" />
 
 
 
-![png](simplified_LOSC_Event_tutorial_files/simplified_LOSC_Event_tutorial_25_1.png)
+<img src="{{ site.baseurl }}/images/simplified_LOSC_Event_tutorial_25_1.png" />
 
 
 In the above spectrograms, you may see lots of excess power below ~20 Hz, as well as strong spectral lines at 500, 1000, 1500 Hz (also evident in the ASDs above). The lines at multiples of 500 Hz are the harmonics of the "violin modes" of the fibers holding up the mirrors of the Advanced LIGO interferometers.
@@ -516,11 +516,11 @@ if make_plots:
 ```
 
 
-![png](simplified_LOSC_Event_tutorial_files/simplified_LOSC_Event_tutorial_27_0.png)
+<img src="{{ site.baseurl }}/images/simplified_LOSC_Event_tutorial_27_0.png" />
 
 
 
-![png](simplified_LOSC_Event_tutorial_files/simplified_LOSC_Event_tutorial_27_1.png)
+<img src="{{ site.baseurl }}/images/simplified_LOSC_Event_tutorial_27_1.png" />
 
 
 Loud (high SNR) signals may be visible in these spectrograms.  Compact object mergers show a characteristic "chirp" as the signal rises in frequency.  If you can't see anything, try
@@ -668,7 +668,7 @@ if make_plots:
 
 
 
-![png](simplified_LOSC_Event_tutorial_files/simplified_LOSC_Event_tutorial_31_2.png)
+<img src="{{ site.baseurl }}/images/simplified_LOSC_Event_tutorial_31_2.png" />
 
 
 These plots show the waveform template we're going to use for our match filtering. As a function of time, they show the strain (and again the strain zoomed in to the actual event), the gravitational wave frequency and the relative velocity of the black holes divided by the speed of light. 
@@ -856,27 +856,27 @@ for det in dets:
 
 
 
-![png](simplified_LOSC_Event_tutorial_files/simplified_LOSC_Event_tutorial_33_2.png)
+<img src="{{ site.baseurl }}/images/simplified_LOSC_Event_tutorial_33_2.png" />
 
 
 
-![png](simplified_LOSC_Event_tutorial_files/simplified_LOSC_Event_tutorial_33_3.png)
+<img src="{{ site.baseurl }}/images/simplified_LOSC_Event_tutorial_33_3.png" />
 
 
 
-![png](simplified_LOSC_Event_tutorial_files/simplified_LOSC_Event_tutorial_33_4.png)
+<img src="{{ site.baseurl }}/images/simplified_LOSC_Event_tutorial_33_4.png" />
 
 
 
-![png](simplified_LOSC_Event_tutorial_files/simplified_LOSC_Event_tutorial_33_5.png)
+<img src="{{ site.baseurl }}/images/simplified_LOSC_Event_tutorial_33_5.png" />
 
 
 
-![png](simplified_LOSC_Event_tutorial_files/simplified_LOSC_Event_tutorial_33_6.png)
+<img src="{{ site.baseurl }}/images/simplified_LOSC_Event_tutorial_33_6.png" />
 
 
 
-![png](simplified_LOSC_Event_tutorial_files/simplified_LOSC_Event_tutorial_33_7.png)
+<img src="{{ site.baseurl }}/images/simplified_LOSC_Event_tutorial_33_7.png" />
 
 
 ### Notes on these results

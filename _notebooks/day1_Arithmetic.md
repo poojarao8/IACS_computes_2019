@@ -1,10 +1,8 @@
 ---
 layout: post
 title:  Arithmetic
-date:   2019-08-04
+date:   2019-08-08
 day: 1
-next:
-prev:
 ---
 
 
@@ -18,6 +16,13 @@ Python can do basic arithmetic. (Make sure you are in code mode for the next box
 ```python
 6 + 4
 ```
+
+
+
+
+    10
+
+
 
 Notice we have two lines now: the input line and the output line. Also note the above command was the first one I entered, and has a [1] in both the input and output lines. If I entered it again, it would change to two.
 
@@ -36,9 +41,23 @@ Python can do everything your calculator can do. Basic arithmetic examples are h
 ```
 
 
+
+
+    14
+
+
+
+
 ```python
 14 - 9
 ```
+
+
+
+
+    5
+
+
 
 
 ```python
@@ -46,14 +65,35 @@ Python can do everything your calculator can do. Basic arithmetic examples are h
 ```
 
 
+
+
+    8.0
+
+
+
+
 ```python
 1999 * 109294
 ```
 
 
+
+
+    218478706
+
+
+
+
 ```python
 10**2
 ```
+
+
+
+
+    100
+
+
 
 The exponential (power) operator isn't the caret (hat) symbol ^, but two asterisks \*\*. In the example above, we put spaces between the numbers and the operators. This isn't necessary, but it's a common programming practice (which we strongly encourage!) to make the code more readable.
 
@@ -65,9 +105,23 @@ Finally, there are two more operators you should be aware of: floor division, an
 ```
 
 
+
+
+    2
+
+
+
+
 ```python
 7 % 3 
 ```
+
+
+
+
+    1
+
+
 
 ### PEMDAS
 
@@ -79,14 +133,35 @@ Remember PEMDAS? You may have learned the mnemonic "Please excuse my dear aunt s
 ```
 
 
+
+
+    16.0
+
+
+
+
 ```python
 10 + (3 ** 2) ** 3 / 9 - 6
 ```
 
 
+
+
+    85.0
+
+
+
+
 ```python
 1 ** 2 * 3 - 4 + 5
 ```
+
+
+
+
+    4
+
+
 
 Fun fact: in the UK we call this *BODMAS*, standing for 'Brackets, Order, Division, Multiplication, Addition and Subtraction', as parentheses are called brackets in British English!
 
