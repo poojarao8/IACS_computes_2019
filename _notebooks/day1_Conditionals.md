@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Conditionals
-date:   2019-08-11
+date:   2019-08-12
 day: 1
 ---
 
@@ -296,15 +296,31 @@ Write some code that creates an variable containing an integer between 10 and 99
 
 
 ```python
-
+a = 38
+if a < 50:
+    print(25 + a)
+else:
+    print(a)
 ```
+
+    63
+
 
 Write some code that creates a variable containing an integer that's either 1, 2, or 3. Write an `if -> elif -> else` statement that will print the word corresponding to that integer. For example, if that integer is 1, this cell should print the word `one`.
 
 
 ```python
-
+a = 1
+if a == 1:
+    print("One")
+elif a == 2:
+    print("Two")
+elif a == 3:
+    print("Three")
 ```
+
+    One
+
 
 Write some code that creates a variable and stores an integer there. Use an if statement to print `Even` if the number is even or `Odd` if the number is odd. (If you want to make your program more robust, you can have it print an error message if it receives a non-integer). 
 
@@ -312,12 +328,34 @@ Write some code that creates a variable and stores an integer there. Use an if s
 
 
 ```python
-
+a = 5
+if a % 2 == 1:
+    print("Odd")
+else:
+    print("Even")
 ```
+
+    Odd
+
 
 ## Advanced Problem
 
 Recall the `type` function. Create a variable that contains a string, an integer, or a float. Check the type of this variable. If it's a string, print `This is a string!`. Otherwise print `This is a number!`. If this is an integer and it is bigger than `10`, print `A large number!`.
+
+
+```python
+a = 94
+if type(a) == str:
+    print("This is a string!")
+else:
+    print("This is a number!")
+    if type(a) == int and a > 10:
+        print("A large number!")
+```
+
+    This is a number!
+    A large number!
+
 
 
 ```python

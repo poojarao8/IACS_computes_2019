@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Fractals
-date:   2019-08-11
+date:   2019-08-12
 day: 8
 ---
 

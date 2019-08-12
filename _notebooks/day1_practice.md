@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Practice
-date:   2019-08-11
+date:   2019-08-12
 day: 1
 ---
 
@@ -17,8 +17,34 @@ Let's use Python to do our math homework for us! Solve the following problems by
 
 
 ```python
-
+volume = 81.2 * 46.8 * 14.89
+print("my suitcase has a volume of ", volume)
 ```
+
+    my suitcase has a volume of  56584.3824
+
+
+
+```python
+side_length = 783**(1/3)
+
+print("Glass side length = ", side_length)
+```
+
+    Glass side length =  9.21695047705754
+
+
+
+```python
+from math import sqrt
+
+hypotenuse = sqrt(15.7**2 + 4.3**2)
+
+print("My cat is {}m away from me".format(hypotenuse))
+```
+
+    My cat is 16.27820628939196m away from me
+
 
 ## Exercise 2
 
@@ -29,8 +55,24 @@ Use a while loop to print out the first 10 square numbers (i.e. 1, 4, 9...)
 
 
 ```python
+counter = 1
 
+while counter <= 10:
+    print(counter**2)
+    counter += 1
 ```
+
+    1
+    4
+    9
+    16
+    25
+    36
+    49
+    64
+    81
+    100
+
 
 ### Triangular numbers 
 From wikipedia:
@@ -42,8 +84,32 @@ From wikipedia:
 
 
 ```python
+counter = 1
+triangular_number = 0
 
+while counter <= 15:
+    triangular_number += counter
+    counter += 1
+    
+    print(triangular_number)
 ```
+
+    1
+    3
+    6
+    10
+    15
+    21
+    28
+    36
+    45
+    55
+    66
+    78
+    91
+    105
+    120
+
 
 2. It turns out that there's a formula for summing up the first $n$ natural numbers:
 
@@ -53,8 +119,29 @@ $$ \sum_n n = \frac{n (n+1)}{2} $$
 
 
 ```python
+counter = 1
 
+while counter <= 15:
+    print(counter * (counter + 1) / 2)
+    counter += 1
 ```
+
+    1.0
+    3.0
+    6.0
+    10.0
+    15.0
+    21.0
+    28.0
+    36.0
+    45.0
+    55.0
+    66.0
+    78.0
+    91.0
+    105.0
+    120.0
+
 
 ### Last divisor standing
 
@@ -69,8 +156,39 @@ The following numbers are all powers of 2 that have been multiplied by some prim
 
 
 ```python
+# number = 98304
+# number = 212992
+# number = 17825792
+number = 2864
 
+while number % 1 == 0:
+    number /= 2
+    
+print("The prime number is", number * 2) # We multiply by 2 here to undo the last division
 ```
+
+    The prime number is 179.0
+
+
+
+```python
+# number = 98304
+# number = 212992
+# number = 17825792
+number = 2864
+
+counter = 0
+
+while number % 1 == 0:
+    number /= 2
+    counter += 1
+    
+# here we subtract 1 from the counter to undo the last loop
+print("The prime number is", number * 2, 'and the power of 2 is', counter - 1) 
+```
+
+    The prime number is 179.0 and the power of 2 is 4
+
 
 ### Alliteration is awesome
 
@@ -86,6 +204,50 @@ I'm writing a poem about a snake and want to include lots of alliteration for *d
 - walk
 - running
 - slithers
+
+
+```python
+# word = 'sand'
+# word = 'grass'
+# word = 'soil'
+# word = 'gravel'
+# word = 'swishes'
+# word = 'walk'
+# word = 'running'
+word = 'slithers'
+
+if word[0] == 's':
+    print(word, 'begins with an s!')
+```
+
+    slithers begins with an s!
+
+
+
+```python
+# word = 'sand'
+# word = 'grass'
+# word = 'soil'
+# word = 'gravel'
+word = 'swishes'
+# word = 'walk'
+# word = 'running'
+# word = 'slithers'
+
+counter = 0 # counter over the letters
+s_counter = 0 # count the number s's
+
+while counter < len(word):
+    if word[counter] == 's':
+        s_counter += 1
+    counter += 1
+        
+if s_counter >= 1:
+    print(word, 'contains', s_counter, "s's!")
+```
+
+    swishes contains 3 s's!
+
 
 
 ```python

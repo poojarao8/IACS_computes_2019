@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  N lp projects
-date:   2019-08-11
+date:   2019-08-12
 day: 8
 ---
 

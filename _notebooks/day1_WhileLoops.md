@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  While loops
-date:   2019-08-11
+date:   2019-08-12
 day: 1
 ---
 
@@ -356,29 +356,101 @@ Write a loop to print the first 10 natural numbers in descending order. (Print 1
 
 
 ```python
-
+n = 10
+while n > 0:
+    print(n)
+    n = n - 1
 ```
+
+    10
+    9
+    8
+    7
+    6
+    5
+    4
+    3
+    2
+    1
+
 
 Write a loop to print the odd numbers between 17 and 67.
 
 
 ```python
-
+n = 17
+while n <= 67:
+    if n % 2 == 1:
+        print(n)
+    n += 1
 ```
+
+    17
+    19
+    21
+    23
+    25
+    27
+    29
+    31
+    33
+    35
+    37
+    39
+    41
+    43
+    45
+    47
+    49
+    51
+    53
+    55
+    57
+    59
+    61
+    63
+    65
+    67
+
 
 Write a loop to print the first 11 multiples of the number 3 (start with 0). So your loop should print 0, 3, 6, ...
 
 
 ```python
-
+n = 0
+while n <= 11:
+    print(n * 3)
+    n += 1
 ```
+
+    0
+    3
+    6
+    9
+    12
+    15
+    18
+    21
+    24
+    27
+    30
+    33
+
 
 Write a loop to calculate the product of the first 5 numbers. (Hint: The answer is 120. This is also known as the factorial function. This code should be very similar to the loop that sums the first 10 numbers.)
 
 
 ```python
-
+result = 1
+n = 1
+while n <= 5:
+    result = result * n
+    n += 1
+print(result)
 ```
+
+    120
+
 
 ## Advanced Practice Problems
 
@@ -387,16 +459,56 @@ Write some code to print out each pair of divisors of an integer variable `n` th
 
 
 ```python
+import math
 
+n = 100
+div = 1
+
+while div <= math.sqrt(n):
+    if n % div == 0:
+        print(n // div, "*", div, "=", n)
+    div += 1
 ```
+
+    100 * 1 = 100
+    50 * 2 = 100
+    25 * 4 = 100
+    20 * 5 = 100
+    10 * 10 = 100
+
 
 **Growing Numbers**  
 Write a cell that when executed prints the numbers from 1 to n (a variable that you create), but prints each number that number of times (i.e. the number 1 gets printed once, the number 2 gets printed twice, the number 3 get printed 3 times, and so on).
 
 
 ```python
+n = 5
+i = 1
 
+while i <= n:
+    j = 1
+    while j <= i:
+        print(i)
+        j = j + 1
+    i = i + 1
 ```
+
+    1
+    2
+    2
+    3
+    3
+    3
+    4
+    4
+    4
+    4
+    5
+    5
+    5
+    5
+    5
+
 
 **Series**  
 
@@ -408,8 +520,21 @@ This sum simply adds up all of the natural numbers from 1 to $n$. A worked examp
 
 
 ```python
+number_of_terms = 10
+my_sum = 0
 
+i = 1
+
+while i <= number_of_terms:
+    my_sum = my_sum + i
+    
+    i = i + 1
+
+print(my_sum)
 ```
+
+    55
+
 
 Once you have that sum working, modify your code to try these sums:
 
@@ -417,15 +542,40 @@ $$1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \dots + \frac{1}{2^n}$$
 
 
 ```python
+number_of_terms = 25
+my_sum = 0
 
+i = 0
+
+while i <= number_of_terms:
+    my_sum = my_sum + 1.0/(2**i)
+    i = i + 1
+
+print(my_sum)
 ```
+
+    1.9999999701976776
+
 
 $$1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \frac{1}{5} - \dots + \frac{(-1)^{n+1}}{n} $$
 
 
 ```python
+number_of_terms = 2500000
 
+my_sum = 1
+i = 2
+
+while i <= number_of_terms:
+    my_sum = my_sum + (-1.0)**(i + 1) / i
+    
+    i = i + 1
+
+print(my_sum)
 ```
+
+    0.6931469805600938
+
 
 
 ```python
