@@ -96,6 +96,8 @@ Student projects
 - [Tic Tac Toe]({{ site.baseurl }}{% link _notebooks/day9_Tic-Tac-Toe.md %})
 - [Text-based Adventure]({{ site.baseurl }}{% link _notebooks/day9_Text-Based-Adventure.md %})
 - [Dead or alive]({{ site.baseurl }}{% link _notebooks/day9_dead_or_alive.md %})
+- [2d platformer game]({{ site.baseurl }}{% link _notebooks/day9_2d_platformer.md %})
+- [Making music]({{ site.baseurl }}{% link _notebooks/day9_music.md %})
 
 ## Anaconda installation
 
