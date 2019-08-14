@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Practice
-date:   2019-08-12
+date:   2019-08-13
 day: 1
 ---
 
@@ -41,8 +41,11 @@ from math import sqrt
 hypotenuse = sqrt(15.7**2 + 4.3**2)
 
 print("My cat is {}m away from me".format(hypotenuse))
+
+print(f"My cat is {hypotenuse}m away from me")
 ```
 
+    My cat is 16.27820628939196m away from me
     My cat is 16.27820628939196m away from me
 
 
@@ -158,8 +161,8 @@ The following numbers are all powers of 2 that have been multiplied by some prim
 ```python
 # number = 98304
 # number = 212992
-# number = 17825792
-number = 2864
+number = 17825792
+# number = 2864
 
 while number % 1 == 0:
     number /= 2
@@ -167,7 +170,7 @@ while number % 1 == 0:
 print("The prime number is", number * 2) # We multiply by 2 here to undo the last division
 ```
 
-    The prime number is 179.0
+    The prime number is 17.0
 
 
 
@@ -190,6 +193,18 @@ print("The prime number is", number * 2, 'and the power of 2 is', counter - 1)
     The prime number is 179.0 and the power of 2 is 4
 
 
+
+```python
+179 * 2**4
+```
+
+
+
+
+    2864
+
+
+
 ### Alliteration is awesome
 
 I'm writing a poem about a snake and want to include lots of alliteration for *dramatic effect*. In particular, I'm looking for words that start with the letter 's' (you know, to represent the snake's hissing). Use an if statement to test whether the following words begin with the letter s. If so, print out `<word> begins with an s!`. 
@@ -208,28 +223,25 @@ I'm writing a poem about a snake and want to include lots of alliteration for *d
 
 ```python
 # word = 'sand'
-# word = 'grass'
+word = 'grass'
 # word = 'soil'
 # word = 'gravel'
 # word = 'swishes'
 # word = 'walk'
 # word = 'running'
-word = 'slithers'
+# word = 'slithers'
 
 if word[0] == 's':
     print(word, 'begins with an s!')
 ```
 
-    slithers begins with an s!
-
-
 
 ```python
 # word = 'sand'
-# word = 'grass'
+word = 'grass'
 # word = 'soil'
 # word = 'gravel'
-word = 'swishes'
+# word = 'swishes'
 # word = 'walk'
 # word = 'running'
 # word = 'slithers'
@@ -246,7 +258,7 @@ if s_counter >= 1:
     print(word, 'contains', s_counter, "s's!")
 ```
 
-    swishes contains 3 s's!
+    grass contains 2 s's!
 
 
 

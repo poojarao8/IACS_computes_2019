@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  For loops
-date:   2019-08-12
+date:   2019-08-13
 day: 2
 ---
 
@@ -169,6 +169,31 @@ Write a for loop that prints out the integers from 3 to 16
 
 
 ```python
+counter = 3
+
+while counter <= 16:
+    print(counter)
+    counter += 1
+```
+
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    10
+    11
+    12
+    13
+    14
+    15
+    16
+
+
+
+```python
 for i in range(3,17):   # i is the variable that we'll use, and the range function makes this easy
     print(i)            # i is our variable, so print it
                         # note: no need to increment i here, because the for loop
@@ -195,6 +220,27 @@ Write a for loop that 'flips' a list of boolean variables (changes True to False
 
 
 ```python
+bool_list = [True, True, False, True, False, False, True]
+
+newlist = []
+counter = 0
+
+while counter < len(bool_list):
+    newlist.append(not bool_list[counter])
+    counter += 1
+
+newlist
+```
+
+
+
+
+    [False, False, True, False, True, True, False]
+
+
+
+
+```python
 bool_list = [True, True, False, True, False, False, True] #example list of booleans
 
 # We need to create a new list which will be our answer. However, to create a list, we
@@ -212,6 +258,33 @@ print(newlist)             # print our result so we can see if it's correct
 
 
 Write a for loop that loops through a string and converts every other character in the string to an underscore, starting with the second letter.
+
+
+```python
+mystring = "I like potatoes."
+
+counter = 0
+
+newstring = ""
+
+while counter < len(mystring):
+    
+    if counter % 2 == 0:
+        newstring += mystring[counter]
+    else:
+        newstring += '_'
+        
+    counter += 1
+
+newstring
+```
+
+
+
+
+    'I_l_k_ _o_a_o_s_'
+
+
 
 
 ```python
@@ -264,6 +337,22 @@ print(newstring)
     I_l_k_ _o_a_o_s_
 
 
+
+```python
+# Here's the same solution to the above problem, without comments:
+mystring = "I like potatoes."
+newstring = ""
+for i, letter in enumerate(mystring):
+    if i % 2 == 1:
+        newstring = newstring + "_"
+    else:
+        newstring = newstring + letter
+print(newstring)
+```
+
+    I_l_k_ _o_a_o_s_
+
+
 ## Practice Problems
 
 Write some code that takes a list of names (as strings), and prints "Hello \_\_\_\_\_\_!" for each name in the list.
@@ -273,8 +362,16 @@ Write some code that takes a list of names (as strings), and prints "Hello \_\_\
 namelist = ["Billy", "Matthew", "Shannon", "Kristen", "Taylor"]
 
 # Your code here
-
+for name in namelist:
+    print("Hello {}!".format(name))
 ```
+
+    Hello Billy!
+    Hello Matthew!
+    Hello Shannon!
+    Hello Kristen!
+    Hello Taylor!
+
 
 Write some code that takes creates three variables: a string of any length (named `mystring`, for example), and two more strings, each of length one (named `first_letter` and `second_letter`, for example). Have that cell create a new string that is like the first string, but with each instance of `first_letter` replaced by `second_letter`.
 
@@ -287,22 +384,93 @@ first_letter = "p"
 second_letter = "g"
 
 # Your code here
+newstring = ""
+
+for letter in mystring:
+    if letter == first_letter:
+        newstring = newstring + second_letter
+    else:
+        newstring = newstring + letter
     
+print(newstring)
 ```
+
+    geter giger
+
 
 In the practice problems for the Lists module, we wrote some code that added together all of the numbers in a list of numbers. You probably used a while loop to do this. Write some code that does it with a for loop instead.
 
 
 ```python
+my_list = [193,298374,129845]
 
+sum(my_list)
 ```
 
-Write some code that takes a string and prints `True` if the string is a palindrome (a word that reads the same backwards as it does forwards, e.g. 'level') and `False` if it is not. Use a for loop. (*Hint*: use both positive and negative indices to look at both ends of the string)
+
+
+
+    428412
+
+
 
 
 ```python
+my_sum = 0
+
+for number in my_list:
+    my_sum += number
     
+print(my_sum)
 ```
+
+    428412
+
+
+Write some code that takes a string and prints `True` if the string is a palindrome (a word that reads the same backwards as it does forwards, e.g. 'level') and `False` if it is not. Use a for loop. (*Hint*: use both positive and negative indices to look at both ends of the string)
+
+*Bonus*: how would we do this without a loop?
+
+
+```python
+test_string = "my test string"
+test_string = "abba"
+
+is_palindrome = True
+
+for i in range(len(test_string)):
+    if not test_string[i] == test_string[-i-1]:
+        is_palindrome = False
+
+print(is_palindrome)
+```
+
+    True
+
+
+
+```python
+test_string[::-1]
+```
+
+
+
+
+    'gnirts tset ym'
+
+
+
+
+```python
+test_string == test_string[::-1]
+```
+
+
+
+
+    True
+
+
 
 ## Advanced Problems
 
@@ -311,8 +479,23 @@ Write some code that takes a string and prints `True` if the string is a palindr
 
 ```python
 numlist = [4,7,-5,9,1,-2,6,4]
-    
+
+# first find the minimum value 
+minimum = sorted(numlist)[0]
+
+# now find location of it in the list
+index = -1
+
+for i in range(len(numlist)):
+    if numlist[i] == minimum:
+        index = i
+        break # the break keyword will exit out of the for loop immediately
+        
+print(index)
 ```
+
+    2
+
 
 *Sorting*: Write some code that takes a list of numbers as input and returns a new list that contains the same numbers, but in increasing order (from least to greatest). If you did the problem above, then you can use that function in your solution to this problem. Otherwise, you can use the `.index()` and `min()` functions, as demonstrated in the example below:
 
@@ -332,7 +515,33 @@ mylist.index(min(mylist))       # min finds the lowest number, and mylist.index(
 
 
 ```python
-# You can write your solution to the Sorting problem here:
-
-
+# one line solution 
+sorted(mylist)
 ```
+
+
+
+
+    [-5, -2, 1, 4, 4, 6, 7, 9]
+
+
+
+
+```python
+sorted_list = []
+
+for i in range(len(mylist)):
+    # find location of minimum value 
+    min_index = mylist.index(min(mylist))
+    
+    # add minimum value to end of sorted list 
+    sorted_list.append(mylist[min_index])
+    
+    # remove the element
+    del(mylist[min_index])
+    
+print(sorted_list)
+```
+
+    [-5, -2, 1, 4, 4, 6, 7, 9]
+

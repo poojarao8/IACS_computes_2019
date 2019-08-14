@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Lists
-date:   2019-08-12
+date:   2019-08-13
 day: 2
 ---
 
@@ -497,11 +497,23 @@ Here's the above code without comments:
 
 
 ```python
+sum(the_list)
+```
+
+
+
+
+    373
+
+
+
+
+```python
 the_list = [98, 43, 56, 38, 99, 17, 22]
 
-the_average = the_list[0] + the_list[2] + the_list[4]
+the_average = sum(the_list[:5:2])
 
-the_average = the_average / 3
+the_average /= 3
 
 print(the_average)
 ```
@@ -515,36 +527,151 @@ Write some code that creates a list that contains 5 seperate entries with value 
 
 
 ```python
-
+ones = [1,1,1,1,1]
 ```
+
+
+```python
+ones
+```
+
+
+
+
+    [1, 1, 1, 1, 1]
+
+
+
+
+```python
+counter = 0
+
+ones = []
+
+while counter < 5:
+    ones.append(1)
+    counter += 1
+    
+print(ones)
+```
+
+    [1, 1, 1, 1, 1]
+
+
+
+```python
+ones = [1] * 5
+```
+
+
+```python
+ones
+```
+
+
+
+
+    [1, 1, 1, 1, 1]
+
+
 
 Write some code that creates a list containing the first 17 odd numbers.
 
 
 ```python
+counter = 0
 
+odds = []
+
+while counter < 17:
+    odds.append(2 * counter + 1)
+    counter += 1
 ```
+
+
+```python
+odds
+```
+
+
+
+
+    [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33]
+
+
+
+
+```python
+list(range(1,18))
+
+list(range(2*17))[1::2]
+```
+
+
+
+
+    [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33]
+
+
 
 Write some code that creates a list of all multiples of 5 less than 100.
 
 
 ```python
+counter = 5
+multiples = []
 
+while counter < 100:
+    multiples.append(counter)
+    counter += 5
+    
+print(multiples)
 ```
+
+    [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95]
+
+
+
+```python
+list(range(100))[5::5]
+```
+
+
+
+
+    [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95]
+
+
 
 Write some code that sums all the entries of a list.
 
 
 ```python
+random_list = [234,587341,456.34,82,2985]
 
+sum(random_list)
 ```
+
+
+
+
+    591098.34
+
+
 
 Write some code that calculates the average of a list of numbers.
 
 
 ```python
-
+sum(random_list) / len(random_list)
 ```
+
+
+
+
+    118219.66799999999
+
+
 
 Write some code that copies all numbers from the given list below that are not multiples of 2 and puts them in a new list. (Hint: This can be done using a loop with a conditional).
 
@@ -552,8 +679,22 @@ Write some code that copies all numbers from the given list below that are not m
 ```python
 first_list = [ 1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 
+new_list = []
+counter = 0
 
+while counter < len(first_list):
+    element = first_list[counter]
+    
+    if element % 2 != 0:
+        new_list.append(element)
+    
+    counter += 1
+    
+print(new_list)
 ```
+
+    [1, 9, 25, 49, 81]
+
 
 ## Advanced Problems
 
@@ -569,19 +710,93 @@ Test your code on the given list. The answer is approximately 31.23.
 ```python
 test_list = [7, 39, 2, 56, 98, 74, 34, 17, 56, 88, 66, 0, 56, 34]
 
+average = sum(test_list) / len(test_list)
 
+counter = 0
+my_sum = 0
+
+while counter < len(test_list):
+    my_sum += (test_list[counter] - average)**2
+    counter += 1
+
+from math import sqrt
+standard_deviation = sqrt(1 / (len(test_list) - 1) * my_sum)
+standard_deviation
 ```
+
+
+
+
+    31.234050875061563
+
+
 
 *Median*: Write some code that calculates the median of a list of numbers. The answer for test_list is 47.5.
 
 
 ```python
+sorted_list = sorted(test_list)
 
+central_index = len(test_list) // 2
+
+median = sum(sorted_list[central_index - 1:central_index+1]) / 2
+
+median
 ```
+
+
+
+
+    47.5
+
+
 
 *Mode*: Write some code that calculates the mode of a list of numbers. The answer for test_list is 56.
 
 
 ```python
+# this is tricky without using more complex data structures we haven't seen yet,
+# so while this solution works in practice it's pretty fiddly and not a great way 
+# of doing this
 
+# first sort the list 
+sorted_list = sorted(test_list)
+
+# make a variable to keep track of the most common one 
+most_common = -1
+# variable holding how many times it's repeated 
+most_common_reps = 0
+# also need a local value to hold number of reps of test values
+local_reps = 0
+
+# now loop over the list 
+counter = 1
+
+while counter < len(sorted_list):
+    # check to see if the element of the list is the same 
+    # as the previous element
+    if sorted_list[counter] == sorted_list[counter - 1]:
+        # if so we increment the number of local reps
+        local_reps += 1
+        
+        # check to see if the local number of reps is greater that 
+        # the largest one found so far
+        if local_reps > most_common_reps:
+            most_common = sorted_list[counter]
+            most_common_reps = local_reps
+            
+    else:
+        # reset the number of local reps
+        local_reps = 0
+        
+    counter += 1
+    
+most_common
 ```
+
+
+
+
+    56
+
+

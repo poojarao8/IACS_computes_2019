@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Practice
-date:   2019-08-11
+date:   2019-08-13
 day: 2
 ---
 
@@ -25,8 +25,19 @@ For a given $n$, print the corresponding staircase made out of hash symbols. For
 
 
 ```python
+n = 6
 
+for i in range(6):
+    print('#' * (i+1))
 ```
+
+    #
+    ##
+    ###
+    ####
+    #####
+    ######
+
 
 ## Data cleaning
 
@@ -52,7 +63,21 @@ data = [105.77696802, 110.406054  , 106.36737707,  95.02908826,
 
 ```python
 # create your clean data here
+
+# most of the values are around 100, so let's throw out all values that
+# are not 100 +/- 30
+
+clean_data = []
+
+for num in data:
+    if num > 70 and num < 130:
+        clean_data.append(num)
+        
+print(clean_data)
 ```
+
+    [105.77696802, 110.406054, 106.36737707, 95.02908826, 84.13182033, 101.47121241, 106.07343453, 90.65935074, 93.66283734, 102.19944747, 82.82894661, 102.20360106, 102.29047846, 104.03586589, 99.09490557, 76.09848805, 114.83901321, 86.5806938, 101.61619984, 92.62959516, 90.04324646]
+
 
 Now you have your nice clean data, let's analyze it to deduce how bright this star is. 
 - Calculate the mean of your clean data (this gives an estimate of the true value of the brightness)
@@ -60,5 +85,76 @@ Now you have your nice clean data, let's analyze it to deduce how bright this st
 
 
 ```python
+# calculate the mean
+mean = sum(clean_data) / len(clean_data)
+mean
+```
 
+
+
+
+    97.52564877523812
+
+
+
+
+```python
+# calculate the standard deviation
+sd_sum = 0
+
+for num in clean_data:
+    sd_sum += (num - mean)**2
+    
+standard_deviation = (1 / (len(clean_data) - 1) * sd_sum)**0.5
+
+standard_deviation
+```
+
+
+
+
+    9.877044386788
+
+
+
+
+```python
+# for fun, let's repeat this with our uncleaned data and see how different the results are 
+
+unclean_mean = sum(data) / len(data)
+unclean_mean
+```
+
+
+
+
+    130.66042345989283
+
+
+
+
+```python
+sd_sum = 0
+
+for num in data:
+    sd_sum += (num - unclean_mean)**2
+    
+standard_deviation = (1 / (len(data) - 1) * sd_sum)**0.5
+
+standard_deviation
+```
+
+
+
+
+    147.02447345444045
+
+
+
+
+```python
+# we can see that with our uncleaned data the mean is much larger (as it is
+# skewed by the large anomalous values) and the standard deviation is 
+# also much larger (indicating that many of the values in the data are 
+# very far from the mean).
 ```
