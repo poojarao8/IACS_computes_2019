@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Arithmetic
-date:   2019-08-12
+date:   2019-08-14
 day: 1
 ---
 

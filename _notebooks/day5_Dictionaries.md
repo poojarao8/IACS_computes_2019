@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Dictionaries
-date:   2019-08-12
+date:   2019-08-14
 day: 5
 ---
 
@@ -219,7 +219,7 @@ inventory = {
 
 ## Fixing Fibonacci
 
-When we learnt about recursion on Friday, we saw how to compute Fibonacci numbers *recursively*.
+When we learnt about recursion, we saw how to compute Fibonacci numbers *recursively*.
 
 This can be a a very efficient way of calculating one-off Fibonacci numbers (especially in non-Python, functional languages), however it becomes very costly if we are calculating many numbers in the Fibonacci series.
 

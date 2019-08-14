@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Practice
-date:   2019-08-12
+date:   2019-08-14
 day: 3
 ---
 
@@ -10,7 +10,7 @@ day: 3
 
 ## Find the snakes
 
-Many real world applications of coding involve processing and analyzing text. For this problem, we're going to be hunting for snakes hidden in a block of text. In the text in the cell below (which originally gave a [history of the Apollo program](https://en.wikipedia.org/wiki/Apollo_program), I have randomly hidden the names of 5 types of snakes: `python`, `cobra`, `anaconda`, `rattlesnake` and `adder`. These names may be lowercase, uppercase or capitalized. Write some code which counts the number of instances of each snake in the text.
+Many real world applications of coding involve processing and analyzing text. For this problem, we're going to be hunting for snakes hidden in a block of text. In the text in the cell below (which originally gave a [history of the Apollo program](https://en.wikipedia.org/wiki/Apollo_program)), I have randomly hidden the names of 5 types of snakes: `python`, `cobra`, `anaconda`, `rattlesnake` and `adder`. These names may be lowercase, uppercase or capitalized. Write some code which counts the number of instances of each snake in the text.
 
 
 ```python
@@ -19,8 +19,18 @@ text = """The Apollo program, also known as Project Apollo, was python the third
 
 
 ```python
-# your code goes here
+snakes = ['python', 'cobra', 'anaconda', 'rattlesnake', 'adder']
+for snake in snakes:
+    num_snake = text.lower().count(snake)           # here we've chained the function calls together
+    print(f"I have found {num_snake} {snake}s!")    # we've printed the results using an f-string
 ```
+
+    I have found 15 pythons!
+    I have found 9 cobras!
+    I have found 6 anacondas!
+    I have found 3 rattlesnakes!
+    I have found 7 adders!
+
 
 ### Sentiment analysis
 
@@ -28,33 +38,14 @@ text = """The Apollo program, also known as Project Apollo, was python the third
 
 We will continue looking at this task more later, but for now let us create a super simple sentiment analysis system. Namely, we will let the computer read a sentence and decide whether it is nice or rude. 
 
-Let us start by learning one more function defined for strings -- `str.split()`.
-
-
-```python
-my_string = "I am a string!"
-my_string.split()
-```
-
-
-
-
-    ['I', 'am', 'a', 'string!']
-
-
-
-As you can see, this method splits a string into separate words.
-
-Now we can start the sentiment analysis task!
-
-
 ***What is good and what is bad?***
 
 Below, define two lists: `good_words` and `bad_words` that contain good and bad words, correspondingly. After, define a string `tweet` that will contain some phrase. (For now, avoid using punctuation)
 
 
 ```python
-
+good_words = ['fun', 'easy', 'love', ':D']
+bad_words = ["don't", 'negative', 'itchy', ':(']
 ```
 
 Now, split the `tweet` into separate words. Try these tweets:
@@ -62,18 +53,41 @@ Now, split the `tweet` into separate words. Try these tweets:
 1. "Sentiment analysis is fun and easy!" 
 2. "I don't like reading all of the negative tweets. :("
 3. "I love ice cream. :D"
-4. "My back is itchy."`
+4. "My back is itchy."
 
 
 ```python
+# tweet = "Sentiment analysis is fun and easy!"
+# tweet = "I don't like reading all of the negative tweets. :("
+tweet = "I love ice cream. :D"
+# tweet = "My back is itchy."
 
+split_tweet = tweet.split()
+
+# if you look at some of the words in the tweet, you'll notice that 
+# they have trailing !'s and .'s. We don't want this as it will break 
+# our analysis, so let's fix that 
+
+for i, word in enumerate(split_tweet):
+    # check if the last character in the string is not a letter 
+    # but the second to last one is.
+    # we do it this way so as not to strip out the emoji
+    if len(word) >= 2 and word[-2].isalpha() and not word[-1].isalpha():
+        split_tweet[i] = word[:-1]
 ```
 
 Create the variables `good` and `bad` which you will increment by `1` every time you encounter a good or a bad word in the `tweet`. Using a loop, look at every word in your `tweet`, and see whether you can find it in the list of good or bad words. Every time you see a good or a bad word, update the corresponding counter.
 
 
 ```python
+good = 0
+bad = 0
 
+for word in split_tweet:
+    if word in good_words:
+        good += 1
+    elif word in bad_words:
+        bad += 1
 ```
 
 Now we want to decide by comparing our two counters whether the tweet is good or bad. Let's write conditions which:
@@ -83,8 +97,18 @@ Now we want to decide by comparing our two counters whether the tweet is good or
 
 
 ```python
-
+if good == 0 and bad == 0:
+    print('Not enough data!')
+elif good > bad:
+    print('The tweet is mostly positive')
+elif bad > good:
+    print('The tweet is mostly negative')
+else: # this will happen if good == bad
+    print('The tweet is neutral')
 ```
+
+    The tweet is mostly positive
+
 
 ### Draw sunglasses
 
@@ -103,7 +127,47 @@ Now, write your own code to draw sunglasses!
 
 
 ```python
+# clean up just in case
+ted.home()
+ted.clear()
 
+ted.pensize(3)
+ted.pencolor('black')
+ted.fillcolor((0.6, 0.8, 0.9))
+
+ted.begin_fill()
+ted.circle(25)
+ted.end_fill()
+
+ted.penup()
+ted.goto((70,0))
+ted.pendown()
+ted.begin_fill()
+ted.circle(25)
+ted.end_fill()
+
+ted.penup()
+ted.goto((25,25))
+ted.pendown()
+ted.goto((45,25))
+
+ted.penup()
+ted.goto((-25,25))
+ted.pendown()
+ted.left(50)
+ted.forward(75)
+ted.right(50)
+ted.forward(20)
+
+ted.penup()
+ted.goto((95,25))
+ted.pendown()
+ted.left(50)
+ted.forward(75)
+ted.right(50)
+ted.forward(20)
+
+ted.hideturtle()
 ```
 
 After we're done drawing, let's close the window.
@@ -111,9 +175,4 @@ After we're done drawing, let's close the window.
 
 ```python
 window.bye()
-```
-
-
-```python
-
 ```

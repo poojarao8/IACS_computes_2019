@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Practice
-date:   2019-08-11
+date:   2019-08-14
 day: 5
 ---
 
@@ -97,7 +97,7 @@ Now loop over the unique words and use the `count` method of a list to find how 
 
 ## Dictionary sorting 
 
-The python `sorted` method can be used to lists, dictionaries, tuples etc. For example, if we sort a list of words:
+The python `sorted` method can be used to sort lists, dictionaries, tuples etc. For example, if we sort a list of words:
 
 
 ```python
@@ -111,7 +111,7 @@ sorted(['hippo', 'aadvark', 'elephant', 'zebra', 'buffalo'])
 
 
 
-If we try running sorted on a dictionary, then its default behavior is to sort the keys:
+If we try running `sorted` on a dictionary, then its default behavior is to sort the keys:
 
 
 ```python
@@ -208,7 +208,7 @@ city_pop('Houston', cities)
     KeyError: 'Houston'
 
 
-Your task is to make a new version of the function `city_pop` that behaves more intelligently that simply raising a `KeyError` if it cannot find the city. Here are a few suggestions for things you could try adding, but feel free to come up with your own improvements:
+Your task is to make a new version of the function `city_pop` that behaves more intelligently than simply raising a `KeyError` if it cannot find the city. Here are a few suggestions for things you could try adding, but feel free to come up with your own improvements:
 - check that the city is a string (what happens if you tried giving the function a number instead of a real city name?)
 - if the function cannot find the city in the dictionary, print a (helpful!) message to the user that the city cannot be found
 - even better: if the city cannot be found, ask the user if they'd like to add a new city to the dictionary. If so, make sure to ask for the population.

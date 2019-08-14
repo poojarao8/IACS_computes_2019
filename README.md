@@ -17,7 +17,7 @@ Time | August 12 | August 13 | August 14 | August 15 | August 16
 ---------- | ---------- | ---------- | ---------- | ---------- | ----------
 **09:00** | welcome + installation | warm up | warm up | warm up | warm up
 **10:00** | arithmetic + variables | lists | strings | functions | dictionaries
-**11:00** | data types + conditionals | lists | strings | functions | errors + exceptions
+**11:00** | data types + conditionals | lists | numpy | functions | errors + exceptions
 **12:00** | lunch | lunch | lunch | lunch | lunch
 **13:00** | while loops | for loops | turtles | I/O | more functions
 **14:00** | coding practice | coding practice | coding practice | coding practice | coding practice
@@ -56,6 +56,7 @@ notebooks can be found at the links below.
 #### Day 3 (Wednesday, August 14)
 1. [Review.ipynb]({{ site.baseurl }}{% link _notebooks/day3_review.md %})
 1. [Strings.ipynb]({{ site.baseurl }}{% link _notebooks/day3_Day3-Strings.md %})
+1. [Numpy.ipynb]({{ site.baseurl }}{% link _notebooks/day3_Numpy.md %})
 2. [Turtles.ipynb]({{ site.baseurl }}{% link _notebooks/day3_turtles.md %})
 7. [Practice.ipynb]({{ site.baseurl }}{% link _notebooks/day3_practice.md %})
 

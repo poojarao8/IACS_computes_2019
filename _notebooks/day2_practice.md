@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Practice
-date:   2019-08-13
+date:   2019-08-14
 day: 2
 ---
 
@@ -27,8 +27,25 @@ For a given $n$, print the corresponding staircase made out of hash symbols. For
 ```python
 n = 6
 
-for i in range(6):
-    print('#' * (i+1))
+for i in range(1, n+1):
+    print('#' * i)
+```
+
+    #
+    ##
+    ###
+    ####
+    #####
+    ######
+
+
+
+```python
+my_str = ""
+
+for i in range(n):
+    my_str += "#"
+    print(my_str)
 ```
 
     #

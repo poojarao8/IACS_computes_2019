@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Tic-tac-toe
-date:   2019-08-11
+date:   2019-08-14
 day: 9
 ---
 

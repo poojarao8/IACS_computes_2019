@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  Numpy
-date:   2019-08-12
-day: 5
+date:   2019-08-14
+day: 3
 ---
 
 
@@ -512,6 +512,213 @@ plt.show()
 
 
 <img src="{{ site.baseurl }}/images/Numpy_53_0.png" />
+
+
+## Practice
+
+
+### Array arithmetic
+
+Let's do some mathematics with numpy arrays. Below we've defined two arrays, `A` and `B`. Compute the following quantities:
+
+1. add `A` to `B` *element wise* (so add the first element of `A` to the first element of `B` etc.)
+2. subtract the elements of `A` from the elements of `B`
+3. Multiply the arrays element-by-element
+4. Square the elements of `A`
+5. Calculate the exponential of the elements of `A` (so $\exp A_ij$ for all $i,j$) 
+5. Treating them as matrices, now multiply `A` by `B`
+6. Again treating them as matrices, divide `A` by `B` 
+7. Calculate square of the matrix `A`
+
+
+```python
+A = np.array([[1, 6, 1],
+              [8, 6, 1],
+              [0, 2, 7]])
+
+B = np.array([[0, 1, 7],
+              [12,9, 2],
+              [1, 0, 1]])
+```
+
+
+```python
+A + B
+```
+
+
+
+
+    array([[ 1,  7,  8],
+           [20, 15,  3],
+           [ 1,  2,  8]])
+
+
+
+
+```python
+A - B
+```
+
+
+
+
+    array([[ 1,  5, -6],
+           [-4, -3, -1],
+           [-1,  2,  6]])
+
+
+
+
+```python
+A * B
+```
+
+
+
+
+    array([[ 0,  6,  7],
+           [96, 54,  2],
+           [ 0,  0,  7]])
+
+
+
+
+```python
+A**2
+```
+
+
+
+
+    array([[ 1, 36,  1],
+           [64, 36,  1],
+           [ 0,  4, 49]])
+
+
+
+
+```python
+np.exp(A)
+```
+
+
+
+
+    array([[2.71828183e+00, 4.03428793e+02, 2.71828183e+00],
+           [2.98095799e+03, 4.03428793e+02, 2.71828183e+00],
+           [1.00000000e+00, 7.38905610e+00, 1.09663316e+03]])
+
+
+
+
+```python
+A @ B
+```
+
+
+
+
+    array([[73, 55, 20],
+           [73, 62, 69],
+           [31, 18, 11]])
+
+
+
+
+```python
+np.linalg.solve(A, B)
+```
+
+
+
+
+    array([[ 1.71428571,  1.14285714, -0.71428571],
+           [-0.325     , -0.025     ,  1.325     ],
+           [ 0.23571429,  0.00714286, -0.23571429]])
+
+
+
+
+```python
+np.linalg.matrix_power(A, 2)
+```
+
+
+
+
+    array([[49, 44, 14],
+           [56, 86, 21],
+           [16, 26, 51]])
+
+
+
+### Plotting
+
+In your math classes at school, you have probably come across *simultaneous equations*. Here we have 2 or more variables (e.g. $x$ and $y$) which are described by 2 or more equations. By solving the equations simultaneously, we can find the values of the variables. 
+
+One way of solving simultaneous equations is by plotting the functions and finding the point way they intersect. Try that here for the following pairs of equations. 
+1. Try plotting between $-3 \leq x \leq 1$ and $-2 \leq y \leq 2$:
+$$x + 2 y = 0$$
+
+$$2 x - y + 5 = 0$$
+
+2. Try plotting between $-2 \leq x \leq 5$ and $-2 \leq y \leq 5$
+$$x^2 + 0.5 y = 0$$
+$$4y - 2x + 1 = 0$$
+
+
+```python
+y = np.linspace(-2, 2)
+x = - 2 * y
+
+x2 = np.linspace(-3, 1)
+y2 = 2 * x2 + 5
+
+plt.plot(x, y, label='x = -2y')
+plt.plot(x2, y2, label='y = 2x + 5')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.legend()
+```
+
+
+
+
+    <matplotlib.legend.Legend at 0x1136d3f28>
+
+
+
+
+<img src="{{ site.baseurl }}/images/Numpy_66_1.png" />
+
+
+
+```python
+x = np.linspace(-2, 5)
+y = -2 * x**2
+
+x2 = np.linspace(-2, 5)
+y2 = 1/2 * x - 1/4
+
+plt.plot(x, y, label='y = -2x**2')
+plt.plot(x2, y2, label='y = x/2 - 1/4')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.xlim([-1, 2])
+plt.ylim([-4, 2])
+plt.legend()
+```
+
+
+
+
+    <matplotlib.legend.Legend at 0x1133f6c18>
+
+
+
+
+<img src="{{ site.baseurl }}/images/Numpy_67_1.png" />
 
 
 

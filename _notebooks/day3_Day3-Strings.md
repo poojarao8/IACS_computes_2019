@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Day3-strings
-date:   2019-08-12
+date:   2019-08-14
 day: 3
 ---
 
@@ -536,36 +536,81 @@ Create a list containing some strings. Then add all of the strings together and 
 
 
 ```python
+my_list = ["rabbit", "crocodile", "butterfly"]
 
+" ".join(my_list)
 ```
+
+
+
+
+    'rabbit crocodile butterfly'
+
+
 
 Write some code that determines how many words are in a string. (Assume that the string is a sentence where words are all seperated by a space).
 
 
 ```python
+my_string = "The quick brown fox jumps over the lazy dog"
 
+len(my_string.split())
 ```
+
+
+
+
+    9
+
+
 
 Write some code that doubles every letter. For example, 'Help' would become 'HHeellpp'. Store the elongated string as a new string, and print it.
 
 
 ```python
+my_string = "Help"
 
+new_string = ""
+
+for letter in my_string:
+    new_string += letter * 2
+    
+print(new_string)
 ```
+
+    HHeellpp
+
 
 Write some code that takes a string as input and prints the string, written in reverse. For example, if given the string 'coconut" the cell would print 'tunococ'.
 
 
 ```python
-
+"coconut"[::-1]
 ```
+
+
+
+
+    'tunococ'
+
+
 
 Write some code that inserts the character 'h' at a given location inside another string. For example, create an integer and initialize it to 5. Then insert 'h' after the 5th position of the string 'She sells seashells'.
 
 
 ```python
+my_string = "She sells seashells"
 
+n = 5
+my_string[:n] + 'h' + my_string[n:]
 ```
+
+
+
+
+    'She shells seashells'
+
+
 
 ## Advanced Problems
 
@@ -573,15 +618,36 @@ Write some code that inserts the character 'h' at a given location inside anothe
 
 
 ```python
-
+result = False
+my_string = "blah3"
+for l in my_string:
+    if l.isdigit():
+        result = True
+print(result)
 ```
+
+    True
+
 
 *Vowels*: Write some code that determines the index (or indices) in a string of all the vowels. 
 
 
 ```python
+vowels = ["a", "o", "i", "u", "e"]
+vowel_indices = []
+my_string = "Hello world!"
 
+# use enumerate to keep track of the index 
+# as we iterate over the letters
+for i, letter in enumerate(my_string):
+    if letter in vowels:
+        vowel_indices.append(i)
+        
+print(vowel_indices)
 ```
+
+    [1, 4, 7]
+
 
 *Palindrome*:  
 From Wikipedia (https://en.wikipedia.org/wiki/Palindrome):  
@@ -591,8 +657,25 @@ Write some code that determines if a string is a palindrome. Make it case insens
 
 
 ```python
+string = "tacocat"
 
+# first we are going to strip the string of any punctuation 
+new_string = ""
+for letter in string:
+    if letter.isalpha():
+        new_string += letter
+
+# find the length of the string / 2 (rounded down to the nearest integer)
+half_length = len(new_string) // 2
+
+# now test whether the reversed string starts with the first half of the original string 
+palindrome = (new_string[::-1].startswith(new_string[:half_length]))
+    
+print(palindrome)
 ```
+
+    True
+
 
 
 ```python
