@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  I o
-date:   2019-08-14
+date:   2019-08-15
 day: 4
 ---
 
@@ -162,27 +162,48 @@ Write some code that uses this chat bot by feeding user input into the chat bot 
 
 
 ```python
-chatbot(input("What is your name? "),input ("What is your favorite animal? "),input("where are you from? "))
+chatbot("Bob", "cat", "Iowa")
 ```
 
-    What is your name?  Ford
-    What is your favorite animal?  cat
-    where are you from?  Betelgeuse V
-
-
-    Hello, Ford!
+    Hello, Bob!
     
     Oh, I see you like cats...
     That choice is pretty usual.
     
-    Wow, you're from Betelgeuse V.
+    Wow, you're from Iowa.
+    Pretty cold there, huh?
+
+
+
+
+
+    'Bob from Iowa likes cats!'
+
+
+
+
+```python
+chatbot(input("What is your name? "),input ("What is your favorite animal? "),input("where are you from? "))
+```
+
+    What is your name?  Alice
+    What is your favorite animal?  cat
+    where are you from?  UK
+
+
+    Hello, Alice!
+    
+    Oh, I see you like cats...
+    That choice is pretty usual.
+    
+    Wow, you're from UK.
     That's good.
 
 
 
 
 
-    'Ford from Betelgeuse V likes cats!'
+    'Alice from UK likes cats!'
 
 
 
@@ -240,10 +261,10 @@ def chatbot():
 chatbot()
 ```
 
-    Hi, I'm RUDY! What's your name?  Ford
+    Hi, I'm RUDY! What's your name?  Alice
 
 
-    Nice to meet you, Ford!
+    Nice to meet you, Alice!
     
 
 
@@ -255,17 +276,17 @@ chatbot()
     
 
 
-    Where are you from? :D  Betelgeuse V
+    Where are you from? :D  UK
 
 
-    Wow, you're from Betelgeuse V??
+    Wow, you're from UK??
     That's good.
 
 
 
 
 
-    'Ford from Betelgeuse V likes cats!'
+    'Alice from UK likes cats!'
 
 
 
@@ -290,7 +311,11 @@ are_we_there_yet()
 
     Are we there yet?  no
     Are we there yet?  
-    Are we there yet?  no
+    Are we there yet?  not yet
+    Are we there yet?  2983764978263auwfkhgsdkfjsd
+    Are we there yet?  ahdflhw8r
+    Are we there yet?  
+    Are we there yet?  
     Are we there yet?  yes
 
 
@@ -495,13 +520,22 @@ Check that your function works by either opening the file manually, or by openin
 
 
 ```python
-
+def write_file(string, filename):
+    with open(filename, 'a') as output_file:
+        output_file.write(string)
+        
+write_file("some new text", 'secret.txt')
 ```
 
 
 ```python
-
+with open('secret.txt', 'r') as input_file:
+    print(input_file.read())
 ```
+
+    Hello
+    world!some new text
+
 
 Write a function with no arguments that prompts the user to enter a random integer between zero and one-hundred. 
 
@@ -513,23 +547,26 @@ Make sure to cast the number entered as an integer!!
 
 
 ```python
-
+def get_number():
+    random_int = int(input("Enter a random integer between zero and 100: "))
+    
+    while random_int < 0 or random_int > 100:
+        random_int = int(input("That's not between 0 and 100. Please try again: "))
+    
+    return random_int
 ```
 
 
 ```python
-
+var = get_number()
 ```
 
+    Enter a random integer between zero and 100:  287364
+    That's not between 0 and 100. Please try again:  -23847
+    That's not between 0 and 100. Please try again:  324
+    That's not between 0 and 100. Please try again:  32537491
+    That's not between 0 and 100. Please try again:  34
 
-```python
-
-```
-
-
-```python
-
-```
 
 Write a function that takes a number as its only argument. 
 
@@ -541,13 +578,37 @@ Have your function return True if its equal and False otherwise.
 
 
 ```python
-
+def compare_numbers(n):
+    m = float(input("Please enter a number: "))
+    
+    if m > n:
+        print(f"{m} is greater than {n}")
+        return False
+    elif m == n:
+        print(f"{m} is equal to {n}")
+        return True
+    elif m < n:
+        print(f"{m} is less than {n}")
+        return False
 ```
 
 
 ```python
-
+compare_numbers(5)
 ```
+
+    Please enter a number:  5
+
+
+    5.0 is equal to 5
+
+
+
+
+
+    True
+
+
 
 ## Advanced Problem 
 
@@ -555,8 +616,41 @@ Have your function return True if its equal and False otherwise.
 
 
 ```python
+# function generating a random number
+from random import randint
 
+def get_rand():
+    return randint(1,100)
+
+def guessing_game():
+    target = get_rand()
+    
+    guess = int(input("Guess a number between 1 and 100!"))
+    
+    while guess != target:
+        if guess < target:
+            guess = int(input("Too low! Try again: "))
+        else:
+            guess = int(input("Too high! Try again:"))
+            
+    print(f"Correct! The number is {target}")
 ```
+
+
+```python
+guessing_game()
+```
+
+    Guess a number between 1 and 100! 50
+    Too high! Try again: 25
+    Too high! Try again: 15
+    Too low! Try again:  20
+    Too high! Try again: 18
+    Too high! Try again: 17
+
+
+    Correct! The number is 17
+
 
 
 ```python

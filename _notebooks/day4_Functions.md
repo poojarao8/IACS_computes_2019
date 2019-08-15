@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Functions
-date:   2019-08-14
+date:   2019-08-15
 day: 4
 ---
 
@@ -9,6 +9,11 @@ day: 4
 # Practice
 
 Write some code that deletes all consonants from the word *omnipotent*.
+
+
+```python
+
+```
 
 
 ```python
@@ -325,15 +330,8 @@ def bad_chatbot(name, animal, state):
 
 
 ```python
-bad_chatbot("Alena", "cat", "New York")
+alena = bad_chatbot("Alena", "cat", "New York")
 ```
-
-
-
-
-    'Alena from New York likes cats!'
-
-
 
 The function exits and returns the result *as soon as* it hits the return statement, so it never gets to the last line in our function. 
 
@@ -347,66 +345,239 @@ def weird_thing(n):
     else:
         return "Hi"
     
-weird_thing(-5)
+weird_thing(5)
 ```
 
 
 
 
-    'Hey'
+    'Hi'
 
 
 
 ## Practice Problems
 
-Write a function that takes an integer `n` and prints the first `n` natural numbers.
+Write a function that takes an integer `n` and prints the first `n` positive integers (i.e. integers from 1 to `n`). So if `n = 5`, it would print
+```
+1
+2
+3
+4
+5
+```
 
 
 ```python
-
+def num(n):
+    for i in range(1, n+1):
+        print(i)
+num(6)
 ```
 
-Write a function that takes a string and counts how many vowels (a,e,i,o,u) are there in the string. Return the result.
+    1
+    2
+    3
+    4
+    5
+    6
+
+
+Write a function that takes a string and counts how many vowels (a,e,i,o,u) are there in the string. Print the result.
 
 
 ```python
-
+def count_vowels(a_string):
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    num_vowels = 0
+    for vowel in vowels:
+        num_vowels += a_string.count(vowel)
+    print(f"There are {num_vowels} in this string")
 ```
+
+
+```python
+count_vowels("this is a string")
+```
+
+    There are 4 in this string
+
+
+
+```python
+count_vowels("this is another string")
+```
+
+    There are 6 in this string
+
 
 Now, remember the first thing we did today. Write a function that takes two arguments: `string` and `t`, and returns the version of the string without consonants if the value of `t` is `c`, and removes vowels if the value of the `t` is `v`. Otherwise it returns `False`.
 
 
 ```python
-
+def remove_letters(string, t):
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    newstring = ""
+    
+    if t == 'c':
+        for letter in string:
+            if letter in vowels:
+                newstring += letter
+    elif t == 'v':
+        for letter in string:
+            if letter not in vowels:
+                newstring += letter
+    else:
+        return False
+    
+    return  newstring
 ```
+
+
+```python
+var = remove_letters("this is a string", "a")
+```
+
+
+```python
+print(var)
+```
+
+    False
+
+
+
+```python
+type(var)
+```
+
+
+
+
+    bool
+
+
 
 Write a function that takes 4 arguments: `name`, `year`, `month`, and `day`. It then greets the user and happliy tells them how old they are, before returning ther age.
 
 
 ```python
-
+def age(name, year, month, day):
+    print(f"Hello {name}!")
+    
+    today = 16
+    this_month = 8
+    this_year = 2019
+    
+    age = 0
+    
+    if (month > this_month) or ((month == this_month) and (day >= today)):
+        age = this_year - year - 1
+    else:
+        age = this_year - year
+        
+    print(f"Congratulations! You are {age} years old!")
+    
+    return age
+    
 ```
+
+
+```python
+billy = age("Billy", 2001, 10, 23)
+```
+
+    Hello Billy!
+    Congratulations! You are 17 years old!
+
+
+
+```python
+billy
+```
+
+
+
+
+    17
+
+
 
 Write a function that takes a list of strings and concatenates every string to the strings in front of it in the list. For example, the list ["cat", "dog", "fox","pig"] would return ["cat","catdog","catdogfox","catdogfoxpig"]
 
 
 ```python
-
+def concat(str_list):
+    
+    new_list = []
+    
+    for i, word in enumerate(str_list):
+        new_string = "".join(str_list[:i+1])
+            
+        new_list.append(new_string)
+        
+    return new_list
 ```
+
+
+```python
+concat(["cat", "dog", "fox","pig"] )
+```
+
+
+
+
+    ['cat', 'catdog', 'catdogfox', 'catdogfoxpig']
+
+
 
 Write a function that takes an integer and returns `True` if that number is prime, and `False` if it isn't. Recall that a positive integer greater than 1 is prime if it can only be divided by 1 and itself.
 
 
 ```python
-
+def prime(n):
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+    return True
 ```
+
+
+```python
+prime(13)
+```
+
+
+
+
+    True
+
+
 
 Write a function that takes an integer and returns a list of all the factors of the input number.
 
 
 ```python
-
+def factors(n):
+    my_list = []
+    
+    for i in range(1, n+1):
+        if n % i == 0:
+            my_list.append(i)
+            
+    return my_list
 ```
+
+
+```python
+factors(15)
+```
+
+
+
+
+    [1, 3, 5, 15]
+
+
 
 ## Advanced Problems
 
@@ -423,19 +594,41 @@ Test the following strings:
 
 
 ```python
-
+def analyze_password(password):
+    contains_lower = False
+    contains_upper = False
+    contains_number = False
+    contains_char = False
+    
+    for letter in password:
+        if letter.islower():
+            contains_lower = True
+        elif letter.isupper():
+            contains_upper = True
+        elif letter.isdigit():
+            contains_number = True
+        elif letter in ['.', ',', '!', '?', '$', '&', '^', ':', ';']:
+            contains_char = True
+            
+    if (contains_lower and contains_upper and contains_number 
+        and contains_char and len(password) >= 9):
+        return True
+    else:
+        return False
 ```
+
+
+```python
+print(analyze_password('password_is_strong'))
+print(analyze_password('myNumberis99:'))
+print(analyze_password('NuMbErSaReFuN'))
+print(analyze_password('l33Tn3rd!)'))
+```
+
+    False
+    True
+    False
+    True
+
 
 By the way, **this advice is wrong**: read [this article](https://www.usatoday.com/story/news/nation-now/2017/08/09/password-expert-says-he-wrong-numbers-capital-letters-and-symbols-useless/552013001/) from *USA today*. People still tend to choose very predictable sequences of numbers, words, and special symbols. A much more secure option is to choose a longer password made up of several random words, e.g. purple tortoise silence cobras -> `purpletortoisesilencecobras`.
-
-Find all prime factors of an integer `n`.
-
-
-```python
-
-```
-
-
-```python
-
-```

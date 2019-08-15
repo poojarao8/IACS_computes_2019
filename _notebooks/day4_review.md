@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Review
-date:   2019-08-14
+date:   2019-08-15
 day: 4
 ---
 
@@ -323,7 +323,7 @@ plt.legend() # remember to call this or else it won't print the legend
 
 
 
-    <matplotlib.legend.Legend at 0x1135d2e10>
+    <matplotlib.legend.Legend at 0x1171298d0>
 
 
 

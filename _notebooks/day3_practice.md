@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Practice
-date:   2019-08-14
+date:   2019-08-15
 day: 3
 ---
 
