@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Functions
-date:   2019-08-15
+date:   2019-08-19
 day: 4
 ---
 
@@ -9,11 +9,6 @@ day: 4
 # Practice
 
 Write some code that deletes all consonants from the word *omnipotent*.
-
-
-```python
-
-```
 
 
 ```python
@@ -591,6 +586,19 @@ Test the following strings:
 * NuMbErSaReFuN
 * l33Tn3rd!
     
+
+
+```python
+a = "string"
+a.islower()
+```
+
+
+
+
+    True
+
+
 
 
 ```python

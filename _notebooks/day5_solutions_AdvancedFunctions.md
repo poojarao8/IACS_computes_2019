@@ -31,31 +31,12 @@ def age(birth_year, birth_month, birth_day):
 age(1990,11,1)
 ```
 
-
-
-
-    28
-
-
-
  Note that in our age function, we have 6 variables. Their names are `birth_year`, `birth_month`, `birth_day`, `today`, `this_month`, and `this_year`. What's currently in those variables?
 
 
 ```python
 today
 ```
-
-
-    ---------------------------------------------------------------------------
-
-    NameError                                 Traceback (most recent call last)
-
-    <ipython-input-3-beb90ce425b0> in <module>
-    ----> 1 today
-    
-
-    NameError: name 'today' is not defined
-
 
 Hmm. It says today is not defined. This is actually what should happen. At this moment in time, the 6 variables inside age() *do not exist* anywhere in the computer. The variables `birth_year`, `birth_month`, and `birth_day` are only created when `age()` is called, and these variables can only be used by `age(`). At the time they are created, they are given the values that we put in the parentheses. The variables `today`, `this_month`, and `this_year` are created *inside* `age()`. Here's the important part: when `age()` has finished executing, all 6 of these variables are destroyed.
 
@@ -69,9 +50,6 @@ today = "Tuesday"   # Create a variable called today and give it a value
 age(1986, 9, 20)    # age has a variable called today that it sets to a number
 print(today)        # What's in today?
 ```
-
-    Tuesday
-
 
 Without the protective structure of scope, the variable today would have been overwritten by the function age, and our code might not have performed the way we anticipated down the road.
 
@@ -100,16 +78,6 @@ def age(birth_year, birth_month, birth_day):
 age(1986, 9, 20)
 ```
 
-    I can see a! It's 7.98
-
-
-
-
-
-    29
-
-
-
 When a function encounters a variable, it first looks within the variables defined within the function to see if it finds a match. If it can find one, it uses that one. If it can't, then it looks outside the function. If we had defined another variable `a` inside `age()`, then `age` would have printed that one instead (try it!)
 
 So we've seen that a function can see a variable outside its scope, but what would happen if we tried to do this?
@@ -132,26 +100,6 @@ def age(birth_year, birth_month, birth_day):
 ```python
 age(1990, 11, 1)
 ```
-
-
-    ---------------------------------------------------------------------------
-
-    UnboundLocalError                         Traceback (most recent call last)
-
-    <ipython-input-5-1e44a38b6a62> in <module>
-    ----> 1 age(1990, 11, 1)
-    
-
-    <ipython-input-4-ee601757633c> in age(birth_year, birth_month, birth_day)
-          3     this_month = 7
-          4     this_year = 2016
-    ----> 5     a = a + 1 # change the variable a
-          6     print("I can see a! It's", a)
-          7     if (birth_month > this_month) or ((birth_month == this_month) and (birth_day >= today)):
-
-
-    UnboundLocalError: local variable 'a' referenced before assignment
-
 
 OK, so a function can *see* a variable outside its scope in Python, but isn't allowed to change it. This is probably a good idea (for the reasons stated above).
 
@@ -176,16 +124,6 @@ def age(birth_year, birth_month, birth_day):
 ```python
 age(1990, 11, 1)
 ```
-
-    I can see a! It's 8.98
-
-
-
-
-
-    25
-
-
 
 While accessing outside variables in a function is a cool feature, it's not usually considered a good practice. One of the big advantages of using functions is that it *compartmentalizes* your code. Compartmentalization is a technique where large codes are split into smaller chunks and each coded separately. This affords us not only readable code, but each piece of the code can then be reused later on if necessary (as you continue coding, you'll find yourself reusing your old code a lot!). If a function that you wrote requires an outside variable to work, then it becomes more difficult for you (and others) to reuse later. And if your function changes an outside variable, it can very easily lead to unintended consequences when used as part of a larger code (and this becomes a real pain to debug). If your function needs information from outside, simply write that function to take that information in as an argument, and if your function needs to change something on the outside, write it as an output.
 
@@ -233,23 +171,6 @@ Because our `linspace` function has a default value for all of its parameters, w
 linspace()
 ```
 
-
-
-
-    [0.0,
-     0.1,
-     0.2,
-     0.30000000000000004,
-     0.4,
-     0.5,
-     0.6000000000000001,
-     0.7000000000000001,
-     0.8,
-     0.9,
-     1.0]
-
-
-
 We can specify only the first input, or the first two inputs, like this:
 
 
@@ -258,33 +179,9 @@ linspace(-1) # Will give 11 points from -1 to 1
 ```
 
 
-
-
-    [-1.0,
-     -0.8,
-     -0.6,
-     -0.3999999999999999,
-     -0.19999999999999996,
-     0.0,
-     0.20000000000000018,
-     0.40000000000000013,
-     0.6000000000000001,
-     0.8,
-     1.0]
-
-
-
-
 ```python
 linspace(0, 100) # will give 11 points from 0 to 100
 ```
-
-
-
-
-    [0.0, 10.0, 20.0, 30.0, 40.0, 50.0, 60.0, 70.0, 80.0, 90.0, 100.0]
-
-
 
 So it's ok to specify `a` and `b`, and leave `n` unspecified, but what if we want to specify `n`, but not `b`. You might try this:
 
@@ -293,47 +190,12 @@ So it's ok to specify `a` and `b`, and leave `n` unspecified, but what if we wan
 linspace(0, , 21) # create a list of 21 numbers from 0 to 1?
 ```
 
-
-      File "<ipython-input-16-b60c426e4ff3>", line 1
-        linspace(0, , 21) # create a list of 21 numbers from 0 to 1?
-                    ^
-    SyntaxError: invalid syntax
-
-
-
 Unfortunately, Python doesn't understand like this. Up to now, Python has been interpreting the arguments based on their position. But if we want to miss out one or more of the arguments, we can no longer do this. Instead, we must specify the arguments by name:
 
 
 ```python
 linspace(a=0, n=21) # set linspace's a to 0 and n to 21, but use the default for b
 ```
-
-
-
-
-    [0.0,
-     0.05,
-     0.1,
-     0.15000000000000002,
-     0.2,
-     0.25,
-     0.30000000000000004,
-     0.35000000000000003,
-     0.4,
-     0.45,
-     0.5,
-     0.55,
-     0.6000000000000001,
-     0.65,
-     0.7000000000000001,
-     0.75,
-     0.8,
-     0.8500000000000001,
-     0.9,
-     0.9500000000000001,
-     1.0]
-
-
 
 This is pretty flexible, and we could even pass in the arguments in a completely different order if we feel like it:
 
@@ -342,66 +204,12 @@ This is pretty flexible, and we could even pass in the arguments in a completely
 linspace(n=21, a=0, b=4) 
 ```
 
-
-
-
-    [0.0,
-     0.2,
-     0.4,
-     0.6000000000000001,
-     0.8,
-     1.0,
-     1.2000000000000002,
-     1.4000000000000001,
-     1.6,
-     1.8,
-     2.0,
-     2.2,
-     2.4000000000000004,
-     2.6,
-     2.8000000000000003,
-     3.0,
-     3.2,
-     3.4000000000000004,
-     3.6,
-     3.8000000000000003,
-     4.0]
-
-
-
 We can also mix up passing in arguments by position and by name:
 
 
 ```python
 linspace(0, n=21) # pass in a and n, but use the default value for b
 ```
-
-
-
-
-    [0.0,
-     0.05,
-     0.1,
-     0.15000000000000002,
-     0.2,
-     0.25,
-     0.30000000000000004,
-     0.35000000000000003,
-     0.4,
-     0.45,
-     0.5,
-     0.55,
-     0.6000000000000001,
-     0.65,
-     0.7000000000000001,
-     0.75,
-     0.8,
-     0.8500000000000001,
-     0.9,
-     0.9500000000000001,
-     1.0]
-
-
 
 When is this useful? Maybe you're writing a code that is very technical, but you want everyday people to be able to use it. Maybe the average person doesn't need to be able to specify everything, but a more informed user would like the ability to be more specific. For example, you could have used a default parameter for the Caeser shift cypher code you wrote yesterday. If you put the default shift at 5, then most users could simply write encrypt('message') and decrypt('message'), but someone who wants more control over the function could specify their own shift.
 
@@ -442,66 +250,9 @@ linspace(0, 1, 21) # the default behavior
 ```
 
 
-
-
-    [0.0,
-     0.05,
-     0.1,
-     0.15000000000000002,
-     0.2,
-     0.25,
-     0.30000000000000004,
-     0.35000000000000003,
-     0.4,
-     0.45,
-     0.5,
-     0.55,
-     0.6000000000000001,
-     0.65,
-     0.7000000000000001,
-     0.75,
-     0.8,
-     0.8500000000000001,
-     0.9,
-     0.9500000000000001,
-     1.0]
-
-
-
-
 ```python
 linspace(0, 1, 21, print_dx=True) # this time print dx
 ```
-
-    dx = 0.05
-
-
-
-
-
-    [0.0,
-     0.05,
-     0.1,
-     0.15000000000000002,
-     0.2,
-     0.25,
-     0.30000000000000004,
-     0.35000000000000003,
-     0.4,
-     0.45,
-     0.5,
-     0.55,
-     0.6000000000000001,
-     0.65,
-     0.7000000000000001,
-     0.75,
-     0.8,
-     0.8500000000000001,
-     0.9,
-     0.9500000000000001,
-     1.0]
-
-
 
 ## Recursion
 
@@ -523,15 +274,6 @@ def powers(n):
 powers(6) # print the first 7 powers of 2 (including 2**0)
 ```
 
-    1
-    2
-    4
-    8
-    16
-    32
-    64
-
-
 Another way to do this is with recursion. Here's how this function would look with recursion:
 
 
@@ -549,15 +291,6 @@ def powers(n):
 powers(6)
 ```
 
-    1
-    2
-    4
-    8
-    16
-    32
-    64
-
-
 Let's take a look at how recursion works. The first step is identifying the *base-case* problem. This is the problem in our loop where we want to the recursion to stop, and often has a simple solution. For our problem, the base case is when $n = 0$. For this we print $2^0 = 1$.
 
 Next is the tricky part. We need to work out how to go from the iterations of our loop to the base case. For our problem, we can see that if we start with $n$ and keep subtracting 1 from it, we will eventually reach 0, the base case. This is what we do in the `else` block when we call `powers(n-1)`. 
@@ -573,35 +306,6 @@ Let's see what happens if we call our function with a negative number (thereby c
 ```python
 powers(-2)
 ```
-
-
-    ---------------------------------------------------------------------------
-
-    RecursionError                            Traceback (most recent call last)
-
-    <ipython-input-27-c3d515ee1ab6> in <module>
-    ----> 1 powers(-2)
-    
-
-    <ipython-input-25-8c8e73c450a0> in powers(n)
-          3         print(1)      # Handle the n == 0 case EXPLICITLY
-          4     else:
-    ----> 5         powers(n - 1) # this is where the recursive magic happens
-          6         print(2**n)
-
-
-    ... last 1 frames repeated, from the frame below ...
-
-
-    <ipython-input-25-8c8e73c450a0> in powers(n)
-          3         print(1)      # Handle the n == 0 case EXPLICITLY
-          4     else:
-    ----> 5         powers(n - 1) # this is where the recursive magic happens
-          6         print(2**n)
-
-
-    RecursionError: maximum recursion depth exceeded in comparison
-
 
 You might have guessed that this would run forever. Fortunately Python helps prevent this from happening by limiting how far down into a recursive function you can go. If you exceed that number, it quits. If it did not do this, then this function would have kept running until our computer ran out of memory and crashed. 
 
@@ -631,13 +335,6 @@ def sillystring(mystring):
 ```python
 sillystring("I like potatoes.")
 ```
-
-
-
-
-    'I_l_k_ _o_a_o_s_'
-
-
 
 ## Practice Problems
 
@@ -818,3 +515,11 @@ pascal_old(10);
 
 
 
+```python
+
+```
+
+
+```python
+
+```

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Errors
-date:   2019-08-14
+date:   2019-08-19
 day: 5
 ---
 
@@ -190,6 +190,117 @@ Let's go over the try block in detail. The code first tries to run the code unde
 There are two more possible keywords that can be used to create blocks beneath a `try` block: the `else` keyword, and the `finally` keyword. They are not very common as they have very specific uses, but for any who are interested, I'll give a brief summary here. Anything in an `else` block of code will only be executed if the initial `try` block executed successfully (and not if the `except` block is what executed). Exceptions raised in the `else` block will *not* be caught by the `except` statement, which may be a good thing if you only want the `except` block to catch a very specific exception. 
 
 The `finally` keyword is used to create a block of code that is executed whether or not an exception is raised. If an exception is raised that is caught by an `except` block, the `finally` block will run after the `except` block. If an exception is raised that is *not* caught by an `except` block, then the finally block will run *before* the exception is reported. In this way, it's sometimes used to 'sneak in' code between the generation of an exception and the termination of the code execution.
+
+## Practice
+
+### Data validation
+
+Write a function that takes a list of numbers, calculates the mean and returns it.
+
+
+```python
+# your code here 
+
+def mean(a_list):
+    
+    try:
+        assert type(a_list) == list, "Input must be a list"
+
+        for element in a_list:
+            assert type(element) == int or type(element) == float, "Input must be a list of numbers"
+            
+    except AssertionError:
+        return 0
+    
+    return sum(a_list) / len(a_list)
+```
+
+
+```python
+# your code here 
+
+def mean(a_list):
+    
+    try:
+        return sum(a_list) / len(a_list)
+            
+    except TypeError:
+        return 0
+    
+    
+```
+
+
+```python
+mean("hello")
+```
+
+
+
+
+    0
+
+
+
+
+```python
+mean([4,8,1,6,9,2,7,9])
+```
+
+
+
+
+    5.75
+
+
+
+
+```python
+mean([True, False, True, True])
+```
+
+
+
+
+    0
+
+
+
+
+```python
+mean(('one', 'two', 'three', 'four'))
+```
+
+
+    ---------------------------------------------------------------------------
+
+    TypeError                                 Traceback (most recent call last)
+
+    <ipython-input-9-d6f2dbbb48a2> in <module>
+    ----> 1 mean(('one', 'two', 'three', 'four'))
+    
+
+    <ipython-input-2-5b020dd3398a> in mean(a_list)
+          3 def mean(a_list):
+          4 
+    ----> 5     return sum(a_list) / len(a_list)
+    
+
+    TypeError: unsupported operand type(s) for +: 'int' and 'str'
+
+
+Now try running your function with the following input arguments:
+
+- `[4,8,1,6,9,2,7,9]`
+- 12
+- 'helloWorld`
+- [True, False, True, True]
+- ('one', 'two', 'three', 'four')
+
+You should find that your function does not work for all of them. So although originally when you wrote your function you nay have intended for the user to only ever pass in a string of numbers as the arguments, in practice because python is quite chill when it comes to checking data types, it is possible for someone to try running your function on completely inapproriate things.
+
+Modify your function to validate (check) the data before you try doing any calculations with it. 
+You could do this using assert statements (e.g. to check that the input variable is a list and that all the items in the list are numbers). You could have a `try/except` block in there so that if something *does* go wrong, your function will exit gracefully rather than returning you a (perhaps confusing) error message. 
 
 
 ```python

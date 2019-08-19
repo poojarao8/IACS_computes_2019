@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Dictionaries
-date:   2019-08-14
+date:   2019-08-19
 day: 5
 ---
 
@@ -214,8 +214,83 @@ inventory = {
 
 
 ```python
-
+inventory['pocket'] = ['seashell', 'strange berry', 'lint']
 ```
+
+
+```python
+inventory['pocket']
+```
+
+
+
+
+    ['seashell', 'strange berry', 'lint']
+
+
+
+
+```python
+sorted(inventory['backpack'])
+```
+
+
+
+
+    ['bedroll', 'bread loaf', 'dagger', 'xylophone']
+
+
+
+
+```python
+inventory['backpack'].sort()
+```
+
+
+```python
+inventory['backpack']
+```
+
+
+
+
+    ['bedroll', 'bread loaf', 'dagger', 'xylophone']
+
+
+
+
+```python
+inventory['backpack'].remove('dagger')
+```
+
+
+```python
+inventory['backpack']
+```
+
+
+
+
+    ['bedroll', 'bread loaf', 'xylophone']
+
+
+
+
+```python
+inventory['gold'] += 50
+```
+
+
+```python
+inventory['gold']
+```
+
+
+
+
+    550
+
+
 
 ## Fixing Fibonacci
 
@@ -555,11 +630,32 @@ Loop over all values in the dictionary
 
 ```python
 # your code here
+
+dice = {}
+
+for d1 in range(1,7):
+    for d2 in range(1,7):
+        new_tuple = (d1, d2)
+        sum_dice = d1 + d2
+        
+        sum_list = dice.get(sum_dice, [])
+        
+        sum_list.append(new_tuple)
+        
+        dice[sum_dice] = sum_list
+        
+print(dice)
 ```
+
+    {2: [(1, 1)], 3: [(1, 2), (2, 1)], 4: [(1, 3), (2, 2), (3, 1)], 5: [(1, 4), (2, 3), (3, 2), (4, 1)], 6: [(1, 5), (2, 4), (3, 3), (4, 2), (5, 1)], 7: [(1, 6), (2, 5), (3, 4), (4, 3), (5, 2), (6, 1)], 8: [(2, 6), (3, 5), (4, 4), (5, 3), (6, 2)], 9: [(3, 6), (4, 5), (5, 4), (6, 3)], 10: [(4, 6), (5, 5), (6, 4)], 11: [(5, 6), (6, 5)], 12: [(6, 6)]}
+
 
 ### Exercise 2
 
 You work at a frozen yogurt shop, and your boss is making you grab some bananas, oranges, and apples. Make a grocery list. Then, using the following information from the supermarket, define a function called `compute_bill` that takes `food` as an input.
+
+
+```python
 stock = {
     "banana": 6,
     "apple": 0,
@@ -573,14 +669,55 @@ prices = {
     "orange": 1.5,
     "pear": 3
 }
+```
+
 For each item in your grocery list, add that item's price to your bill total. At the end, return the total. Your function should be able to work for any grocery list that contains the items in the store.
 
 After you have this working, modify your function to only add the price of the item to your total if the item is in stock. Then, subtract one of the items from the store's stock.
 
 
 ```python
-# your code here
+grocery_list = {"apple" : 2, "banana": 3}
+
+def compute_bill(food):
+    bill_total = 0
+    
+    for item, quantity in food.items():
+        price = prices[item]
+        
+        if quantity > stock[item]:
+            bill_total += stock[item] * price
+            stock[item] = 0
+        else:
+            bill_total += quantity * price
+            stock[item] -= quantity
+    
+    return bill_total
 ```
+
+
+```python
+compute_bill(grocery_list)
+```
+
+
+
+
+    0
+
+
+
+
+```python
+stock
+```
+
+
+
+
+    {'banana': 0, 'apple': 0, 'orange': 32, 'pear': 15}
+
+
 
 ### Exercise 3
 
@@ -633,4 +770,48 @@ According to all known laws of aviation, there is no way a bee should be able to
 
 ```python
 # your code
+punctuation = [',', '.', '!', "'", '?', '-']
+
+for p in punctuation:
+    beemoviescript = beemoviescript.replace(p, "")
+    
+
+```
+
+
+```python
+beemoviescript = beemoviescript.lower()
+```
+
+
+```python
+string = "hello"
+string.isalpha?
+```
+
+
+    [0;31mDocstring:[0m
+    S.isalpha() -> bool
+    
+    Return True if all characters in S are alphabetic
+    and there is at least one character in S, False otherwise.
+    [0;31mType:[0m      builtin_function_or_method
+
+
+
+
+```python
+words_dictionary = {}
+
+for word in beemoviescript.split():
+    if word.isalpha():
+        frequency = words_dictionary.get(word, 0)
+        words_dictionary[word] = frequency + 1
+    
+words_dictionary
+```
+
+
+```python
+
 ```
