@@ -4,6 +4,9 @@ In this folder, you'll find jupyter notebooks that we are going to use.
 
 ### Authors of the notebooks
 
+##### 2020:
+* Pooja Rao
+
 ##### 2019:
 * Alice Harpole
 * Cyrus Dreyer
