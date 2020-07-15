@@ -32,8 +32,8 @@ Time | July 27 | July 28 | July 29 | July 30 | July 31
 **10:00** | advanced lists | literature analysis | fractals | student projects | student projects
 **11:00** | classes | literature analysis | fractals | student projects | student projects
 **12:00** | lunch | lunch | lunch | lunch | lunch
-**13:00** | classes | cryptography | Data processing | student projects | student presentations
-**14:00** | coding practice | cryptography | projects intro | student projects | student presentations
+**13:00** | classes | cryptography (TBD) | Data processing | student projects | student presentations
+**14:00** | coding practice | cryptography (TBD) | projects intro | student projects | student presentations
 
 
 ## Materials
@@ -79,8 +79,8 @@ Time | July 27 | July 28 | July 29 | July 30 | July 31
 
 #### Day 7 (Tuesday, July 28)
 1. Review
-1. Literature analysis
-1. Cryptography
+1. Literature analysis (TBD)
+1. Cryptography (TBD)
 
 #### Day 8 (Wednesday, July 29)
 1. Warm-up
