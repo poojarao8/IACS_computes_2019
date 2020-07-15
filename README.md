@@ -96,8 +96,8 @@ Student projects
 
 ## Anaconda installation
 
-1. Go to [Anaconda's website](https://www.anaconda.com/)
-2. Click 'Download' in the top right
-3. Choose Python 3.7 version
-4. Follow the instructions
+1. Go to [Anaconda's website](https://docs.anaconda.com/anaconda/install/).
+2. Click on your operating system.
+3. Choose Python 3.7 version. I also recommend checking the box for the "Add Anaconda3 to my PATH environment variable" option.
+4. Follow the instructions.
 5. Done!
