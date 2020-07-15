@@ -5,7 +5,7 @@
 
 Hi and welcome to the website for the **IACS Computes! HS summer camp**. During this camp, students will learn Python programming skills, get to know research challenges for which coding is necessary, and see several real-world applications of coding, including literature analysis, cryptography and data processing. 
 
-- **Dates:** 20-31 July, 9am-3pm
+- **Dates:** 20-31 July, 9am to 3pm
 - **Location:** IACS, Stony Brook University, NY
 - **Instructor:** Pooja Rao
 - **Helper:** Matt Dannenberg
