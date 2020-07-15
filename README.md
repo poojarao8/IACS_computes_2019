@@ -7,7 +7,7 @@ Hi and welcome to the website for the **IACS Computes! HS summer camp**. During 
 
 - **Dates:** 20-31 July, 9am-3pm
 - **Location:** IACS, Stony Brook University, NY
-- **Instructors:** Pooja Rao
+- **Instructor:** Pooja Rao
 - **Helper:** Matt Dannenberg
 
 On this page, you will find information about the [schedule](#schedule), [materials](#materials), and how to [install anaconda](#anaconda-installation).
