@@ -32,7 +32,7 @@ Time | July 27 | July 28 | July 29 | July 30 | July 31
 **10:00** | advanced lists | literature analysis | fractals | student projects | student projects
 **11:00** | classes | literature analysis | fractals | student projects | student projects
 **12:00** | lunch | lunch | lunch | lunch | lunch
-**13:00** | classes | cryptography (TBD) | Data processing | student projects | student presentations
+**13:00** | classes | cryptography (TBD) | Data processing (TBD) | student projects | student presentations
 **14:00** | coding practice | cryptography (TBD) | projects intro | student projects | student presentations
 
 
