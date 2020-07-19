@@ -101,3 +101,6 @@ Student projects
 3. Choose Python 3.7 version. I also recommend checking the box for the "Add Anaconda3 to my PATH environment variable" option.
 4. Follow the instructions. 
 5. Done!
+
+## Anaconda Online
+This should be the last resort. If you are unable to install Anaconda and don't have access to jupyter notebook on your computer, please use the online jupyter notebook from [here]. (https://mybinder.org/v2/gh/ipython/ipython-in-depth/master?filepath=binder/Index.ipynb)
