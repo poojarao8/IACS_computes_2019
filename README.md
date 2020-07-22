@@ -20,10 +20,10 @@ The schedule is subject to change!
 Time | July 20 | July 21 | July 22 | July 23 |  July 24
 ---------- | ---------- | ---------- | ---------- | ---------- | ----------
 **09:00** | welcome + installation | warm up | warm up | warm up | warm up
-**10:00** | arithmetic + variables | lists | strings | functions | dictionaries
+**10:00** | arithmetic + variables | lists | strings | functions | turtles
 **11:00** | data types + conditionals | lists | strings | functions | errors + exceptions
 **12:00** | lunch | lunch | lunch | lunch | lunch
-**13:00** | while loops | for loops | turtles | I/O | more functions
+**13:00** | while loops | for loops | dictionaries | I/O | more functions
 **14:00** | coding practice | coding practice | coding practice | coding practice | coding practice
 
 Time | July 27 | July 28 | July 29 | July 30 | July 31
