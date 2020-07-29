@@ -29,11 +29,11 @@ Time | July 20 | July 21 | July 22 | July 23 |  July 24
 Time | July 27 | July 28 | July 29 | July 30 | July 31
 ---------- | ---------- | ---------- | ---------- | ---------- | ----------
 **09:00** | warm up | warm up | warm up | student projects | student projects
-**10:00** | advanced lists | literature analysis | fractals | student projects | student projects
-**11:00** | classes | literature analysis | fractals | student projects | student projects
+**10:00** | advanced lists | Numpy | fractals | student projects | student projects
+**11:00** | classes | Matplotlib | fractals | student projects | student projects
 **12:00** | lunch | lunch | lunch | lunch | lunch
-**13:00** | classes | cryptography (TBD) | Data processing (TBD) | student projects | student presentations
-**14:00** | coding practice | cryptography (TBD) | projects intro | student projects | student presentations
+**13:00** | classes | Numpy & Matplotlib | coding practice | student projects | student presentations
+**14:00** | coding practice | coding practuce | coding practice | student projects | student presentations
 
 
 ## Materials
